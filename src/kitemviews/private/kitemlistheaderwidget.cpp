@@ -208,6 +208,9 @@ void KItemListHeaderWidget::paint(QPainter *painter, const QStyleOptionGraphicsI
         return;
     }
 
+    // An opaque header: rows scrolled under it must not show through.
+    painter->fillRect(QRectF(QPointF(0, 0), size()), palette().base());
+
     // Draw roles
     painter->setFont(font());
     painter->setPen(palette().text().color());

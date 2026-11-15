@@ -1,3 +1,10 @@
+raye-files (25.12.3+raye8) resolute; urgency=high
+
+  * Details view: the column header (Name, Date modified, Type, Size) is now
+    opaque, so files no longer show through it when scrolling.
+
+ -- techoraye <190692880+techoraye@users.noreply.github.com>  Sun, 15 Nov 2026 18:15:00 +0000
+
 raye-files (25.12.3+raye7) resolute; urgency=high
 
   * Navigation pane: clicking a USB stick, disk or optical drive that is
