@@ -436,6 +436,12 @@ void NavigationPane::activate(const QModelIndex &index)
     if (!url.isEmpty()) {
         m_currentUrl = url;
         Q_EMIT urlActivated(url);
+        return;
+    }
+    // A USB stick or disk that is plugged in but not mounted has no address yet.
+    const QString driveId = index.data(NavigationModel::DriveIdRole).toString();
+    if (!driveId.isEmpty()) {
+        Q_EMIT mountRequested(driveId);
     }
 }
 

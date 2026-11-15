@@ -74,6 +74,8 @@ Q_SIGNALS:
     void openInNewWindowRequested(const QUrl &url);
     void propertiesRequested(const QUrl &url);
     void ejectRequested(const QString &driveId, const QUrl &url);
+    // A drive that is not mounted yet was clicked: mount it, then open it.
+    void mountRequested(const QString &driveId);
     // Emitted after the copy, move or link job is started.
     void dropped(const QList<QUrl> &sources, const QUrl &destination, Qt::DropAction action);
 

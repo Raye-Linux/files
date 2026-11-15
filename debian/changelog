@@ -1,3 +1,11 @@
+raye-files (25.12.3+raye7) resolute; urgency=high
+
+  * Navigation pane: clicking a USB stick, disk or optical drive that is
+    plugged in but not mounted now mounts it and opens it, and says why
+    if it cannot be opened.
+
+ -- techoraye <190692880+techoraye@users.noreply.github.com>  Sun, 15 Nov 2026 18:03:18 +0000
+
 raye-files (25.12.3+raye6) resolute; urgency=medium
 
   * Map network drive: connect a shared folder (\\server\share) into a

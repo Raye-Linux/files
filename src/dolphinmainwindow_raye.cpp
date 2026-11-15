@@ -45,6 +45,7 @@
 #include <KNewFileMenu>
 #include <KConfigGroup>
 #include <KLocalizedString>
+#include <KMessageBox>
 #include <KPropertiesDialog>
 
 #include "raye/properties/propertiesdialog.h"
@@ -401,6 +402,35 @@ void DolphinMainWindow::rayeSetupWindow()
         if (auto *access = device.as<Solid::StorageAccess>()) {
             access->teardown();
         }
+    });
+    connect(nav, &Raye::NavPane::NavigationPane::mountRequested, this, [this](const QString &driveId) {
+        Solid::Device device(driveId);
+        auto *access = device.as<Solid::StorageAccess>();
+        if (!access) {
+            return;
+        }
+        if (access->isAccessible() && !access->filePath().isEmpty()) {
+            m_activeViewContainer->setUrl(QUrl::fromLocalFile(access->filePath()));
+            return;
+        }
+        QPointer<DolphinMainWindow> self(this);
+        connect(access, &Solid::StorageAccess::setupDone, this,
+                [self, driveId](Solid::ErrorType error, const QVariant &errorData, const QString &udi) {
+                    if (!self || udi != driveId) {
+                        return;
+                    }
+                    if (error != Solid::NoError) {
+                        const QString detail = errorData.toString();
+                        KMessageBox::error(self, detail.isEmpty() ? i18nc("@info", "This drive could not be opened.") : detail);
+                        return;
+                    }
+                    Solid::Device mounted(udi);
+                    if (auto *done = mounted.as<Solid::StorageAccess>(); done && !done->filePath().isEmpty()) {
+                        self->m_activeViewContainer->setUrl(QUrl::fromLocalFile(done->filePath()));
+                    }
+                },
+                Qt::SingleShotConnection);
+        access->setup();
     });
     m_rayeShell->setNavigationPaneVisible(ac->action(QString::fromLatin1(Raye::Commands::Ids::navigationPane))->isChecked());
 
