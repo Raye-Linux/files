@@ -1,0 +1,27 @@
+# Keep the system's own partitions out of Files and the file dialogs, the
+# way Windows keeps its EFI, recovery and reserved partitions out of
+# Explorer: Raye's root and boot partitions, the unlocked root of an
+# encrypted install, and swap. udisks reads UDISKS_IGNORE and hides these
+# devices, so no drive list shows them. The EFI system partition, the
+# Microsoft reserved and recovery partitions are already hidden by
+# 80-udisks2.rules, which runs before this file. The Raye drive in This PC
+# reads "/" itself, so it stays.
+
+SUBSYSTEM!="block", GOTO="raye_hide_system_end"
+ACTION=="remove", GOTO="raye_hide_system_end"
+
+# The partitions the installer makes, by GPT name: "raye" is the root (a
+# plain file system or the encrypted container), "raye_boot" is /boot.
+ENV{ID_PART_ENTRY_SCHEME}=="gpt", ENV{ID_PART_ENTRY_NAME}=="raye|raye_boot", ENV{UDISKS_IGNORE}="1"
+
+# /boot by its file system label.
+ENV{ID_FS_LABEL}=="raye_boot", ENV{UDISKS_IGNORE}="1"
+
+# Swap partitions, and the loop device of a swap file.
+ENV{ID_FS_TYPE}=="swap", ENV{UDISKS_IGNORE}="1"
+
+# The unlocked root (luks-<uuid>), but only when it sits on Raye's own
+# partition or is mounted as / or /boot: an encrypted USB drive still shows.
+KERNEL=="dm-*", ENV{DM_NAME}=="luks-*", PROGRAM="/usr/lib/raye/udev/raye-is-system-dm %k", ENV{UDISKS_IGNORE}="1"
+
+LABEL="raye_hide_system_end"

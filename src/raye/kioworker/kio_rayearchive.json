@@ -1,0 +1,25 @@
+{
+    "KDE-KIO-Protocols": {
+        "rayearchive": {
+            "Class": ":local",
+            "Icon": "package-x-generic",
+            "deleting": true,
+            "input": "none",
+            "listing": [
+                "Name",
+                "Type",
+                "Size",
+                "Date",
+                "Access",
+                "Link"
+            ],
+            "makedir": true,
+            "maxInstances": 4,
+            "output": "filesystem",
+            "protocol": "rayearchive",
+            "reading": true,
+            "source": true,
+            "writing": true
+        }
+    }
+}

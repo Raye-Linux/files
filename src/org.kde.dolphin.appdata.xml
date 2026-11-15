@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component type="desktop">
+  <id>org.kde.dolphin.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-2.0-or-later</project_license>
+  <developer id="org.kde">
+    <name translate="no">KDE</name>
+    <url>https://kde.org</url>
+  </developer>
+  <name>Files</name>
+  <name xml:lang="fr">Fichiers</name>
+  <summary>Browse and manage your files</summary>
+  <summary xml:lang="fr">Parcourez et gérez vos fichiers</summary>
+  <description>
+    <p>Files is where you keep your documents, pictures, downloads and drives. Copy, move and delete files and folders, open several folders in tabs, and open archives like folders.</p>
+    <p xml:lang="fr">Fichiers, c'est l'endroit où vous rangez vos documents, images, téléchargements et lecteurs. Copiez, déplacez et supprimez des fichiers et des dossiers, ouvrez plusieurs dossiers dans des onglets, et ouvrez les archives comme des dossiers.</p>
+    <p>Files is based on Dolphin, the KDE file manager.</p>
+    <p xml:lang="fr">Fichiers est basé sur Dolphin, le gestionnaire de fichiers de KDE.</p>
+  </description>
+  <url type="homepage">https://apps.kde.org/dolphin</url>
+  <url type="help">https://docs.kde.org/?application=dolphin</url>
+  <url type="donation">https://www.kde.org/community/donations/?app=dolphin&amp;source=appdata</url>
+  <url type="contribute">https://invent.kde.org/system/dolphin/-/blob/master/README.md</url>
+  <screenshots>
+    <screenshot type="default">
+      <caption>File management in Files</caption>
+      <image>https://cdn.kde.org/screenshots/dolphin/dolphin.png</image>
+    </screenshot>
+    <screenshot type="default">
+      <caption>Embedded terminal in Files</caption>
+      <image>https://cdn.kde.org/screenshots/dolphin/dolphin-terminal.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Set up Files the way you want</caption>
+      <image>https://cdn.kde.org/screenshots/dolphin/dolphin-settings.png</image>
+    </screenshot>
+  </screenshots>
+  <project_group>KDE</project_group>
+  <provides>
+    <binary>dolphin</binary>
+  </provides>
+  <launchable type="desktop-id">org.kde.dolphin.desktop</launchable>
+  <releases>
+    <release version="25.12.3" date="2026-03-05"/>
+    <release version="25.12.2" date="2026-02-05"/>
+    <release version="25.12.1" date="2026-01-08"/>
+    <release version="25.12.0" date="2025-12-11"/>
+    <release version="25.08.3" date="2025-11-06"/>
+    <release version="25.08.2" date="2025-10-09"/>
+    <release version="25.08.1" date="2025-09-11"/>
+    <release version="25.08.0" date="2025-08-14"/>
+    <release version="25.04.3" date="2025-07-03"/>
+    <release version="25.04.2" date="2025-06-05"/>
+    <release version="25.04.1" date="2025-05-08"/>
+    <release version="25.04.0" date="2025-04-17"/>
+    <release version="24.12.3" date="2025-03-06"/>
+    <release version="24.12.2" date="2025-02-06"/>
+    <release version="24.12.1" date="2025-01-09"/>
+    <release version="24.12.0" date="2024-12-12"/>
+    <release version="24.08.3" date="2024-11-07"/>
+    <release version="24.08.2" date="2024-10-10"/>
+    <release version="24.08.1" date="2024-09-12"/>
+    <release version="24.08.0" date="2024-08-22"/>
+    <release version="24.05.2" date="2024-07-04"/>
+    <release version="24.05.1" date="2024-06-13"/>
+    <release version="24.05.0" date="2024-05-23"/>
+    <release version="24.02.2" date="2024-04-11"/>
+    <release version="24.02.1" date="2024-03-21"/>
+    <release version="24.02.0" date="2024-02-28"/>
+    <release version="23.08.5" date="2024-02-15"/>
+  </releases>
+  <content_rating type="oars-1.1"/>
+  <branding>
+    <color type="primary" scheme_preference="light">#67c4ff</color>
+    <color type="primary" scheme_preference="dark">#19455b</color>
+  </branding>
+</component>

@@ -1,0 +1,51 @@
+Upstream source of Raye Files
+=============================
+
+Project   Dolphin
+Version   25.12.3
+Tarball   dolphin-25.12.3.tar.xz
+          https://download.kde.org/stable/release-service/25.12.3/src/
+SHA-256   9961de7cc076d9d7d598bb7f53afdebcfba20567093231f42ba72e031e089a3b
+Signature dolphin-25.12.3.tar.xz.sig, good signature from
+          D81C 0CB3 8EB7 25EF 6691  C385 BB46 3350 D6EF 31EF
+          (Heiko Becker <heiko.becker@kde.org>, KDE release manager)
+Imported  2026-10-30, whole tree, no file removed.
+Licence   GPL-2.0-or-later, see COPYING. Credits stay in the About box.
+
+The tree is frozen on 25.12.3 for this release of Raye. Moving to a newer
+Dolphin means a merge: every file we touched is listed, with the reason,
+in raye-changes/FX-<n>.txt (one file per work package). Read those first,
+replay them on the new tree, then run the tests.
+
+
+Changes kept from Ubuntu's dolphin packaging
+--------------------------------------------
+
+Ubuntu's source package 4:25.12.3-0ubuntu1 carries one patch. We keep it,
+applied in the tree instead of in debian/patches, because we build native:
+
+  require-baloo-widgets.patch
+      Baloo Widgets is released with the minor version of the release
+      service (25.12.0), so find_package(KF6BalooWidgets 25.12.3) never
+      matches. The version asked for is now 25.12.0 and the package is
+      REQUIRED: the file information panel is not optional for us.
+
+Nothing else from Ubuntu's debian/ applies: the rest is packaging, and
+ours is written from scratch in debian/.
+
+
+What we do not build
+--------------------
+
+libdolphinvcs is Dolphin's public plugin interface. We do not build or
+install our own copy: the package build-depends on libdolphinvcs-dev and
+links the system libdolphinvcs6 (same 25.12.3 ABI), so dolphin-plugins
+keeps loading into Files. If a future Dolphin changes that interface, the
+system library has to move with us.
+
+Qt private API
+--------------
+
+Like Dolphin, Files uses Qt private headers (qt6-base-private-dev), so the
+package depends on qt6-base-private-abi of the Qt it was built with. Every
+Qt update in the archive needs a rebuild of raye-files.

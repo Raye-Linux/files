@@ -1,0 +1,67 @@
+#!/usr/bin/make -f
+
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+# ctest prints "No tests were found!!!" and exits 0. A package whose
+# tests stop being registered -- a renamed tests/ folder, a find_package
+# that quietly goes missing, BUILD_TESTING flipped -- then BUILDS GREEN
+# with nothing run, and the only trace is one line in an 8 MB log.
+# Measured in the resolute chroot: bare ctest on an empty tree exits 0,
+# with this set it exits 8. iso/tools/tests/test_ctest_no_tests_guard.py
+# fails if any debian/rules that runs dh_auto_test loses this line.
+export CTEST_NO_TESTS_ACTION = error
+
+%:
+	dh $@
+
+# BUILD_TESTING stays on: the Raye tests run at build time (see below).
+# The KDE handbook is not built: Raye has its own handbook, and the KDE one
+# would clash with dolphin-doc.
+override_dh_auto_configure:
+	dh_auto_configure -Skf6 -- \
+		-DBUILD_TESTING=ON \
+		-DCMAKE_DISABLE_FIND_PACKAGE_KF6DocTools=ON
+
+# One binary package, but still a staging tree: raye-files.install decides
+# what ships, and dh_missing says what the build made and nobody claimed.
+override_dh_auto_install:
+	dh_auto_install --destdir=debian/tmp
+	# The D-Bus interface description is for people building against the
+	# FileManager1 API. Ubuntu ships it in dolphin-dev; Files has no
+	# development package, and shipping it would clash with that one.
+	rm -f debian/tmp/usr/share/dbus-1/interfaces/org.freedesktop.FileManager1.xml
+
+# Some roots only exist once a later work package lands: the QML module
+# org.raye.files, settings under /etc/xdg, udev rules, a portal backend,
+# notification files, the root .hidden list. A line in raye-files.install
+# would stop the build until then (dh_install fails on a pattern that
+# matches nothing), so they are picked up here when they are there, in the
+# same dh_install run as the install file.
+RAYE_OPTIONAL = \
+	usr/lib/*/qt6/qml/org/raye \
+	etc/xdg \
+	.hidden \
+	usr/lib/udev \
+	usr/lib/raye \
+	usr/lib/environment.d \
+	usr/libexec \
+	usr/share/knotifications6 \
+	usr/share/xdg-desktop-portal \
+	usr/share/applications/*.list
+
+override_dh_install:
+	cd debian/tmp && extra=; \
+	for p in $(RAYE_OPTIONAL); do \
+		if [ -e "$$p" ]; then extra="$$extra $$p"; fi; \
+	done; \
+	cd ../.. && dh_install --autodest $$extra
+
+# A file the build makes and the install file does not claim is a mistake,
+# not a detail: fail, do not drop it quietly.
+override_dh_missing:
+	dh_missing --fail-missing
+
+# Only the Raye tests. Dolphin's own tests want a session bus and a display.
+# RAYE_TESTS_STRICT: a test that would skip for a missing tool or locale
+# fails instead, so a package build always checks what it says it checks.
+override_dh_auto_test:
+	RAYE_TESTS_STRICT=1 dh_auto_test -- ARGS+="-L raye --output-on-failure"

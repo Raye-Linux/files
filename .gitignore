@@ -1,0 +1,40 @@
+# Ignore the following files
+.vscode
+*~
+*.[oa]
+*.diff
+*.kate-swp
+*.kdev4
+.kdev_include_paths
+*.kdevelop.pcs
+*.moc
+*.moc.cpp
+*.orig
+*.user
+.*.swp
+.swp.*
+Doxyfile
+Makefile
+avail
+random_seed
+/build*/
+CMakeLists.txt.user*
+.clang-format
+/compile_commands.json
+.clangd
+.idea
+/cmake-build*
+.cache
+apidocs
+doxygen.log
+.directory
+.cmake/
+
+# A test that imports a module leaves bytecode beside it. The launcher
+# sets PYTHONDONTWRITEBYTECODE=1, but `python3 -I` ignores it, and a
+# plain `pytest` run from a shell is not the launcher. Without this
+# line a `git add -A` commits .pyc files -- and in this tree one of
+# those folders is PACKAGED.
+__pycache__/
+*.pyc
+.pytest_cache/

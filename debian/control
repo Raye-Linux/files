@@ -1,0 +1,91 @@
+Source: raye-files
+Section: kde
+Priority: optional
+Maintainer: techoraye <190692880+techoraye@users.noreply.github.com>
+Build-Depends: cmake (>= 3.16~),
+               dbus-daemon <!nocheck>,
+               debhelper-compat (= 13),
+               desktop-file-utils <!nocheck>,
+               dh-sequence-kf6,
+               extra-cmake-modules (>= 6.9.0~),
+               gettext,
+               kio-extras <!nocheck>,
+               libraye-archive-dev (>= 0.3~beta1),
+               libbaloowidgets-dev (>= 4:25.12.3~),
+               libdolphinvcs-dev (>= 4:25.12.3~),
+               libkf6baloo-dev (>= 6.9.0~),
+               libkf6bookmarks-dev (>= 6.9.0~),
+               libkf6codecs-dev (>= 6.9.0~),
+               libkf6colorscheme-dev (>= 6.9.0~),
+               libkf6completion-dev (>= 6.9.0~),
+               libkf6config-dev (>= 6.9.0~),
+               libkf6coreaddons-dev (>= 6.9.0~),
+               libkf6crash-dev (>= 6.9.0~),
+               libkf6dbusaddons-dev (>= 6.9.0~),
+               libkf6filemetadata-dev (>= 6.9.0~),
+               libkf6guiaddons-dev (>= 6.9.0~),
+               libkf6i18n-dev (>= 6.9.0~),
+               libkf6iconthemes-dev (>= 6.9.0~),
+               libkf6kcmutils-dev (>= 6.9.0~),
+               libkf6kio-dev (>= 6.9.0~),
+               libkf6newstuff-dev (>= 6.9.0~),
+               libkf6notifications-dev (>= 6.9.0~),
+               libkf6parts-dev (>= 6.9.0~),
+               libkf6purpose-dev,
+               libkf6solid-dev (>= 6.9.0~),
+               libkf6texteditor-dev,
+               libkf6textwidgets-dev (>= 6.9.0~),
+               libkf6userfeedback-dev (>= 6.9.0~),
+               libkf6wallet-dev (>= 6.9.0~),
+               libkf6widgetsaddons-dev (>= 6.9.0~),
+               libkf6windowsystem-dev (>= 6.9.0~),
+               libpackagekitqt6-dev,
+               locales-all <!nocheck>,
+               libphonon4qt6-dev,
+               libphonon4qt6experimental-dev,
+               libplasmaactivities-dev,
+               libplasmaactivitiesstats-dev,
+               pkgconf,
+               plasma-wayland-protocols,
+               qt6-base-dev (>= 6.4.0~),
+               qt6-base-private-dev,
+               qt6-declarative-dev (>= 6.4.0~),
+               qt6-multimedia-dev (>= 6.4.0~),
+               qt6-wayland-dev,
+Standards-Version: 4.7.3
+Homepage: https://github.com/techoraye
+Rules-Requires-Root: no
+
+Package: raye-files
+Architecture: any
+Depends: baloo6,
+         pkexec,
+         qml6-module-org-kde-kirigami,
+         qml6-module-org-kde-purpose,
+         qml6-module-qtmultimedia,
+         ${misc:Depends},
+         ${shlibs:Depends},
+Recommends: cifs-utils,
+            ffmpegthumbs,
+            kdegraphics-thumbnailers,
+            kdenetwork-filesharing,
+            kimageformat6-plugins,
+            kio-extras (>= 4:25.12.2~),
+            qt6-image-formats-plugins,
+Suggests: dolphin-plugins,
+          kio-admin,
+Provides: dolphin (= 4:25.12.3-0ubuntu1),
+          dolphin-data (= 4:25.12.3-0ubuntu1),
+Conflicts: dolphin,
+           dolphin-data,
+Replaces: dolphin,
+          dolphin-data,
+Description: Files, the Raye file explorer
+ Files is where you keep your documents, pictures, downloads and drives.
+ It opens on Home, with the folders you use most and the files you had
+ open last, and it shows your drives and network places the way the rest
+ of Raye does.
+ .
+ Tabs across the top, an address bar you can type a path into, a command
+ bar with the actions that fit what you picked, a details pane and a
+ preview pane, and archives that open like folders.

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Choose an app
+Name[fr]=Choisir une application
+Comment=Asks which app opens a file no app is set for
+Comment[fr]=Demande quelle application ouvre un fichier sans application
+Exec=@RAYE_PORTAL_BINARY@ --open-with %U
+Icon=system-run
+NoDisplay=true
+MimeType=application/octet-stream;

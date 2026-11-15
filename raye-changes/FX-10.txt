@@ -1,0 +1,61 @@
+FX-10 - views: modes, rows, extensions, type names, groups
+Upstream files this package changed, and why. New Raye code is in
+src/raye/typenames/ and src/raye/viewdefaults/.
+
+src/kitemviews/kfileitemmodel.{h,cpp}
+    New role "displayText": the name with a known extension hidden (only
+    stored when it differs), recomputed on rename and, for every item, when
+    [Raye] ShowExtensions changes (slot rayeSetShowExtensions). The "type"
+    role says what Windows says ("Text document", "PNG file", "File
+    folder"). Date groups are Windows' (Today, Yesterday, Earlier this week,
+    Last week, Earlier this month, Last month, Earlier this year, A long time
+    ago); the upstream month-by-month code of timeRoleGroups() is gone.
+    Column names Date modified / Date created / Date accessed / Location
+    come from the raye-files catalog (rayeRoleName()).
+src/kitemviews/kfileitemmodelrolesupdater.cpp
+    The "type" role it fills once the MIME type is known uses the same names.
+src/kitemviews/kstandarditemlistwidget.cpp
+    The name painted and measured is "displayText" when present ("text"
+    stays the whole name for the editor, sorting and type-ahead). Compact
+    items laid out in rows (Small icons, Tiles) get one cell size.
+src/kitemviews/kfileitemlistwidget.cpp
+    Same shown name in itemText(); inline rename selects what the view
+    shows (Raye::FileNames::baseNameLength); the Size column is Windows'
+    whole KB, empty for folders.
+src/kitemviews/kitemlistview.{h,cpp}
+    adjustedItemSize()/reapplyItemSize(): a subclass can impose row heights
+    and cell widths on what DolphinItemListView asks for. The column header
+    is at least 32 high.
+src/kitemviews/kstandarditemlistview.{h,cpp}
+    setRayeMetrics(rowHeight, cellWidth, flowRows): Windows' 32/24 rows,
+    fixed cells, compact layout in rows. No alternating row backgrounds.
+src/kitemviews/kstandarditemlistgroupheader.cpp
+    Group headers painted the Windows way: Body strong, divider to the
+    right. Rating headers and horizontal flows keep the upstream painting.
+src/kitemviews/private/kitemlistheaderwidget.cpp
+    Column header painted the Windows way (no bar, hover fill, chevron
+    above the label, thin dividers). The upstream style code under the Raye
+    block is kept, unreached, to ease merges.
+src/views/viewproperties.{h,cpp}
+    setRayeViewMode()/rayeViewMode(): one of the eight Windows modes,
+    stored in the ViewMode key as 100 + mode (viewMode() still answers the
+    layout). Per-place defaults (Raye::ViewDefaults::forUrl) for folders
+    never set, and for Pictures/Videos/Downloads with global view
+    properties; not saved. Default Details columns: Name, Date modified,
+    Type, Size. The role prefix follows the layout, not the raw value.
+src/views/dolphinview.{h,cpp}
+    setRayeViewMode()/rayeViewMode()/rayeViewModeChanged; Ctrl+wheel steps
+    through the modes; Compact view and item check boxes follow [Raye] at
+    once; the content area takes the layer colour with a Raye palette;
+    "This folder is empty." in Body, secondary colour. At the end of the
+    file: the render harness showcases (View-<mode>, View-grouped,
+    View-empty), here because DolphinView needs KParts' headers, and the
+    KParts widget resolver used by FX-12's Preview pane.
+
+On a rebase: tests/raye/test_typenames, test_extensions and
+test_viewdefaults cover the Raye logic; the eight modes are checked by
+rendering the View-* showcases.
+src/kitemviews/kitemlistview.cpp (0.3)
+    preferredColumnWidths() measures a header label with the Raye header's
+    font and margins, so a column is never narrower than its label ("Date
+    modified" was cut to "Date modifi…").

@@ -1,0 +1,13 @@
+[Unit]
+Description=Open and Save dialogs for apps
+PartOf=graphical-session.target
+After=plasma-core.target
+
+[Service]
+ExecStart=@RAYE_PORTAL_BINARY@
+BusName=org.freedesktop.impl.portal.desktop.rayefiles
+# This is what the other apps call for their dialogs: never itself.
+Environment=PLASMA_INTEGRATION_USE_PORTAL=0
+Slice=session.slice
+# started on demand over D-Bus, so no restart
+Restart=no

@@ -1,0 +1,186 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: raye-files
+Source: Dolphin 25.12.3, https://download.kde.org/stable/release-service/25.12.3/src/
+Comment: Files is a fork of KDE's Dolphin, frozen on 25.12.3. See UPSTREAM for
+ what was imported and how it was checked, and raye-changes/ for every
+ upstream file Raye touched. The full licence texts are in LICENSES/.
+
+Files: *
+Copyright: 2006-2026 The Dolphin Developers
+License: GPL-2.0-or-later
+
+Files: src/raye/*
+       tests/raye/*
+       debian/*
+       UPSTREAM
+       Messages.sh
+       po/CMakeLists.txt
+       po/*/raye-files.po
+       raye-changes/*
+Copyright: 2026 techoraye
+License: GPL-2.0-or-later
+
+Files: src/admin/bar.cpp
+       src/admin/bar.h
+       src/admin/workerintegration.cpp
+       src/admin/workerintegration.h
+       src/animatedheightwidget.cpp
+       src/animatedheightwidget.h
+       src/dolphinnavigatorswidgetaction.cpp
+       src/dolphinnavigatorswidgetaction.h
+       src/dolphinpackageinstaller.cpp
+       src/dolphinpackageinstaller.h
+       src/dolphinurlnavigator.cpp
+       src/dolphinurlnavigator.h
+       src/dolphinurlnavigatorscontroller.cpp
+       src/dolphinurlnavigatorscontroller.h
+       src/kitemviews/kfileitemlisttostring.cpp
+       src/kitemviews/kfileitemlisttostring.h
+       src/search/barsecondrowflowlayout.cpp
+       src/search/barsecondrowflowlayout.h
+       src/search/chip.cpp
+       src/search/chip.h
+       src/search/popup.cpp
+       src/search/popup.h
+       src/search/selectors/dateselector.cpp
+       src/search/selectors/dateselector.h
+       src/search/selectors/filetypeselector.cpp
+       src/search/selectors/filetypeselector.h
+       src/search/selectors/minimumratingselector.h
+       src/search/updatablestateinterface.h
+       src/search/widgetmenu.cpp
+       src/search/widgetmenu.h
+       src/selectionmode/actiontexthelper.cpp
+       src/selectionmode/actiontexthelper.h
+       src/selectionmode/actionwithwidget.cpp
+       src/selectionmode/actionwithwidget.h
+       src/selectionmode/backgroundcolorhelper.cpp
+       src/selectionmode/backgroundcolorhelper.h
+       src/selectionmode/bottombar.cpp
+       src/selectionmode/bottombar.h
+       src/selectionmode/bottombarcontentscontainer.cpp
+       src/selectionmode/bottombarcontentscontainer.h
+       src/selectionmode/singleclickselectionproxystyle.h
+       src/selectionmode/topbar.cpp
+       src/selectionmode/topbar.h
+       src/statusbar/diskspaceusagemenu.cpp
+       src/statusbar/diskspaceusagemenu.h
+Copyright: 2006-2026 The Dolphin Developers
+License: LGPL-2.1-or-3.0-or-KDEeV
+
+Files: src/dolphinpart.cpp
+       src/dolphinpart.h
+       src/dolphinpart_ext.cpp
+       src/dolphinpart_ext.h
+Copyright: 2006-2026 The Dolphin Developers
+License: LGPL-2.0-or-later
+
+Files: src/views/versioncontrol/kversioncontrolplugin.cpp
+       src/views/versioncontrol/kversioncontrolplugin.h
+Copyright: 2006-2026 The Dolphin Developers
+License: LGPL-2.0-only
+
+Files: src/icons/org.kde.dolphin.svg
+Copyright: 2006-2026 The Dolphin Developers
+License: LGPL-3.0-or-KDEeV
+
+Files: src/settings/contextmenu/servicemenuinstaller/servicemenuinstaller.cpp
+Copyright: 2006-2026 The Dolphin Developers
+License: GPL-2.0-or-3.0-or-KDEeV
+
+Files: appiumtests/CMakeLists.txt
+       cmake/FindGem.cmake
+       cmake/FindGem.cmake.in
+Copyright: 2006-2026 The Dolphin Developers
+License: BSD-3-Clause
+
+Files: src/kitemviews/private/kpixmapmodifier.cpp
+Copyright: 2006-2026 The Dolphin Developers
+License: BSD-2-Clause
+
+License: GPL-2.0-or-later
+ This program is free software; you can redistribute it and/or modify it
+ under the terms of the GNU General Public License as published by the Free
+ Software Foundation; either version 2 of the License, or (at your option)
+ any later version.
+ .
+ This program is distributed in the hope that it will be useful, but WITHOUT
+ ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+ more details.
+ .
+ On Debian systems the full text of the GNU General Public License version 2
+ is in /usr/share/common-licenses/GPL-2, and version 3 in
+ /usr/share/common-licenses/GPL-3. The texts shipped with the source are in
+ LICENSES/.
+
+License: LGPL-2.0-only
+ This library is free software; you can redistribute it and/or modify it
+ under the terms of the GNU Library General Public License version 2 as
+ published by the Free Software Foundation.
+ .
+ On Debian systems the full text is in /usr/share/common-licenses/LGPL-2.
+
+License: LGPL-2.0-or-later
+ This library is free software; you can redistribute it and/or modify it
+ under the terms of the GNU Library General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or (at your
+ option) any later version.
+ .
+ On Debian systems the full text is in /usr/share/common-licenses/LGPL-2.
+
+License: LGPL-2.1-or-3.0-or-KDEeV
+ This library is free software; you can redistribute it and/or modify it
+ under the terms of the GNU Lesser General Public License as published by
+ the Free Software Foundation; either version 2.1 or version 3, or any later
+ version accepted by the membership of KDE e.V., which shall act as a proxy
+ as defined in Section 6 of version 3 of the licence.
+ .
+ On Debian systems the full texts are in /usr/share/common-licenses/LGPL-2.1
+ and /usr/share/common-licenses/LGPL-3; the KDE e.V. text is in
+ LICENSES/LicenseRef-KDE-Accepted-LGPL.txt.
+
+License: LGPL-3.0-or-KDEeV
+ This library is free software; you can redistribute it and/or modify it
+ under the terms of the GNU Lesser General Public License version 3, or any
+ later version accepted by the membership of KDE e.V., which shall act as a
+ proxy as defined in Section 6 of that licence.
+ .
+ On Debian systems the full text is in /usr/share/common-licenses/LGPL-3;
+ the KDE e.V. text is in LICENSES/LicenseRef-KDE-Accepted-LGPL.txt.
+
+License: GPL-2.0-or-3.0-or-KDEeV
+ This program is free software; you can redistribute it and/or modify it
+ under the terms of the GNU General Public License version 2 or version 3,
+ or any later version accepted by the membership of KDE e.V., which shall
+ act as a proxy as defined in Section 14 of version 3 of the licence.
+ .
+ On Debian systems the full texts are in /usr/share/common-licenses/GPL-2
+ and /usr/share/common-licenses/GPL-3; the KDE e.V. text is in
+ LICENSES/LicenseRef-KDE-Accepted-GPL.txt.
+
+License: BSD-2-Clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are met:
+ .
+ 1. Redistributions of source code must retain the above copyright notice,
+ this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the above copyright
+ notice, this list of conditions and the following disclaimer in the
+ documentation and/or other materials provided with the distribution.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ AND ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED. IN NO EVENT SHALL THE
+ COPYRIGHT HOLDER BE LIABLE FOR ANY DAMAGES ARISING IN ANY WAY OUT OF THE USE
+ OF THIS SOFTWARE. The full text is in LICENSES/BSD-2-Clause.txt.
+
+License: BSD-3-Clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the conditions of the three-clause
+ BSD licence are met, including that neither the name of the copyright holder
+ nor the names of its contributors may be used to endorse or promote products
+ derived from this software without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ AND ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED. The full text is in
+ LICENSES/BSD-3-Clause.txt.

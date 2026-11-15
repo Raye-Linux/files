@@ -1,0 +1,21 @@
+FX-3 - Title row: tabs and caption buttons
+Upstream files this package changed, and why. The row itself is new code in
+src/raye/titlebar/ (Raye::Title::TitleBar, TabBar, the width rules).
+
+src/dolphintabbar.{h,cpp}
+    DolphinTabBar derives from Raye::Title::TabBar instead of QTabBar, so
+    the tabs are drawn, sized (112 to 240, then the strip scrolls) and
+    animated the Raye way, with Raye's close buttons. Its drag and drop
+    code stays and also lights the tab under a drop. The middle click,
+    double click and tab menu overrides are removed: Raye::Title::TabBar
+    has them (middle click closes, double click maximises the window, the
+    menu is Close tab / Close other tabs / Close tabs to the right /
+    Duplicate tab / Move tab to new window). Duplicate is routed to
+    openNewActivatedTab(index), Move to new window to tabDetachRequested.
+    Rename tab is no longer offered; the tabRenamed signal stays for the
+    tab widget.
+
+0.3: OwnTitleBar not set in dolphinrc now means "follow the decoration":
+Files draws its own row only when kwinrc names org.raye.decoration and a
+"Windeco Exception N" group of rayerc hides the title bar for the class
+"dolphin org.kde.dolphin" (TitleBar::decorationHidesTitleBar()).

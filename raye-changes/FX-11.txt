@@ -1,0 +1,21 @@
+FX-11 - Context menu
+Upstream files this package changed, and why. The menu itself is new code
+in src/raye/menu/ (the table of items, the icon row, the shared actions).
+
+src/dolphincontextmenu.{h,cpp}
+    DolphinContextMenu derives from Raye::Menu::CompactMenu. By default it
+    is the Windows menu: the icon row (Cut, Copy, Paste, Rename, Share,
+    Delete), the short list of Raye::Menu::plan() and "Show more options"
+    last; the items run the window's actions (Cut, Copy, Rename, Move to
+    Trash, Properties, Undo, Refresh, Open in new tab, Open in Terminal...)
+    or Raye's (Open, Open with ›, Pin to Quick access, Add to Favorites,
+    Compress to ›, Extract all…, Set as desktop background, Rotate, Copy as
+    path, Create shortcut, Restore, Empty Recycle Bin, Share flyout).
+    Dolphin's own menu is kept as the Full style: "Show more options" opens
+    it where the compact one was, and Shift+right click or Shift+F10 open it
+    at once (a new Style argument, Automatic by default, so the callers do
+    not change). In it: no hamburger menu on top, Ark's compress/extract
+    plugins left out (Files handles archives), kio-admin's entry replaced by
+    Raye's "Open as administrator". The compact menu keeps a hidden first
+    action with the hamburger icon because the selection mode bar drops the
+    menu's first action.

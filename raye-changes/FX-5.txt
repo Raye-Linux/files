@@ -1,0 +1,13 @@
+FX-5 - Search box and search options
+Upstream files this package changed, and why. The search box itself is new
+code in src/raye/search/ (Raye::Search::SearchBox and the pure rules of
+searchoptions.h).
+
+src/search/dolphinquery.{h,cpp}
+    Adds Search::urlForRayeSearch(options, folder): the words, file contents
+    or not, the kind and the first day of "Date modified" of the Raye search
+    box go into a DolphinQuery for the folder and its sub-folders, so the
+    search uses Baloo where the folder is indexed and filenamesearch
+    elsewhere, exactly as Dolphin decides. The window hands it to
+    SearchBox::setUrlBuilder(). Nothing else of the file changes; Dolphin's
+    own search bar (search/bar.*) stays compiled, the window stops showing it.

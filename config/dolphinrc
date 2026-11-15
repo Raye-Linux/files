@@ -1,0 +1,74 @@
+# Files: system defaults (explorer spec 3.18). Installed as
+# /etc/xdg/dolphinrc; an account's own ~/.config/dolphinrc wins over it.
+# Raye Settings and Files write the [Raye] keys per user, never this file.
+
+[General]
+# Windows opens Home in a new window, not the tabs of last time.
+RememberOpenedTabs=false
+BrowseThroughArchives=true
+# 1 = the status bar across the whole window.
+ShowStatusBar=1
+ShowZoomSlider=false
+ConfirmClosingMultipleTabs=false
+OpenExternallyCalledFolderInNewTab=false
+ShowFullPathInTitlebar=false
+RenameInline=true
+# Item check boxes come from [Raye] ItemCheckBoxes.
+ShowSelectionToggle=false
+# 0 = natural order (file2 before file10).
+SortingChoice=0
+UseTabForSwitchingSplitView=false
+
+[ContextMenu]
+# The Raye menu has its own entries; Dolphin's optional ones stay off.
+ShowCopyMoveMenu=false
+ShowAddToPlaces=false
+ShowSortBy=false
+ShowViewMode=false
+ShowOpenInNewTab=false
+ShowOpenInNewWindow=false
+ShowOpenInSplitView=false
+ShowCopyLocation=false
+ShowDuplicateHere=false
+ShowOpenTerminal=false
+ShowCopyToOtherSplitView=false
+ShowMoveToOtherSplitView=false
+
+[PreviewSettings]
+# Thumbnails as Windows draws them: pictures, videos, documents, album art,
+# the program icon of a .exe and the contents of a folder. No text previews.
+Plugins=appimagethumbnail,audiothumbnail,blenderthumbnail,comicbookthumbnail,cursorthumbnail,directorythumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,ffmpegthumbs,fontthumbnail,gsthumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,mobithumbnail,opendocumentthumbnail,rawthumbnail,svgthumbnail,windowsexethumbnail,windowsimagethumbnail
+
+[DetailsMode]
+PreviewSize=16
+ExpandableFolders=false
+
+[Raye]
+# home or thispc: what a new window opens on.
+StartPage=home
+ShowExtensions=false
+ShowHidden=false
+Compact=false
+ItemCheckBoxes=false
+ShowAllFolders=false
+ExpandToOpenFolder=false
+ShowRecent=true
+ShowFrequent=true
+ShowFavorites=true
+ShowContinue=true
+# OwnTitleBar: not set = the tabs go in the title row when the Raye
+# decoration hides its own title bar for Files (rayerc exception).
+# none, details or preview.
+PreviewPane=none
+NavPaneWidth=240
+SearchWidth=240
+RecentSearches=
+PlacesMigrated=false
+# Empty: the account's Pictures folder.
+GalleryFolders=
+# ask, open or none (memory cards: ask, open, import or none; phones: ask,
+# import or none). Raye Settings shows these on the AutoPlay page.
+AutoPlayEnabled=true
+AutoPlayRemovable=ask
+AutoPlayMemoryCard=ask
+AutoPlayPhone=ask

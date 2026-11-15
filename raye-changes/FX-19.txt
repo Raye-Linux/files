@@ -1,0 +1,15 @@
+FX-19 - Properties dialog
+Upstream files this package changed, and why. The dialog itself is new code
+in src/raye/properties/ and src/raye/qml/properties/.
+
+src/views/dolphinviewactionhandler.cpp
+    slotProperties() (Alt+Enter, the menus' Properties) opens
+    Raye::Properties::showProperties() instead of KPropertiesDialog.
+src/dbusinterface.cpp
+    ShowItemProperties (FileManager1, used by other apps) does the same.
+src/dolphinmainwindow_raye.cpp
+    Properties from the navigation pane does the same.
+
+showProperties() falls back to KPropertiesDialog for anything that is not
+a local file (phones, shares, trash), and the Security tab's "Advanced
+settings…" opens KDE's dialog for the same items.

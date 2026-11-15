@@ -1,0 +1,110 @@
+#!/bin/sh
+# Is this device-mapper device the system's own? 90-raye-hide-system.rules
+# calls it with the kernel name (dm-0) for every unlocked LUKS device.
+#
+# Exit 0 when it is: one of the devices under it (followed down through
+# other mappers) is Raye's root or boot partition by its GPT name, or it is
+# what "/" or "/boot" is mounted from. Exit 1 otherwise, and on any doubt:
+# a drive shown by mistake is better than a USB stick hidden by mistake.
+#
+# It runs inside udev, so it only reads sysfs, the udev database and the
+# mount table, with sh builtins. --root DIR reads them under DIR (tests).
+
+root=
+if [ "${1-}" = --root ] && [ $# -ge 2 ]; then
+    root=$2
+    shift 2
+fi
+[ $# -eq 1 ] || exit 1
+
+# A kernel block device name, nothing that could walk out of /sys/class/block.
+valid_name() {
+    case $1 in
+        '' | .* | */* | *[!A-Za-z0-9._:+-]*) return 1 ;;
+    esac
+    return 0
+}
+
+# The GPT name of a block device: the kernel's PARTNAME, else what udev
+# stored for it (ID_PART_ENTRY_NAME).
+part_name() {
+    pn= major= minor=
+    if [ -r "$root/sys/class/block/$1/uevent" ]; then
+        while IFS='=' read -r key val; do
+            case $key in
+                PARTNAME) pn=$val ;;
+                MAJOR) major=$val ;;
+                MINOR) minor=$val ;;
+            esac
+        done < "$root/sys/class/block/$1/uevent"
+    fi
+    if [ -z "$pn" ]; then
+        case $major$minor in
+            '' | *[!0-9]*) ;;
+            *)
+                db="$root/run/udev/data/b$major:$minor"
+                if [ -r "$db" ]; then
+                    while IFS= read -r line; do
+                        case $line in
+                            E:ID_PART_ENTRY_NAME=*) pn=${line#E:ID_PART_ENTRY_NAME=} ;;
+                        esac
+                    done < "$db"
+                fi
+                ;;
+        esac
+    fi
+    printf '%s' "$pn"
+}
+
+# Does $1 sit on a "raye" or "raye_boot" partition? $2 is how many levels
+# down we may still go; mappers are rarely more than two deep.
+on_system_part() {
+    valid_name "$1" || return 1
+    [ "$2" -gt 0 ] || return 1
+    [ -d "$root/sys/class/block/$1" ] || return 1
+    case $(part_name "$1") in
+        raye | raye_boot) return 0 ;;
+    esac
+    for s in "$root/sys/class/block/$1/slaves/"*; do
+        [ -e "$s" ] || continue
+        s=${s##*/}
+        [ "$s" = "$1" ] && continue
+        on_system_part "$s" $(($2 - 1)) && return 0
+    done
+    return 1
+}
+
+# Is $1 (dm-N, its mapper name in $2) mounted on / or /boot? Covers a disk
+# with no partition names. The fields after " - " are: type, source, options.
+mounted_as_system() {
+    [ -r "$root/proc/self/mountinfo" ] || return 1
+    while read -r _id _parent _majmin _rootdir mnt rest; do
+        case $mnt in
+            / | /boot) ;;
+            *) continue ;;
+        esac
+        src=${rest#* - }
+        [ "$src" = "$rest" ] && continue
+        src=${src#* }
+        src=${src%% *}
+        [ "$src" = "/dev/$1" ] && return 0
+        [ -n "$2" ] && [ "$src" = "/dev/mapper/$2" ] && return 0
+    done < "$root/proc/self/mountinfo"
+    return 1
+}
+
+dev=$1
+valid_name "$dev" || exit 1
+[ -d "$root/sys/class/block/$dev" ] || exit 1
+
+on_system_part "$dev" 8 && exit 0
+
+dmname=
+if [ -r "$root/sys/class/block/$dev/dm/name" ]; then
+    read -r dmname < "$root/sys/class/block/$dev/dm/name" || true
+fi
+case $dmname in
+    */*) dmname= ;;
+esac
+mounted_as_system "$dev" "$dmname" && exit 0
+exit 1

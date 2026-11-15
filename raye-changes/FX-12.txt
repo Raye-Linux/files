@@ -1,0 +1,14 @@
+FX-12 - Details pane and Preview pane
+Upstream files this package changed, and why. The panes themselves are new
+code in src/raye/preview/.
+
+src/panels/information/informationpanel.{h,cpp}
+    The panel hosts Raye::Preview::RightPane (Details pane or Preview pane,
+    one at a time) instead of InformationPanelContent, which is no longer
+    made (the class stays compiled for merges). rightPane() gives the window
+    the pane to switch with Alt+Shift+P / Alt+P. Like Windows, the pane
+    follows the selection, not the pointer (requestDelayedItemInfo() does
+    nothing), and has no settings menu (contextMenuEvent()).
+
+Also used: src/views/dolphinview.cpp sets the KParts widget resolver of
+the Preview pane (see FX-10.txt), since src/raye cannot see KParts' headers.

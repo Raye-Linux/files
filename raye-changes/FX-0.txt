@@ -1,0 +1,64 @@
+FX-0 - fork import and packaging hub
+Upstream files this package changed, and why.
+
+CMakeLists.txt
+    Baloo Widgets is released with the minor version of the release service,
+    so asking for 25.12.3 never matched; ask for 25.12.0 and make it
+    required - the information panel is not optional for us. (This is the
+    one patch Ubuntu carries, applied in the tree.)
+    The version control library is no longer set up and exported here: the
+    system one is found instead.
+    The DolphinVcs CMake package and its headers are no longer installed:
+    Files is an application and ships nothing under /usr/include.
+    Added: po/ (the raye-files catalog targets) and tests/raye.
+    Qt Qml, Quick and QuickWidgets are looked up here, next to Dolphin's Qt
+    modules: Raye's pages are QML, and the Raye code is linked into the
+    private library in src/, which has to see those targets.
+
+src/CMakeLists.txt
+    The dolphinvcs target is gone; the private library links the imported
+    DolphinVcs of the system instead.
+    The private library installs as libraye-files-private: it is ours and
+    internal, and it must clash with no file of another package. The CMake
+    target keeps the name dolphinprivate so nothing else in the tree moves.
+    dolphin_export.h is no longer installed (no development package).
+    Added: src/raye.
+
+src/main.cpp
+    About box: the name is "Files" and the description "Files, based on
+    Dolphin", both from the raye-files catalog. Dolphin's authors, licence
+    and home page are untouched - the credit stays.
+    The About box logo is system-file-manager, like the desktop file. The
+    window icon line is left as upstream wrote it (org.kde.dolphin): the
+    Raye icon theme has to draw that name as Files as well, or the window
+    icon line moves to system-file-manager with the title row work.
+    No bug address (setBugAddress empty): the crash reporter does not offer
+    to send crashes of this modified Dolphin to bugs.kde.org.
+
+src/org.kde.dolphin.appdata.xml
+    Software centre listing: name Files / Fichiers, summary and description
+    in English and French, captions without the old name, no KDE bug
+    tracker link. The other languages are dropped (they fall back to
+    English). The id, licence, developer, URLs and releases stay.
+
+src/org.kde.dolphin.desktop
+    Rewritten for the user: Name=Files / Fichiers, GenericName=File Explorer
+    / Explorateur de fichiers, a comment and keywords in both languages,
+    Icon=system-file-manager. Every other translation of the old name is
+    dropped; they fall back to English. X-DocPath is gone with the KDE
+    handbook (see below).
+    Unchanged on purpose: the file name, Exec, X-DBUS-ServiceName,
+    StartupWMClass, X-KDE-Shortcuts and MimeType - the taskbar, Meta+E,
+    folder defaults and "Show in folder" all go through them.
+
+Files added by this package (not upstream): UPSTREAM, README.md,
+Messages.sh (new: the release tarball has none; it only builds the
+raye-files catalog, Dolphin's own catalogs come with the release),
+data/CMakeLists.txt, po/CMakeLists.txt, po/raye-files.pot, po/fr/raye-files.po,
+src/raye/CMakeLists.txt, tests/raye/*, debian/*, raye-changes/FX-0.txt.
+
+CMakeLists.txt also adds config/ (when it exists) and data/, whose
+CMakeLists.txt builds every data/<kind>/ folder that has one.
+
+Not built: the KDE handbook (-DCMAKE_DISABLE_FIND_PACKAGE_KF6DocTools=ON).
+Raye has its own handbook, and the KDE one would clash with dolphin-doc.

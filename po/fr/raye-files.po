@@ -1,0 +1,4885 @@
+# French translation of Raye Files.
+# This file is distributed under the same license as the raye-files package.
+msgid ""
+msgstr ""
+"Project-Id-Version: raye-files\n"
+"Report-Msgid-Bugs-To: https://github.com/techoraye\n"
+"POT-Creation-Date: 2026-11-13 20:08+0000\n"
+"PO-Revision-Date: 2026-10-30 06:00+0000\n"
+"Last-Translator: techoraye\n"
+"Language-Team: French\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: src/dolphincontextmenu.cpp:737
+msgctxt "@action:inmenu %1 is a folder name"
+msgid "Extract to “%1/”"
+msgstr "Extraire vers « %1/ »"
+
+#: src/dolphinmainwindow_raye.cpp:184
+msgctxt "@action:inmenu"
+msgid "Options"
+msgstr "Options"
+
+#: src/dolphinmainwindow_raye.cpp:206
+msgctxt "@action:inmenu"
+msgid "Compact view"
+msgstr "Affichage compact"
+
+#: src/dolphinmainwindow_raye.cpp:226
+msgctxt "@action:inmenu"
+msgid "Text document"
+msgstr "Document texte"
+
+#: src/dolphinmainwindow_raye.cpp:229
+msgctxt "@item the name of a new file, before .txt"
+msgid "New Text Document"
+msgstr "Nouveau document texte"
+
+#: src/dolphinmainwindow_raye.cpp:238
+msgctxt "@item the name of a new archive, before .zip"
+msgid "New Compressed (zipped) Folder"
+msgstr "Nouveau dossier compressé"
+
+#: src/dolphinmainwindow_raye.cpp:242
+msgctxt "@action:inmenu"
+msgid "Shortcut"
+msgstr "Raccourci"
+
+#: src/dolphinmainwindow_raye.cpp:247
+msgctxt "@title:window"
+msgid "Choose what the shortcut opens"
+msgstr "Choisir ce qu'ouvre le raccourci"
+
+#: src/dolphinmainwindow_raye.cpp:252
+msgctxt "@item %1 is the name of what a shortcut opens"
+msgid "%1 - Shortcut"
+msgstr "%1 - Raccourci"
+
+#: src/dolphinmainwindow_raye.cpp:262
+msgctxt "@action"
+msgid "Search"
+msgstr "Rechercher"
+
+#: src/dolphinmainwindow_raye.cpp:270
+msgctxt "@action"
+msgid "Edit the address"
+msgstr "Modifier l'adresse"
+
+#: src/dolphinmainwindow_raye.cpp:287
+msgctxt "@action:inmenu"
+msgid "Full screen"
+msgstr "Plein écran"
+
+#: src/dolphinviewcontainer.cpp:111
+msgid "Files is running as the administrator. Be careful with what you change."
+msgstr ""
+"Fichiers s'exécute en tant qu'administrateur. Faites attention à ce que vous "
+"modifiez."
+
+#: src/dolphinviewcontainer.cpp:1014
+msgctxt "@info:status"
+msgid "Web pages open in your browser."
+msgstr "Les pages web s'ouvrent dans votre navigateur."
+
+#: src/dolphinviewcontainer.cpp:1016
+msgctxt "@info:status"
+msgid "Files can't show this location, so it opened in its own app."
+msgstr ""
+"Fichiers ne peut pas afficher cet emplacement, il s'est donc ouvert dans son "
+"application."
+
+#: src/kitemviews/kfileitemmodel.cpp:50
+msgctxt "@label column"
+msgid "Date modified"
+msgstr "Modifié le"
+
+#: src/kitemviews/kfileitemmodel.cpp:53
+msgctxt "@label column"
+msgid "Date created"
+msgstr "Créé le"
+
+#: src/kitemviews/kfileitemmodel.cpp:56
+msgctxt "@label column"
+msgid "Date accessed"
+msgstr "Consulté le"
+
+#: src/kitemviews/kfileitemmodel.cpp:59
+msgctxt "@label column"
+msgid "Location"
+msgstr "Emplacement"
+
+#: src/main.cpp:104
+msgid "Files"
+msgstr "Fichiers"
+
+#: src/main.cpp:106
+msgid "Files, based on Dolphin"
+msgstr "Fichiers, basé sur Dolphin"
+
+#: src/raye/addressbar/addressbar.cpp:49
+#, kde-format
+msgctxt "@info accessible name of the handle that resizes the search box"
+msgid "Resize the search box"
+msgstr "Redimensionner la zone de recherche"
+
+#: src/raye/addressbar/addressbar.cpp:98
+#, kde-format
+msgctxt "@action:button go to the previous location"
+msgid "Back"
+msgstr "Précédent"
+
+#: src/raye/addressbar/addressbar.cpp:99
+#, kde-format
+msgctxt "@action:button go to the next location"
+msgid "Forward"
+msgstr "Suivant"
+
+#: src/raye/addressbar/addressbar.cpp:100
+#, kde-format
+msgctxt "@action:button go to the folder that holds this one"
+msgid "Up"
+msgstr "Monter"
+
+#: src/raye/addressbar/addressbar.cpp:101
+#, kde-format
+msgctxt "@action:button load the folder again"
+msgid "Refresh"
+msgstr "Actualiser"
+
+#: src/raye/addressbar/addressbar.cpp:158
+#, kde-format
+msgctxt "@action edit the address as text"
+msgid "Edit address"
+msgstr "Modifier l'adresse"
+
+#: src/raye/addressbar/addressbox.cpp:180
+#, kde-format
+msgctxt "@action:button opens the list of folders in a part of the address"
+msgid "Show folders"
+msgstr "Afficher les dossiers"
+
+#: src/raye/addressbar/addressbox.cpp:259
+#, kde-format
+msgctxt "@info in the folder list of the address"
+msgid "This folder can't be opened."
+msgstr "Impossible d'ouvrir ce dossier."
+
+#: src/raye/addressbar/addressbox.cpp:260
+#, kde-format
+msgctxt "@info in the folder list of the address"
+msgid "No folders"
+msgstr "Aucun dossier"
+
+#: src/raye/addressbar/addressbox.cpp:291
+#, kde-format
+msgctxt "@info accessible name of the address box"
+msgid "Address"
+msgstr "Adresse"
+
+#: src/raye/addressbar/addressbox.cpp:296
+#, kde-format
+msgctxt "@action:button the hidden first parts of a long address"
+msgid "Earlier folders"
+msgstr "Dossiers précédents"
+
+#: src/raye/archive/archiveentry.cpp:20
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Files can't open this archive. It may have been moved, or you don't have "
+"permission to open it."
+msgstr ""
+"Fichiers ne peut pas ouvrir cette archive. Elle a peut-être été déplacée, ou "
+"vous n'avez pas l'autorisation de l'ouvrir."
+
+#: src/raye/archive/archiveentry.cpp:22
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Files can't open this file. It isn't a compressed folder, or it uses a "
+"format Files can't read."
+msgstr ""
+"Fichiers ne peut pas ouvrir ce fichier. Ce n'est pas un dossier compressé, "
+"ou son format n'est pas pris en charge."
+
+#: src/raye/archive/archiveentry.cpp:24
+#, kde-format
+msgctxt "@info"
+msgid "This compressed folder is damaged or incomplete."
+msgstr "Ce dossier compressé est endommagé ou incomplet."
+
+#: src/raye/archive/archiveentry.cpp:26
+#: src/raye/qml/archive/ArchivePasswordPage.qml:40
+#, kde-format
+msgctxt "@info"
+msgid "This archive is protected. Enter the password."
+msgstr "Cette archive est protégée. Entrez le mot de passe."
+
+#: src/raye/archive/archiveentry.cpp:28
+#: src/raye/qml/archive/ArchivePasswordPage.qml:64
+#, kde-format
+msgctxt "@info"
+msgid "The password is incorrect. Try again."
+msgstr "Le mot de passe est incorrect. Réessayez."
+
+#: src/raye/archive/archiveentry.cpp:30
+#, kde-format
+msgctxt "@info"
+msgid ""
+"This archive can't be extracted safely. It tries to put files outside the "
+"destination folder."
+msgstr ""
+"Cette archive ne peut pas être extraite en toute sécurité. Elle tente de "
+"placer des fichiers en dehors du dossier de destination."
+
+#: src/raye/archive/archiveentry.cpp:32
+#, kde-format
+msgctxt "@info"
+msgid ""
+"This archive expands to much more than its size. Extracting it could fill "
+"your drive."
+msgstr ""
+"Cette archive occupe beaucoup plus de place une fois extraite. L'extraire "
+"pourrait remplir votre lecteur."
+
+#: src/raye/archive/archiveentry.cpp:34
+#, kde-format
+msgctxt "@info"
+msgid "The operation was canceled."
+msgstr "L'opération a été annulée."
+
+#: src/raye/archive/archiveentry.cpp:36
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Files can't write here. The drive may be full, or you don't have permission."
+msgstr ""
+"Fichiers ne peut pas écrire ici. Le lecteur est peut-être plein, ou vous "
+"n'avez pas l'autorisation."
+
+#: src/raye/archive/archiveentry.cpp:38
+#, kde-format
+msgctxt "@info"
+msgid "This item isn't in the archive any more."
+msgstr "Cet élément ne se trouve plus dans l'archive."
+
+#: src/raye/archive/archiveentry.cpp:40
+#, kde-format
+msgctxt "@info"
+msgid "Files can't do this with this kind of archive."
+msgstr "Fichiers ne peut pas faire cela avec ce type d'archive."
+
+#: src/raye/archive/archiveentry.cpp:42
+#, kde-format
+msgctxt "@info"
+msgid ""
+"A part of this archive is missing. Put all its parts in the same folder and "
+"try again."
+msgstr ""
+"Il manque une partie de cette archive. Mettez toutes ses parties dans le "
+"même dossier, puis réessayez."
+
+#: src/raye/archive/archiveformat.cpp:196
+#, kde-format
+msgctxt "@info"
+msgid "Files can't add to this archive."
+msgstr "Fichiers ne peut pas ajouter d'éléments à cette archive."
+
+#: src/raye/archive/archiveformat.cpp:198
+#, kde-format
+msgctxt "@info %1 is a format name: RAR, 7z, ISO"
+msgid "Files can't add to %1 archives."
+msgstr "Fichiers ne peut pas ajouter d'éléments aux archives %1."
+
+#: src/raye/archive/archivejobs.cpp:206
+#, kde-format
+msgctxt "@title job"
+msgid "Extracting"
+msgstr "Extraction"
+
+#: src/raye/archive/archivejobs.cpp:207 src/raye/archive/archivejobs.cpp:337
+#, kde-format
+msgctxt "The source of a job"
+msgid "From"
+msgstr "De"
+
+#: src/raye/archive/archivejobs.cpp:208 src/raye/archive/archivejobs.cpp:339
+#, kde-format
+msgctxt "The destination of a job"
+msgid "To"
+msgstr "Vers"
+
+#: src/raye/archive/archivejobs.cpp:336
+#, kde-format
+msgctxt "@title job"
+msgid "Compressing"
+msgstr "Compression"
+
+#: src/raye/archive/archivejobs.cpp:338
+#, kde-format
+msgid "%1 item"
+msgid_plural "%1 items"
+msgstr[0] "%1 élément"
+msgstr[1] "%1 éléments"
+
+#: src/raye/archive/archivewizardmodels.cpp:80
+#, kde-format
+msgctxt "@item folder an archive without extension goes into"
+msgid "%1 (extracted)"
+msgstr "%1 (extrait)"
+
+#: src/raye/archive/archivewizardmodels.cpp:139
+#, kde-format
+msgctxt "@info"
+msgid "Enter a folder to extract the files to."
+msgstr "Indiquez le dossier où extraire les fichiers."
+
+#: src/raye/archive/archivewizardmodels.cpp:144
+#, kde-format
+msgctxt "@info"
+msgid "This folder can't be used. Choose another one."
+msgstr "Ce dossier ne peut pas être utilisé. Choisissez-en un autre."
+
+#: src/raye/archive/archivewizardmodels.cpp:148
+#, kde-format
+msgctxt "@info"
+msgid "There's already a file with this name. Choose another folder."
+msgstr "Un fichier porte déjà ce nom. Choisissez un autre dossier."
+
+#: src/raye/archive/archivewizardmodels.cpp:152
+#, kde-format
+msgctxt "@info"
+msgid "You don't have permission to extract to this folder."
+msgstr "Vous n'avez pas l'autorisation d'extraire dans ce dossier."
+
+#: src/raye/archive/archivewizardmodels.cpp:369
+#, kde-format
+msgctxt "@item no compression"
+msgid "None"
+msgstr "Aucune"
+
+#: src/raye/archive/archivewizardmodels.cpp:417
+#, kde-format
+msgctxt "@item dictionary size picked by the level"
+msgid "Automatic (%1)"
+msgstr "Automatique (%1)"
+
+#: src/raye/archive/archivewizardmodels.cpp:450
+#: src/raye/archive/archivewizardmodels.cpp:473
+#, kde-format
+msgctxt "@item picked by the level"
+msgid "Automatic"
+msgstr "Automatique"
+
+#: src/raye/archive/archivewizardmodels.cpp:473
+#, kde-format
+msgctxt "@item solid block size"
+msgid "Not solid"
+msgstr "Non solide"
+
+#: src/raye/archive/archivewizardmodels.cpp:477
+#, kde-format
+msgctxt "@item solid block size"
+msgid "One block"
+msgstr "Un seul bloc"
+
+#: src/raye/archive/archivewizardmodels.cpp:504
+#, kde-format
+msgctxt "@item one per processor"
+msgid "Automatic (%1)"
+msgstr "Automatique (%1)"
+
+#: src/raye/archive/archivewizardmodels.cpp:694
+#, kde-format
+msgctxt "@info %2 is a size"
+msgid "%2 in %1 file"
+msgid_plural "%2 in %1 files"
+msgstr[0] "%2 dans %1 fichier"
+msgstr[1] "%2 dans %1 fichiers"
+
+#: src/raye/archive/archivewizardmodels.cpp:696
+#, kde-format
+msgctxt "@info %1 is what is compressed, %2 and %3 sizes"
+msgid "%1 · about %2 of memory to compress, %3 to open"
+msgstr "%1 · environ %2 de mémoire pour compresser, %3 pour ouvrir"
+
+#: src/raye/archive/archivewizardmodels.cpp:822
+#, kde-format
+msgctxt "@info"
+msgid "Enter a name for the archive."
+msgstr "Donnez un nom à l'archive."
+
+#: src/raye/archive/archivewizardmodels.cpp:824
+#, kde-format
+msgctxt "@info"
+msgid "This name can't be used. Choose another one."
+msgstr "Ce nom ne peut pas être utilisé. Choisissez-en un autre."
+
+#: src/raye/archive/archivewizardmodels.cpp:826
+#, kde-format
+msgctxt "@info"
+msgid "This folder doesn't exist."
+msgstr "Ce dossier n'existe pas."
+
+#: src/raye/archive/archivewizardmodels.cpp:828
+#, kde-format
+msgctxt "@info"
+msgid "You don't have permission to save in this folder."
+msgstr "Vous n'avez pas l'autorisation d'enregistrer dans ce dossier."
+
+#: src/raye/archive/archivewizardmodels.cpp:830
+#, kde-format
+msgctxt "@info"
+msgid "There's already a file with this name."
+msgstr "Un fichier porte déjà ce nom."
+
+#: src/raye/archive/archivewizardmodels.cpp:832
+#, kde-format
+msgctxt "@info"
+msgid "The passwords don't match."
+msgstr "Les mots de passe ne correspondent pas."
+
+#: src/raye/archive/archivewizardmodels.cpp:834
+#, kde-format
+msgctxt "@info"
+msgid "Enter a part size like 250 MB."
+msgstr "Indiquez une taille de partie, par exemple 250 Mo."
+
+#: src/raye/archive/archivewizardmodels.cpp:836
+#, kde-format
+msgctxt "@info"
+msgid "An archive split into parts can't be updated. Create a new one."
+msgstr ""
+"Une archive découpée en parties ne peut pas être mise à jour. Créez-en une "
+"nouvelle."
+
+#: src/raye/archive/archivewizards.cpp:136
+#: src/raye/archive/archivewizards.cpp:304 src/raye/jobs/dialogs.cpp:315
+#: src/raye/options/folderoptionsdialog.cpp:45
+#: src/raye/portal/filedialog.cpp:511
+#: src/raye/properties/propertiesdialog.cpp:49
+#, kde-format
+msgctxt "@action:button"
+msgid "OK"
+msgstr "OK"
+
+#: src/raye/archive/archivewizards.cpp:143
+#, kde-format
+msgctxt "@title:window"
+msgid "Select a folder"
+msgstr "Sélectionner un dossier"
+
+#: src/raye/archive/archivewizards.cpp:205
+#, kde-format
+msgctxt "@title:window"
+msgid "Can't extract the files"
+msgstr "Impossible d'extraire les fichiers"
+
+#: src/raye/archive/archivewizards.cpp:225
+#, kde-format
+msgctxt "@title:window"
+msgid "Can't create the archive"
+msgstr "Impossible de créer l'archive"
+
+#: src/raye/archive/archivewizards.cpp:272
+#, kde-format
+msgctxt "@title:window"
+msgid "Extract compressed (zipped) folders"
+msgstr "Extraire des dossiers compressés"
+
+#: src/raye/archive/archivewizards.cpp:276
+#, kde-format
+msgctxt "@action:button"
+msgid "Extract"
+msgstr "Extraire"
+
+#: src/raye/archive/archivewizards.cpp:277
+#: src/raye/archive/archivewizards.cpp:292
+#: src/raye/archive/archivewizards.cpp:305
+#: src/raye/archive/archivewizards.cpp:441
+#: src/raye/archive/archivewizards.cpp:538 src/raye/jobs/adminaccess.cpp:121
+#: src/raye/jobs/adminaccess.cpp:130 src/raye/jobs/dialogs.cpp:153
+#: src/raye/jobs/dialogs.cpp:251 src/raye/jobs/dialogs.cpp:307
+#: src/raye/jobs/dialogs.cpp:311 src/raye/netdrive/mapdrivedialog.cpp:186
+#: src/raye/openwith/openwithdialog.cpp:135
+#: src/raye/options/folderoptionsdialog.cpp:47
+#: src/raye/portal/filedialog.cpp:340 src/raye/portal/filedialog.cpp:660
+#: src/raye/properties/propertiesdialog.cpp:51
+#: src/raye/qml/jobs/ProgressPage.qml:115
+#: src/raye/qml/jobs/ProgressPage.qml:202
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "Annuler"
+
+#: src/raye/archive/archivewizards.cpp:287
+#, kde-format
+msgctxt "@title:window"
+msgid "Add to archive"
+msgstr "Ajouter à l'archive"
+
+#: src/raye/archive/archivewizards.cpp:291 src/raye/portal/filedialog.cpp:659
+#, kde-format
+msgctxt "@action:button"
+msgid "Create"
+msgstr "Créer"
+
+#: src/raye/archive/archivewizards.cpp:300
+#, kde-format
+msgctxt "@title:window"
+msgid "Enter password"
+msgstr "Entrer le mot de passe"
+
+#: src/raye/archive/archivewizards.cpp:438
+#: src/raye/archive/archivewizards.cpp:535
+#, kde-format
+msgctxt "@title:window"
+msgid "Extract anyway?"
+msgstr "Extraire quand même ?"
+
+#: src/raye/archive/archivewizards.cpp:440
+#: src/raye/archive/archivewizards.cpp:537
+#, kde-format
+msgctxt "@action:button"
+msgid "Extract anyway"
+msgstr "Extraire quand même"
+
+#: src/raye/commandbar/commandbar.cpp:128
+#, kde-format
+msgctxt "@info accessible name of the command bar"
+msgid "Commands"
+msgstr "Commandes"
+
+#: src/raye/commandbar/commandbar.cpp:182
+#, kde-format
+msgctxt "@action:button make a new folder or file"
+msgid "New"
+msgstr "Nouveau"
+
+#: src/raye/commandbar/commandbar.cpp:183
+#, kde-format
+msgctxt "@action:button"
+msgid "Cut"
+msgstr "Couper"
+
+#: src/raye/commandbar/commandbar.cpp:184
+#, kde-format
+msgctxt "@action:button"
+msgid "Copy"
+msgstr "Copier"
+
+#: src/raye/commandbar/commandbar.cpp:185
+#, kde-format
+msgctxt "@action:button"
+msgid "Paste"
+msgstr "Coller"
+
+#: src/raye/commandbar/commandbar.cpp:186
+#, kde-format
+msgctxt "@action:button"
+msgid "Rename"
+msgstr "Renommer"
+
+#: src/raye/commandbar/commandbar.cpp:187 src/raye/preview/detailspane.cpp:98
+#, kde-format
+msgctxt "@action:button"
+msgid "Share"
+msgstr "Partager"
+
+#: src/raye/commandbar/commandbar.cpp:188
+#, kde-format
+msgctxt "@action:button send to the Recycle Bin"
+msgid "Delete"
+msgstr "Supprimer"
+
+#: src/raye/commandbar/commandbar.cpp:189
+#, kde-format
+msgctxt "@action:button sort the items"
+msgid "Sort"
+msgstr "Trier"
+
+#: src/raye/commandbar/commandbar.cpp:190
+#, kde-format
+msgctxt "@action:button how the items are shown"
+msgid "View"
+msgstr "Afficher"
+
+#: src/raye/commandbar/commandbar.cpp:233
+#, kde-format
+msgctxt "@action:button more commands"
+msgid "See more"
+msgstr "Voir plus"
+
+#: src/raye/commandbar/commandbar.cpp:241
+#, kde-format
+msgctxt "@action:button show or hide the details pane"
+msgid "Details"
+msgstr "Détails"
+
+#: src/raye/commandbar/commandbar.cpp:707 src/raye/menu/compactmenu.cpp:285
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Undo"
+msgstr "Annuler"
+
+#: src/raye/commandbar/commandbar.cpp:708
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Redo"
+msgstr "Rétablir"
+
+#: src/raye/commandbar/commandbar.cpp:710
+#, kde-format
+msgctxt "@action:inmenu add the folder to the navigation pane"
+msgid "Pin to Quick access"
+msgstr "Épingler dans Accès rapide"
+
+#: src/raye/commandbar/commandbar.cpp:711
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Select all"
+msgstr "Tout sélectionner"
+
+#: src/raye/commandbar/commandbar.cpp:712
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Select none"
+msgstr "Ne rien sélectionner"
+
+#: src/raye/commandbar/commandbar.cpp:713
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Invert selection"
+msgstr "Inverser la sélection"
+
+#: src/raye/commandbar/commandbar.cpp:715 src/raye/menu/compactmenu.cpp:287
+#: src/raye/navpane/navigationpane.cpp:561
+#: src/raye/qml/components/ItemMenu.qml:93
+#: src/raye/qml/thispc/DriveTile.qml:120
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Properties"
+msgstr "Propriétés"
+
+#: src/raye/commandbar/commandbar.cpp:716
+#: src/raye/commandbar/commandbar.cpp:717
+#, kde-format
+msgctxt "@action:inmenu folder options"
+msgid "Options"
+msgstr "Options"
+
+#: src/raye/commandbar/commandbar.cpp:719 src/raye/menu/compactmenu.cpp:276
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open in Terminal"
+msgstr "Ouvrir dans le terminal"
+
+#: src/raye/commandbar/commandbar.cpp:742
+#, kde-format
+msgctxt "@action:inmenu sort by"
+msgid "Name"
+msgstr "Nom"
+
+#: src/raye/commandbar/commandbar.cpp:743
+#, kde-format
+msgctxt "@action:inmenu sort by"
+msgid "Date modified"
+msgstr "Modifié le"
+
+#: src/raye/commandbar/commandbar.cpp:744
+#, kde-format
+msgctxt "@action:inmenu sort by"
+msgid "Type"
+msgstr "Type"
+
+#: src/raye/commandbar/commandbar.cpp:745
+#, kde-format
+msgctxt "@action:inmenu sort by"
+msgid "Size"
+msgstr "Taille"
+
+#: src/raye/commandbar/commandbar.cpp:769
+#, kde-format
+msgctxt "@action:inmenu other ways to sort"
+msgid "More"
+msgstr "Plus"
+
+#: src/raye/commandbar/commandbar.cpp:783
+#, kde-format
+msgctxt "@action:inmenu sort order"
+msgid "Ascending"
+msgstr "Croissant"
+
+#: src/raye/commandbar/commandbar.cpp:787
+#, kde-format
+msgctxt "@action:inmenu sort order"
+msgid "Descending"
+msgstr "Décroissant"
+
+#: src/raye/commandbar/commandbar.cpp:796 src/raye/menu/compactmenu.cpp:283
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Group by"
+msgstr "Regrouper par"
+
+#: src/raye/commandbar/commandbar.cpp:799
+#, kde-format
+msgctxt "@action:inmenu no groups"
+msgid "(None)"
+msgstr "(Aucun)"
+
+#: src/raye/commandbar/commandbar.cpp:842
+#, kde-format
+msgctxt "@action:inmenu view mode"
+msgid "Extra large icons"
+msgstr "Très grandes icônes"
+
+#: src/raye/commandbar/commandbar.cpp:843
+#, kde-format
+msgctxt "@action:inmenu view mode"
+msgid "Large icons"
+msgstr "Grandes icônes"
+
+#: src/raye/commandbar/commandbar.cpp:844
+#, kde-format
+msgctxt "@action:inmenu view mode"
+msgid "Medium icons"
+msgstr "Icônes moyennes"
+
+#: src/raye/commandbar/commandbar.cpp:845
+#, kde-format
+msgctxt "@action:inmenu view mode"
+msgid "Small icons"
+msgstr "Petites icônes"
+
+#: src/raye/commandbar/commandbar.cpp:846
+#: src/raye/commandbar/commandbar.cpp:863 src/raye/portal/filedialog.cpp:184
+#, kde-format
+msgctxt "@action:inmenu view mode"
+msgid "List"
+msgstr "Liste"
+
+#: src/raye/commandbar/commandbar.cpp:847
+#: src/raye/commandbar/commandbar.cpp:864 src/raye/portal/filedialog.cpp:182
+#, kde-format
+msgctxt "@action:inmenu view mode"
+msgid "Details"
+msgstr "Détails"
+
+#: src/raye/commandbar/commandbar.cpp:848
+#, kde-format
+msgctxt "@action:inmenu view mode"
+msgid "Tiles"
+msgstr "Mosaïques"
+
+#: src/raye/commandbar/commandbar.cpp:849
+#, kde-format
+msgctxt "@action:inmenu view mode"
+msgid "Content"
+msgstr "Contenu"
+
+#: src/raye/commandbar/commandbar.cpp:862 src/raye/portal/filedialog.cpp:183
+#, kde-format
+msgctxt "@action:inmenu view mode"
+msgid "Icons"
+msgstr "Icônes"
+
+#: src/raye/commandbar/commandbar.cpp:878
+#, kde-format
+msgctxt "@action:inmenu less space between items"
+msgid "Compact view"
+msgstr "Affichage compact"
+
+#: src/raye/commandbar/commandbar.cpp:880
+#, kde-format
+msgctxt "@action:inmenu show or hide parts of the window"
+msgid "Show"
+msgstr "Afficher"
+
+#: src/raye/commandbar/commandbar.cpp:881
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Navigation pane"
+msgstr "Volet de navigation"
+
+#: src/raye/commandbar/commandbar.cpp:882
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Details pane"
+msgstr "Volet des détails"
+
+#: src/raye/commandbar/commandbar.cpp:883
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Preview pane"
+msgstr "Volet de visualisation"
+
+#: src/raye/commandbar/commandbar.cpp:884
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Item check boxes"
+msgstr "Cases à cocher des éléments"
+
+#: src/raye/commandbar/commandbar.cpp:885
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "File name extensions"
+msgstr "Extensions de noms de fichiers"
+
+#: src/raye/commandbar/commandbar.cpp:886 src/raye/portal/filedialog.cpp:186
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Hidden items"
+msgstr "Éléments masqués"
+
+#: src/raye/commandbar/commandbar.cpp:912
+#, kde-format
+msgctxt "@action:inmenu a new shortcut to a file"
+msgid "Shortcut"
+msgstr "Raccourci"
+
+#: src/raye/commandbar/commandbar.cpp:922
+#, kde-format
+msgctxt "@action:inmenu a new folder"
+msgid "Folder"
+msgstr "Dossier"
+
+#: src/raye/commandbar/commandbar.cpp:926
+#, kde-format
+msgctxt "@action:inmenu a new empty text file"
+msgid "Text document"
+msgstr "Document texte"
+
+#: src/raye/commandbar/commandbar.cpp:933
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Compressed (zipped) folder"
+msgstr "Dossier compressé"
+
+#: src/raye/commandbar/defaultsets.cpp:209
+#, kde-format
+msgctxt "@action:button"
+msgid "Empty Recycle Bin"
+msgstr "Vider la Corbeille"
+
+#: src/raye/commandbar/defaultsets.cpp:216
+#, kde-format
+msgctxt "@action:button"
+msgid "Restore all items"
+msgstr "Restaurer tous les éléments"
+
+#: src/raye/commandbar/defaultsets.cpp:223
+#, kde-format
+msgctxt "@action:button"
+msgid "Restore the selected items"
+msgstr "Restaurer les éléments sélectionnés"
+
+#: src/raye/commandbar/defaultsets.cpp:237
+#, kde-format
+msgctxt "@action:button"
+msgid "Map network drive"
+msgstr "Connecter un lecteur réseau"
+
+#: src/raye/commandbar/defaultsets.cpp:250
+#, kde-format
+msgctxt "@action:button open the Settings app"
+msgid "Open Settings"
+msgstr "Ouvrir les Paramètres"
+
+#: src/raye/commandbar/defaultsets.cpp:265
+#, kde-format
+msgctxt "@action:button use the selected picture as the desktop background"
+msgid "Set as background"
+msgstr "Choisir comme arrière-plan"
+
+#: src/raye/commandbar/defaultsets.cpp:279
+#, kde-format
+msgctxt "@action:button"
+msgid "Rotate left"
+msgstr "Faire pivoter à gauche"
+
+#: src/raye/commandbar/defaultsets.cpp:287
+#, kde-format
+msgctxt "@action:button"
+msgid "Rotate right"
+msgstr "Faire pivoter à droite"
+
+#: src/raye/commandbar/defaultsets.cpp:297
+#, kde-format
+msgctxt "@action:button eject a drive or disc"
+msgid "Eject"
+msgstr "Éjecter"
+
+#: src/raye/commandbar/defaultsets.cpp:312
+#, kde-format
+msgctxt "@action:button erase a drive and prepare it"
+msgid "Format"
+msgstr "Formater"
+
+#: src/raye/jobs/adminaccess.cpp:117
+#, kde-format
+msgctxt "@title:window"
+msgid "File access"
+msgstr "Accès au fichier"
+
+#: src/raye/jobs/adminaccess.cpp:117
+#, kde-format
+msgctxt "@title:window"
+msgid "Folder access"
+msgstr "Accès au dossier"
+
+#: src/raye/jobs/adminaccess.cpp:118
+#, kde-format
+msgctxt "@info"
+msgid ""
+"You don't currently have permission to access this folder.\n"
+"\n"
+"Select Continue to get access."
+msgstr ""
+"Vous n'avez pas l'autorisation d'accéder à ce dossier pour le moment.\n"
+"\n"
+"Sélectionnez Continuer pour y accéder."
+
+#: src/raye/jobs/adminaccess.cpp:119
+#, kde-format
+msgctxt "@info"
+msgid ""
+"You don't currently have permission to access this file.\n"
+"\n"
+"Select Continue to get access."
+msgstr ""
+"Vous n'avez pas l'autorisation d'accéder à ce fichier pour le moment.\n"
+"\n"
+"Sélectionnez Continuer pour y accéder."
+
+#: src/raye/jobs/adminaccess.cpp:120 src/raye/jobs/adminaccess.cpp:128
+#: src/raye/jobs/dialogs.cpp:179 src/raye/jobs/dialogs.cpp:310
+#, kde-format
+msgctxt "@action:button"
+msgid "Continue"
+msgstr "Continuer"
+
+#: src/raye/jobs/adminaccess.cpp:129 src/raye/jobs/dialogs.cpp:250
+#: src/raye/qml/jobs/ProgressPage.qml:197
+#, kde-format
+msgctxt "@action:button"
+msgid "Skip"
+msgstr "Ignorer"
+
+#: src/raye/jobs/adminaccess.cpp:131
+#, kde-format
+msgctxt "@title:window"
+msgid "File Access Denied"
+msgstr "Accès au fichier refusé"
+
+#: src/raye/jobs/adminaccess.cpp:131
+#, kde-format
+msgctxt "@title:window"
+msgid "Folder Access Denied"
+msgstr "Accès au dossier refusé"
+
+#: src/raye/jobs/adminaccess.cpp:134 src/raye/jobs/adminaccess.cpp:138
+#: src/raye/jobs/adminaccess.cpp:142 src/raye/jobs/adminaccess.cpp:146
+#, kde-format
+msgctxt "@title:window"
+msgid "Destination Folder Access Denied"
+msgstr "Accès au dossier de destination refusé"
+
+#: src/raye/jobs/adminaccess.cpp:135
+#, kde-format
+msgctxt "@info"
+msgid "You'll need to provide administrator permission to copy to this folder."
+msgstr ""
+"Vous devez fournir une autorisation d'administrateur pour copier dans ce "
+"dossier."
+
+#: src/raye/jobs/adminaccess.cpp:139
+#, kde-format
+msgctxt "@info"
+msgid "You'll need to provide administrator permission to move to this folder."
+msgstr ""
+"Vous devez fournir une autorisation d'administrateur pour déplacer vers ce "
+"dossier."
+
+#: src/raye/jobs/adminaccess.cpp:143
+#, kde-format
+msgctxt "@info"
+msgid ""
+"You'll need to provide administrator permission to create a link in this "
+"folder."
+msgstr ""
+"Vous devez fournir une autorisation d'administrateur pour créer un lien dans "
+"ce dossier."
+
+#: src/raye/jobs/adminaccess.cpp:147
+#, kde-format
+msgctxt "@info"
+msgid "You'll need to provide administrator permission to create this folder."
+msgstr ""
+"Vous devez fournir une autorisation d'administrateur pour créer ce dossier."
+
+#: src/raye/jobs/adminaccess.cpp:152
+#, kde-format
+msgctxt "@info"
+msgid "You'll need to provide administrator permission to delete these items."
+msgstr ""
+"Vous devez fournir une autorisation d'administrateur pour supprimer ces "
+"éléments."
+
+#: src/raye/jobs/adminaccess.cpp:153
+#, kde-format
+msgctxt "@info"
+msgid "You'll need to provide administrator permission to delete this folder."
+msgstr ""
+"Vous devez fournir une autorisation d'administrateur pour supprimer ce "
+"dossier."
+
+#: src/raye/jobs/adminaccess.cpp:154
+#, kde-format
+msgctxt "@info"
+msgid "You'll need to provide administrator permission to delete this file."
+msgstr ""
+"Vous devez fournir une autorisation d'administrateur pour supprimer ce "
+"fichier."
+
+#: src/raye/jobs/adminaccess.cpp:158
+#, kde-format
+msgctxt "@info"
+msgid "You'll need to provide administrator permission to rename this folder."
+msgstr ""
+"Vous devez fournir une autorisation d'administrateur pour renommer ce "
+"dossier."
+
+#: src/raye/jobs/adminaccess.cpp:159
+#, kde-format
+msgctxt "@info"
+msgid "You'll need to provide administrator permission to rename this file."
+msgstr ""
+"Vous devez fournir une autorisation d'administrateur pour renommer ce "
+"fichier."
+
+#: src/raye/jobs/askuserlogic.cpp:177
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete file"
+msgstr "Supprimer le fichier"
+
+#: src/raye/jobs/askuserlogic.cpp:177
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete folder"
+msgstr "Supprimer le dossier"
+
+#: src/raye/jobs/askuserlogic.cpp:179
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete multiple items"
+msgstr "Supprimer plusieurs éléments"
+
+#: src/raye/jobs/askuserlogic.cpp:181
+#, kde-format
+msgctxt "@action:button"
+msgid "Yes"
+msgstr "Oui"
+
+#: src/raye/jobs/askuserlogic.cpp:185
+#, kde-format
+msgctxt "@info"
+msgid "Are you sure you want to move this folder to the Recycle Bin?"
+msgstr "Voulez-vous vraiment déplacer ce dossier vers la Corbeille ?"
+
+#: src/raye/jobs/askuserlogic.cpp:186
+#, kde-format
+msgctxt "@info"
+msgid "Are you sure you want to move this file to the Recycle Bin?"
+msgstr "Voulez-vous vraiment déplacer ce fichier vers la Corbeille ?"
+
+#: src/raye/jobs/askuserlogic.cpp:188
+#, kde-format
+msgctxt "@info"
+msgid "Are you sure you want to move this item to the Recycle Bin?"
+msgid_plural "Are you sure you want to move these %1 items to the Recycle Bin?"
+msgstr[0] "Voulez-vous vraiment déplacer cet élément vers la Corbeille ?"
+msgstr[1] "Voulez-vous vraiment déplacer ces %1 éléments vers la Corbeille ?"
+
+#: src/raye/jobs/askuserlogic.cpp:193
+#, kde-format
+msgctxt "@info"
+msgid ""
+"This item is too big for the Recycle Bin. Do you want to permanently delete "
+"it?"
+msgid_plural ""
+"These %1 items are too big for the Recycle Bin. Do you want to permanently "
+"delete them?"
+msgstr[0] ""
+"Cet élément est trop volumineux pour la Corbeille. Voulez-vous le supprimer "
+"définitivement ?"
+msgstr[1] ""
+"Ces %1 éléments sont trop volumineux pour la Corbeille. Voulez-vous les "
+"supprimer définitivement ?"
+
+#: src/raye/jobs/askuserlogic.cpp:199
+#, kde-format
+msgctxt "@info"
+msgid ""
+"This item can't be moved to the Recycle Bin. Do you want to permanently "
+"delete it?"
+msgid_plural ""
+"These %1 items can't be moved to the Recycle Bin. Do you want to permanently "
+"delete them?"
+msgstr[0] ""
+"Cet élément ne peut pas être déplacé vers la Corbeille. Voulez-vous le "
+"supprimer définitivement ?"
+msgstr[1] ""
+"Ces %1 éléments ne peuvent pas être déplacés vers la Corbeille. Voulez-vous "
+"les supprimer définitivement ?"
+
+#: src/raye/jobs/askuserlogic.cpp:204
+#, kde-format
+msgctxt "@title:window"
+msgid "Empty Recycle Bin"
+msgstr "Vider la Corbeille"
+
+#: src/raye/jobs/askuserlogic.cpp:206 src/raye/jobs/askuserlogic.cpp:216
+#, kde-format
+msgctxt "@info"
+msgid "Are you sure you want to permanently delete this item?"
+msgid_plural "Are you sure you want to permanently delete these %1 items?"
+msgstr[0] "Voulez-vous vraiment supprimer définitivement cet élément ?"
+msgstr[1] "Voulez-vous vraiment supprimer définitivement ces %1 éléments ?"
+
+#: src/raye/jobs/askuserlogic.cpp:208
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Are you sure you want to permanently delete everything in the Recycle Bin?"
+msgstr ""
+"Voulez-vous vraiment supprimer définitivement tout le contenu de la "
+"Corbeille ?"
+
+#: src/raye/jobs/askuserlogic.cpp:213
+#, kde-format
+msgctxt "@info"
+msgid "Are you sure you want to permanently delete this folder?"
+msgstr "Voulez-vous vraiment supprimer définitivement ce dossier ?"
+
+#: src/raye/jobs/askuserlogic.cpp:214
+#, kde-format
+msgctxt "@info"
+msgid "Are you sure you want to permanently delete this file?"
+msgstr "Voulez-vous vraiment supprimer définitivement ce fichier ?"
+
+#: src/raye/jobs/dialogs.cpp:133
+#, kde-format
+msgctxt "@title:window"
+msgid "Merge folders"
+msgstr "Fusionner les dossiers"
+
+#: src/raye/jobs/dialogs.cpp:133
+#, kde-format
+msgctxt "@title:window"
+msgid "Replace or skip files"
+msgstr "Remplacer ou ignorer des fichiers"
+
+#: src/raye/jobs/dialogs.cpp:216
+#, kde-format
+msgctxt "@label item type"
+msgid "File folder"
+msgstr "Dossier de fichiers"
+
+#: src/raye/jobs/dialogs.cpp:229
+#, kde-format
+msgctxt "@action:button"
+msgid "No"
+msgstr "Non"
+
+#: src/raye/jobs/dialogs.cpp:242
+#, kde-format
+msgctxt "@title:window"
+msgid "Something went wrong"
+msgstr "Un problème est survenu"
+
+#: src/raye/jobs/dialogs.cpp:248 src/raye/qml/jobs/ProgressPage.qml:192
+#, kde-format
+msgctxt "@action:button"
+msgid "Try again"
+msgstr "Réessayer"
+
+#: src/raye/jobs/dialogs.cpp:290
+#, kde-format
+msgctxt "@title:window"
+msgid "Files"
+msgstr "Fichiers"
+
+#: src/raye/jobs/jobsmodel.cpp:31
+#, kde-format
+msgctxt "@info"
+msgid "Copying %1 item from %2 to %3"
+msgid_plural "Copying %1 items from %2 to %3"
+msgstr[0] "Copie de %1 élément de %2 vers %3"
+msgstr[1] "Copie de %1 éléments de %2 vers %3"
+
+#: src/raye/jobs/jobsmodel.cpp:34
+#, kde-format
+msgctxt "@info"
+msgid "Copying %1 item to %2"
+msgid_plural "Copying %1 items to %2"
+msgstr[0] "Copie de %1 élément vers %2"
+msgstr[1] "Copie de %1 éléments vers %2"
+
+#: src/raye/jobs/jobsmodel.cpp:36
+#, kde-format
+msgctxt "@info"
+msgid "Copying %1 item"
+msgid_plural "Copying %1 items"
+msgstr[0] "Copie de %1 élément"
+msgstr[1] "Copie de %1 éléments"
+
+#: src/raye/jobs/jobsmodel.cpp:39
+#, kde-format
+msgctxt "@info"
+msgid "Moving %1 item from %2 to %3"
+msgid_plural "Moving %1 items from %2 to %3"
+msgstr[0] "Déplacement de %1 élément de %2 vers %3"
+msgstr[1] "Déplacement de %1 éléments de %2 vers %3"
+
+#: src/raye/jobs/jobsmodel.cpp:42
+#, kde-format
+msgctxt "@info"
+msgid "Moving %1 item to %2"
+msgid_plural "Moving %1 items to %2"
+msgstr[0] "Déplacement de %1 élément vers %2"
+msgstr[1] "Déplacement de %1 éléments vers %2"
+
+#: src/raye/jobs/jobsmodel.cpp:44
+#, kde-format
+msgctxt "@info"
+msgid "Moving %1 item"
+msgid_plural "Moving %1 items"
+msgstr[0] "Déplacement de %1 élément"
+msgstr[1] "Déplacement de %1 éléments"
+
+#: src/raye/jobs/jobsmodel.cpp:47
+#, kde-format
+msgctxt "@info"
+msgid "Creating %1 shortcut in %2"
+msgid_plural "Creating %1 shortcuts in %2"
+msgstr[0] "Création de %1 raccourci dans %2"
+msgstr[1] "Création de %1 raccourcis dans %2"
+
+#: src/raye/jobs/jobsmodel.cpp:49
+#, kde-format
+msgctxt "@info"
+msgid "Creating %1 shortcut"
+msgid_plural "Creating %1 shortcuts"
+msgstr[0] "Création de %1 raccourci"
+msgstr[1] "Création de %1 raccourcis"
+
+#: src/raye/jobs/jobsmodel.cpp:52
+#, kde-format
+msgctxt "@info"
+msgid "Deleting %1 item from %2"
+msgid_plural "Deleting %1 items from %2"
+msgstr[0] "Suppression de %1 élément de %2"
+msgstr[1] "Suppression de %1 éléments de %2"
+
+#: src/raye/jobs/jobsmodel.cpp:54
+#, kde-format
+msgctxt "@info"
+msgid "Deleting %1 item"
+msgid_plural "Deleting %1 items"
+msgstr[0] "Suppression de %1 élément"
+msgstr[1] "Suppression de %1 éléments"
+
+#: src/raye/jobs/jobsmodel.cpp:57
+#, kde-format
+msgctxt "@info"
+msgid "Permanently deleting %1 item from %2"
+msgid_plural "Permanently deleting %1 items from %2"
+msgstr[0] "Suppression définitive de %1 élément de %2"
+msgstr[1] "Suppression définitive de %1 éléments de %2"
+
+#: src/raye/jobs/jobsmodel.cpp:59
+#, kde-format
+msgctxt "@info"
+msgid "Permanently deleting %1 item"
+msgid_plural "Permanently deleting %1 items"
+msgstr[0] "Suppression définitive de %1 élément"
+msgstr[1] "Suppression définitive de %1 éléments"
+
+#: src/raye/jobs/jobsmodel.cpp:63
+#, kde-format
+msgctxt "@info"
+msgid "Working on your files"
+msgstr "Traitement de vos fichiers"
+
+#: src/raye/jobs/jobsmodel.cpp:72 src/raye/locations/locationnames.cpp:109
+#: src/raye/pages/homemodel.cpp:38
+#, kde-format
+msgctxt "@label the trash"
+msgid "Recycle Bin"
+msgstr "Corbeille"
+
+#: src/raye/jobs/jobsmodel.cpp:77 src/raye/pages/homemodel.cpp:52
+#, kde-format
+msgctxt "@label the home folder"
+msgid "Home"
+msgstr "Accueil"
+
+#: src/raye/jobs/jobsmodel.cpp:80 src/raye/pages/homemodel.cpp:55
+#, kde-format
+msgctxt "@label the whole computer"
+msgid "This PC"
+msgstr "Ce PC"
+
+#: src/raye/jobs/jobsmodel.cpp:93
+#, kde-format
+msgctxt "@info items left, then their size"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: src/raye/jobs/jobsmodel.cpp:145
+#, kde-format
+msgctxt "@info progress"
+msgid "Paused - %1% complete"
+msgstr "En pause - %1 % terminé"
+
+#: src/raye/jobs/jobsmodel.cpp:147
+#, kde-format
+msgctxt "@info progress"
+msgid "%1% complete"
+msgstr "%1 % terminé"
+
+#: src/raye/jobs/jobsmodel.cpp:156
+#, kde-format
+msgctxt "@info"
+msgid "Speed: %1"
+msgstr "Vitesse : %1"
+
+#: src/raye/jobs/progresswindow.cpp:68
+#, kde-format
+msgctxt "@title:window progress of file operations"
+msgid "%1% complete"
+msgstr "%1 % terminé"
+
+#: src/raye/jobs/speedsampler.cpp:189
+#, kde-format
+msgctxt "@info speed of a copy, %1 is like 112 MB"
+msgid "%1/s"
+msgstr "%1/s"
+
+#: src/raye/jobs/speedsampler.cpp:195
+#, kde-format
+msgctxt "@info time left"
+msgid "Calculating…"
+msgstr "Calcul en cours…"
+
+#: src/raye/jobs/speedsampler.cpp:199
+#, kde-format
+msgctxt "@info time left"
+msgid "A few seconds"
+msgstr "Quelques secondes"
+
+#: src/raye/jobs/speedsampler.cpp:204
+#, kde-format
+msgctxt "@info time left"
+msgid "About %1 second"
+msgid_plural "About %1 seconds"
+msgstr[0] "Environ %1 seconde"
+msgstr[1] "Environ %1 secondes"
+
+#: src/raye/jobs/speedsampler.cpp:208
+#, kde-format
+msgctxt "@info time left"
+msgid "About %1 minute"
+msgid_plural "About %1 minutes"
+msgstr[0] "Environ %1 minute"
+msgstr[1] "Environ %1 minutes"
+
+#: src/raye/jobs/speedsampler.cpp:213
+#, kde-format
+msgctxt "@info time left"
+msgid "About %1 hour"
+msgid_plural "About %1 hours"
+msgstr[0] "Environ %1 heure"
+msgstr[1] "Environ %1 heures"
+
+#: src/raye/jobs/speedsampler.cpp:215
+#, kde-format
+msgctxt "@info"
+msgid "%1 hour"
+msgid_plural "%1 hours"
+msgstr[0] "%1 heure"
+msgstr[1] "%1 heures"
+
+#: src/raye/jobs/speedsampler.cpp:215
+#, kde-format
+msgctxt "@info"
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] "%1 minute"
+msgstr[1] "%1 minutes"
+
+#: src/raye/jobs/speedsampler.cpp:215
+#, kde-format
+msgctxt "@info time left, %1 hours and %2 minutes"
+msgid "About %1 and %2"
+msgstr "Environ %1 et %2"
+
+#: src/raye/jobs/undobar.cpp:26
+#, kde-format
+msgctxt "@info %1 is a file name"
+msgid "Deleted %1"
+msgstr "%1 supprimé"
+
+#: src/raye/jobs/undobar.cpp:28
+#, kde-format
+msgctxt "@info"
+msgid "Deleted %1 item"
+msgid_plural "Deleted %1 items"
+msgstr[0] "%1 élément supprimé"
+msgstr[1] "%1 éléments supprimés"
+
+#: src/raye/jobs/undobar.cpp:43
+#, kde-format
+msgctxt "@action:button"
+msgid "Undo"
+msgstr "Annuler"
+
+#: src/raye/kioworker/workertext.cpp:16
+#, kde-format
+msgctxt "@title:window"
+msgid "Protected archive"
+msgstr "Archive protégée"
+
+#: src/raye/kioworker/workertext.cpp:21
+#, kde-format
+msgctxt "@label the archive a password is asked for"
+msgid "Archive:"
+msgstr "Archive :"
+
+#: src/raye/kioworker/workertext.cpp:26
+#, kde-format
+msgctxt "@info"
+msgid "Files can't change a protected archive."
+msgstr "Fichiers ne peut pas modifier une archive protégée."
+
+#: src/raye/locations/locationnames.cpp:96
+#, kde-format
+msgctxt "@label the page with the drives and folders of the computer"
+msgid "This PC"
+msgstr "Ce PC"
+
+#: src/raye/locations/locationnames.cpp:101
+#, kde-format
+msgctxt "@label Files' start page"
+msgid "Home"
+msgstr "Accueil"
+
+#: src/raye/locations/locationnames.cpp:105
+#, kde-format
+msgctxt "@label the page with all pictures"
+msgid "Gallery"
+msgstr "Galerie"
+
+#: src/raye/locations/locationnames.cpp:113
+#, kde-format
+msgctxt "@label computers and shared folders on the network"
+msgid "Network"
+msgstr "Réseau"
+
+#: src/raye/locations/locationnames.cpp:117
+#, kde-format
+msgctxt "@label recently used files"
+msgid "Recent"
+msgstr "Récents"
+
+#: src/raye/locations/locationnames.cpp:135
+#, kde-format
+msgctxt "@label a drive with no name"
+msgid "Local Disk"
+msgstr "Disque local"
+
+#: src/raye/locations/locationnames.cpp:135
+#, kde-format
+msgctxt "@label a USB stick or disk with no name"
+msgid "USB Drive"
+msgstr "Lecteur USB"
+
+#: src/raye/locations/locationnames.cpp:249
+#, kde-format
+msgctxt "@label known folder"
+msgid "Desktop"
+msgstr "Bureau"
+
+#: src/raye/locations/locationnames.cpp:251
+#, kde-format
+msgctxt "@label known folder"
+msgid "Documents"
+msgstr "Documents"
+
+#: src/raye/locations/locationnames.cpp:253
+#, kde-format
+msgctxt "@label known folder"
+msgid "Downloads"
+msgstr "Téléchargements"
+
+#: src/raye/locations/locationnames.cpp:255
+#, kde-format
+msgctxt "@label known folder"
+msgid "Music"
+msgstr "Musique"
+
+#: src/raye/locations/locationnames.cpp:257
+#, kde-format
+msgctxt "@label known folder"
+msgid "Pictures"
+msgstr "Images"
+
+#: src/raye/locations/locationnames.cpp:259
+#, kde-format
+msgctxt "@label known folder"
+msgid "Videos"
+msgstr "Vidéos"
+
+#: src/raye/locations/locationnames.cpp:285
+#, kde-format
+msgctxt "@label the drive Raye is installed on"
+msgid "Raye"
+msgstr "Raye"
+
+#: src/raye/locations/locationnames.cpp:432
+#, kde-format
+msgctxt "@label phones and cameras plugged into the computer"
+msgid "Phones and cameras"
+msgstr "Téléphones et appareils photo"
+
+#: src/raye/locations/locationnames.cpp:455
+#, kde-format
+msgctxt "@label the results of a search"
+msgid "Search results"
+msgstr "Résultats de recherche"
+
+#: src/raye/locations/locationnames.cpp:459
+#, kde-format
+msgctxt "@label %1 is the folder searched"
+msgid "Search results in %1"
+msgstr "Résultats de recherche dans %1"
+
+#: src/raye/menu/compactmenu.cpp:248
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Cut"
+msgstr "Couper"
+
+#: src/raye/menu/compactmenu.cpp:249
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Copy"
+msgstr "Copier"
+
+#: src/raye/menu/compactmenu.cpp:250
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Paste"
+msgstr "Coller"
+
+#: src/raye/menu/compactmenu.cpp:251
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Rename"
+msgstr "Renommer"
+
+#: src/raye/menu/compactmenu.cpp:252
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Share"
+msgstr "Partager"
+
+#: src/raye/menu/compactmenu.cpp:253
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Delete"
+msgstr "Supprimer"
+
+#: src/raye/menu/compactmenu.cpp:254 src/raye/qml/components/ItemMenu.qml:45
+#: src/raye/qml/thispc/DriveTile.qml:65
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open"
+msgstr "Ouvrir"
+
+#: src/raye/menu/compactmenu.cpp:255
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open with"
+msgstr "Ouvrir avec"
+
+#: src/raye/menu/compactmenu.cpp:256 src/raye/navpane/navigationpane.cpp:508
+#: src/raye/qml/components/ItemMenu.qml:50 src/raye/qml/thispc/DriveTile.qml:70
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open in new tab"
+msgstr "Ouvrir dans un nouvel onglet"
+
+#: src/raye/menu/compactmenu.cpp:257 src/raye/navpane/navigationpane.cpp:511
+#: src/raye/qml/components/ItemMenu.qml:56 src/raye/qml/thispc/DriveTile.qml:76
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open in new window"
+msgstr "Ouvrir dans une nouvelle fenêtre"
+
+#: src/raye/menu/compactmenu.cpp:258 src/raye/qml/components/ItemMenu.qml:62
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open file location"
+msgstr "Ouvrir l’emplacement du fichier"
+
+#: src/raye/menu/compactmenu.cpp:259 src/raye/navpane/navigationpane.cpp:521
+#: src/raye/qml/components/ItemMenu.qml:75 src/raye/qml/thispc/DriveTile.qml:83
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Pin to Quick access"
+msgstr "Épingler dans Accès rapide"
+
+#: src/raye/menu/compactmenu.cpp:260 src/raye/navpane/navigationpane.cpp:543
+#: src/raye/qml/thispc/DriveTile.qml:90
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Map network drive…"
+msgstr "Connecter un lecteur réseau…"
+
+#: src/raye/menu/compactmenu.cpp:261 src/raye/navpane/navigationpane.cpp:533
+#: src/raye/qml/thispc/DriveTile.qml:96
+#, kde-format
+msgctxt "@action:inmenu remove a network drive"
+msgid "Disconnect"
+msgstr "Déconnecter"
+
+#: src/raye/menu/compactmenu.cpp:262 src/raye/qml/components/ItemMenu.qml:81
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Add to Favorites"
+msgstr "Ajouter aux favoris"
+
+#: src/raye/menu/compactmenu.cpp:263
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Compress to"
+msgstr "Compresser en"
+
+#: src/raye/menu/compactmenu.cpp:264
+#, kde-format
+msgctxt "@action:inmenu compress to"
+msgid "ZIP file"
+msgstr "Fichier ZIP"
+
+#: src/raye/menu/compactmenu.cpp:265
+#, kde-format
+msgctxt "@action:inmenu compress to"
+msgid "7z file"
+msgstr "Fichier 7z"
+
+#: src/raye/menu/compactmenu.cpp:266
+#, kde-format
+msgctxt "@action:inmenu compress to"
+msgid "tar.zst file"
+msgstr "Fichier tar.zst"
+
+#: src/raye/menu/compactmenu.cpp:267
+#, kde-format
+msgctxt "@action:inmenu compress to"
+msgid "Additional options…"
+msgstr "Options supplémentaires…"
+
+#: src/raye/menu/compactmenu.cpp:268
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Extract all…"
+msgstr "Extraire tout…"
+
+#: src/raye/menu/compactmenu.cpp:269
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Extract here"
+msgstr "Extraire ici"
+
+#: src/raye/menu/compactmenu.cpp:270
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Extract to a new folder"
+msgstr "Extraire dans un nouveau dossier"
+
+#: src/raye/menu/compactmenu.cpp:271 src/raye/qml/components/ItemMenu.qml:69
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Set as desktop background"
+msgstr "Choisir comme arrière-plan du Bureau"
+
+#: src/raye/menu/compactmenu.cpp:272
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Rotate right"
+msgstr "Faire pivoter à droite"
+
+#: src/raye/menu/compactmenu.cpp:273
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Rotate left"
+msgstr "Faire pivoter à gauche"
+
+#: src/raye/menu/compactmenu.cpp:274 src/raye/qml/components/ItemMenu.qml:87
+#: src/raye/qml/thispc/DriveTile.qml:114
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Copy as path"
+msgstr "Copier en tant que chemin d’accès"
+
+#: src/raye/menu/compactmenu.cpp:275
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Create shortcut"
+msgstr "Créer un raccourci"
+
+#: src/raye/menu/compactmenu.cpp:277 src/raye/qml/thispc/DriveTile.qml:102
+#, kde-format
+msgctxt "@action:inmenu eject a drive or disc"
+msgid "Eject"
+msgstr "Éjecter"
+
+#: src/raye/menu/compactmenu.cpp:278 src/raye/qml/thispc/DriveTile.qml:108
+#, kde-format
+msgctxt "@action:inmenu erase a drive and prepare it"
+msgid "Format…"
+msgstr "Formater…"
+
+#: src/raye/menu/compactmenu.cpp:279
+#, kde-format
+msgctxt "@action:inmenu put back from the Recycle Bin"
+msgid "Restore"
+msgstr "Restaurer"
+
+#: src/raye/menu/compactmenu.cpp:280 src/raye/navpane/navigationpane.cpp:554
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Empty Recycle Bin"
+msgstr "Vider la Corbeille"
+
+#: src/raye/menu/compactmenu.cpp:281
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "View"
+msgstr "Affichage"
+
+#: src/raye/menu/compactmenu.cpp:282
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Sort by"
+msgstr "Trier par"
+
+#: src/raye/menu/compactmenu.cpp:284
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Refresh"
+msgstr "Actualiser"
+
+#: src/raye/menu/compactmenu.cpp:286
+#, kde-format
+msgctxt "@action:inmenu create a new item"
+msgid "New"
+msgstr "Nouveau"
+
+#: src/raye/menu/compactmenu.cpp:288
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Show more options"
+msgstr "Afficher d’autres options"
+
+#: src/raye/menu/compactmenu.cpp:289
+#, kde-format
+msgctxt "@action:inmenu open with"
+msgid "Choose another app"
+msgstr "Choisir une autre application"
+
+#: src/raye/menu/compactmenu.cpp:290
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open as administrator"
+msgstr "Ouvrir en tant qu’administrateur"
+
+#: src/raye/menu/compactmenu.cpp:292 src/raye/navpane/navigationpane.cpp:517
+#: src/raye/qml/components/ItemMenu.qml:75 src/raye/qml/thispc/DriveTile.qml:82
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Unpin from Quick access"
+msgstr "Désépingler de l'Accès rapide"
+
+#: src/raye/menu/compactmenu.cpp:293 src/raye/qml/components/ItemMenu.qml:81
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Remove from Favorites"
+msgstr "Retirer des favoris"
+
+#: src/raye/menu/menuactions.cpp:178
+#, kde-format
+msgctxt "@action:inmenu group by"
+msgid "(None)"
+msgstr "(Aucun)"
+
+#: src/raye/menu/menuactions.cpp:190
+#, kde-format
+msgctxt "@action:inmenu group by"
+msgid "Name"
+msgstr "Nom"
+
+#: src/raye/menu/menuactions.cpp:191
+#, kde-format
+msgctxt "@action:inmenu group by"
+msgid "Date modified"
+msgstr "Modifié le"
+
+#: src/raye/menu/menuactions.cpp:192
+#, kde-format
+msgctxt "@action:inmenu group by"
+msgid "Type"
+msgstr "Type"
+
+#: src/raye/menu/menuactions.cpp:193
+#, kde-format
+msgctxt "@action:inmenu group by"
+msgid "Size"
+msgstr "Taille"
+
+#: src/raye/menu/menuplan.cpp:257
+#, kde-format
+msgctxt "@item the name of a new shortcut, %1 is the item's name"
+msgid "%1 - Shortcut"
+msgstr "%1 - Raccourci"
+
+#: src/raye/navpane/navigationmodel.cpp:193
+#, kde-format
+msgctxt "@item navigation pane"
+msgid "Home"
+msgstr "Accueil"
+
+#: src/raye/navpane/navigationmodel.cpp:194
+#, kde-format
+msgctxt "@item navigation pane"
+msgid "Gallery"
+msgstr "Galerie"
+
+#: src/raye/navpane/navigationmodel.cpp:197
+#, kde-format
+msgctxt "@item navigation pane"
+msgid "This PC"
+msgstr "Ce PC"
+
+#: src/raye/navpane/navigationmodel.cpp:201
+#, kde-format
+msgctxt "@item navigation pane"
+msgid "Network"
+msgstr "Réseau"
+
+#: src/raye/navpane/navigationmodel.cpp:203
+#: src/raye/navpane/navigationmodel.cpp:219
+#, kde-format
+msgctxt "@item navigation pane"
+msgid "Recycle Bin"
+msgstr "Corbeille"
+
+#: src/raye/navpane/navigationpane.cpp:201
+#, kde-format
+msgctxt "@info:accessible"
+msgid "Navigation pane"
+msgstr "Volet de navigation"
+
+#: src/raye/navpane/navigationpane.cpp:528
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Eject"
+msgstr "Éjecter"
+
+#: src/raye/navpane/navigationpane.cpp:693 src/raye/preview/detailsmodel.cpp:61
+#, kde-format
+msgctxt "@item the system drive"
+msgid "Raye"
+msgstr "Raye"
+
+#: src/raye/navpane/navigationpane.cpp:703
+#, kde-format
+msgctxt "@item a removable drive with no name"
+msgid "USB Drive"
+msgstr "Lecteur USB"
+
+#: src/raye/netdrive/mapdrivedialog.cpp:123
+#, kde-format
+msgctxt "@info"
+msgid "Type the folder as \\\\server\\share."
+msgstr "Tapez le dossier sous la forme \\\\serveur\\partage."
+
+#: src/raye/netdrive/mapdrivedialog.cpp:131
+#, kde-format
+msgctxt "@info"
+msgid "Pick a folder inside your home folder."
+msgstr "Choisissez un dossier dans votre dossier personnel."
+
+#: src/raye/netdrive/mapdrivedialog.cpp:137
+#, kde-format
+msgctxt "@info"
+msgid "%1 already has files in it. Pick an empty folder."
+msgstr "%1 contient déjà des fichiers. Choisissez un dossier vide."
+
+#: src/raye/netdrive/mapdrivedialog.cpp:159
+#, kde-format
+msgctxt "@info"
+msgid "%1 needs a user name and password."
+msgstr "%1 demande un nom d'utilisateur et un mot de passe."
+
+#: src/raye/netdrive/mapdrivedialog.cpp:178
+#, kde-format
+msgctxt "@title:window"
+msgid "Map network drive"
+msgstr "Connecter un lecteur réseau"
+
+#: src/raye/netdrive/mapdrivedialog.cpp:185
+#: src/raye/netdrive/mapdrivedialog.cpp:198
+#, kde-format
+msgctxt "@action:button connect the network drive"
+msgid "Finish"
+msgstr "Terminer"
+
+#: src/raye/netdrive/mapdrivedialog.cpp:198
+#, kde-format
+msgctxt "@action:button busy connecting"
+msgid "Connecting…"
+msgstr "Connexion…"
+
+#: src/raye/netdrive/mapdrivedialog.cpp:216
+#, kde-format
+msgctxt "@title:window"
+msgid "Choose where the drive goes"
+msgstr "Choisir l'emplacement du lecteur"
+
+#: src/raye/netdrive/networkdrives.cpp:341
+#, kde-format
+msgctxt "@info"
+msgid "The user name or password for %1 is not right."
+msgstr "Le nom d'utilisateur ou le mot de passe de %1 est incorrect."
+
+#: src/raye/netdrive/networkdrives.cpp:343
+#, kde-format
+msgctxt "@info"
+msgid "%1 has no shared folder with that name."
+msgstr "%1 n'a aucun dossier partagé de ce nom."
+
+#: src/raye/netdrive/networkdrives.cpp:345
+#, kde-format
+msgctxt "@info"
+msgid "Can't reach %1. Check the name and that the computer is on."
+msgstr ""
+"Impossible de joindre %1. Vérifiez le nom et que l'ordinateur est allumé."
+
+#: src/raye/netdrive/networkdrives.cpp:347
+#, kde-format
+msgctxt "@info"
+msgid "The drive needs an empty folder of yours, in your home folder."
+msgstr ""
+"Le lecteur a besoin d'un dossier vide à vous, dans votre dossier personnel."
+
+#: src/raye/netdrive/networkdrives.cpp:349
+#, kde-format
+msgctxt "@info"
+msgid "You aren't allowed to connect network drives."
+msgstr "Vous n'êtes pas autorisé à connecter des lecteurs réseau."
+
+#: src/raye/netdrive/networkdrives.cpp:353
+#, kde-format
+msgctxt "@info"
+msgid "Couldn't connect to %1."
+msgstr "Impossible de se connecter à %1."
+
+#: src/raye/netdrive/networkdrives.cpp:528
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Couldn't disconnect %1. Close the files that are open on it, then try again."
+msgstr ""
+"Impossible de déconnecter %1. Fermez les fichiers ouverts dessus, puis "
+"réessayez."
+
+#: src/raye/netdrive/reconnect/main.cpp:54
+#, kde-format
+msgctxt "@title notification"
+msgid "Couldn't reconnect all network drives"
+msgstr "Impossible de reconnecter tous les lecteurs réseau"
+
+#: src/raye/netdrive/reconnect/main.cpp:56
+#, kde-format
+msgctxt "@info notification"
+msgid "%2 isn't connected. Open Files to connect it again."
+msgid_plural "%2 aren't connected. Open Files to connect them again."
+msgstr[0] "%2 n'est pas connecté. Ouvrez Fichiers pour le reconnecter."
+msgstr[1] "%2 ne sont pas connectés. Ouvrez Fichiers pour les reconnecter."
+
+#: src/raye/openwith/openwithdialog.cpp:99
+#, kde-format
+msgctxt "@title:window"
+msgid "Select an app to open this .%1 file"
+msgstr "Choisissez une application pour ouvrir ce fichier .%1"
+
+#: src/raye/openwith/openwithdialog.cpp:99
+#, kde-format
+msgctxt "@title:window"
+msgid "Select an app to open this file"
+msgstr "Choisissez une application pour ouvrir ce fichier"
+
+#: src/raye/openwith/openwithdialog.cpp:130
+#, kde-format
+msgctxt "@action:button"
+msgid "Always"
+msgstr "Toujours"
+
+#: src/raye/openwith/openwithdialog.cpp:132
+#, kde-format
+msgctxt "@action:button"
+msgid "Just once"
+msgstr "Une seule fois"
+
+#: src/raye/openwith/openwithdialog.cpp:195
+#, kde-format
+msgctxt "@title:window"
+msgid "Look for an app on this PC"
+msgstr "Rechercher une application sur ce PC"
+
+#: src/raye/options/folderoptionsdialog.cpp:33
+#, kde-format
+msgctxt "@title:window"
+msgid "Folder options"
+msgstr "Options des dossiers"
+
+#: src/raye/options/folderoptionsdialog.cpp:46
+#: src/raye/properties/propertiesdialog.cpp:50
+#, kde-format
+msgctxt "@action:button"
+msgid "Apply"
+msgstr "Appliquer"
+
+#: src/raye/pages/host.cpp:51
+#, kde-format
+msgctxt "@title the Home page of Files"
+msgid "Home"
+msgstr "Accueil"
+
+#: src/raye/pages/host.cpp:58
+#, kde-format
+msgctxt "@title the Gallery page of Files"
+msgid "Gallery"
+msgstr "Galerie"
+
+#: src/raye/pages/host.cpp:65
+#, kde-format
+msgctxt "@title the This PC page of Files"
+msgid "This PC"
+msgstr "Ce PC"
+
+#: src/raye/pages/host.cpp:161
+#, kde-format
+msgctxt "@title:window"
+msgid "Add a folder to Gallery"
+msgstr "Ajouter un dossier à la Galerie"
+
+#: src/raye/pages/thispcmodel.cpp:51
+#, kde-format
+msgctxt "@info drive space under its name"
+msgid "%1 free of %2"
+msgstr "%1 libres sur %2"
+
+#: src/raye/pages/thispcmodel.cpp:56
+#, kde-format
+msgctxt "@item a shared folder, then the computer it is on"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: src/raye/pages/thispcmodel.cpp:172
+#, kde-format
+msgctxt "@info a network drive that is not connected right now"
+msgid "Disconnected"
+msgstr "Déconnecté"
+
+#: src/raye/pages/thispcmodel.cpp:225
+#, kde-format
+msgctxt "@title section of This PC"
+msgid "Phones and cameras"
+msgstr "Téléphones et appareils photo"
+
+#: src/raye/pages/thispcmodel.cpp:228
+#, kde-format
+msgctxt "@title section of This PC"
+msgid "Network locations"
+msgstr "Emplacements réseau"
+
+#: src/raye/pages/thispcmodel.cpp:231
+#, kde-format
+msgctxt "@title section of This PC"
+msgid "Computers on the network"
+msgstr "Ordinateurs du réseau"
+
+#: src/raye/pages/thispcmodel.cpp:233
+#, kde-format
+msgctxt "@title section of This PC"
+msgid "Devices and drives"
+msgstr "Périphériques et lecteurs"
+
+#: src/raye/portal/filedialog.cpp:79
+#, kde-format
+msgctxt "@title:window"
+msgid "Confirm Save As"
+msgstr "Confirmer l'enregistrement"
+
+#: src/raye/portal/filedialog.cpp:80
+#, kde-format
+msgctxt "@info %1 is a file name"
+msgid "%1 already exists. Do you want to replace it?"
+msgstr "%1 existe déjà. Voulez-vous le remplacer ?"
+
+#: src/raye/portal/filedialog.cpp:81
+#, kde-format
+msgctxt "@info"
+msgid "%1 file already exists. Do you want to replace it?"
+msgid_plural "%1 files already exist. Do you want to replace them?"
+msgstr[0] "%1 fichier existe déjà. Voulez-vous le remplacer ?"
+msgstr[1] "%1 fichiers existent déjà. Voulez-vous les remplacer ?"
+
+#: src/raye/portal/filedialog.cpp:82
+#, kde-format
+msgctxt "@action:button replace the file"
+msgid "Yes"
+msgstr "Oui"
+
+#: src/raye/portal/filedialog.cpp:83
+#, kde-format
+msgctxt "@action:button keep the file"
+msgid "No"
+msgstr "Non"
+
+#: src/raye/portal/filedialog.cpp:99
+#, kde-format
+msgctxt "@title:window"
+msgid "Open"
+msgstr "Ouvrir"
+
+#: src/raye/portal/filedialog.cpp:102
+#, kde-format
+msgctxt "@title:window"
+msgid "Select folder"
+msgstr "Sélectionner un dossier"
+
+#: src/raye/portal/filedialog.cpp:106
+#, kde-format
+msgctxt "@title:window"
+msgid "Save as"
+msgstr "Enregistrer sous"
+
+#: src/raye/portal/filedialog.cpp:156
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Search this folder"
+msgstr "Rechercher dans ce dossier"
+
+#: src/raye/portal/filedialog.cpp:166
+#, kde-format
+msgctxt "@action:button"
+msgid "New folder"
+msgstr "Nouveau dossier"
+
+#: src/raye/portal/filedialog.cpp:170
+#, kde-format
+msgctxt "@action:button how the files are shown"
+msgid "View"
+msgstr "Affichage"
+
+#: src/raye/portal/filedialog.cpp:245
+#, kde-format
+msgctxt "@label:textbox"
+msgid "File name:"
+msgstr "Nom du fichier :"
+
+#: src/raye/portal/filedialog.cpp:245
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Folder:"
+msgstr "Dossier :"
+
+#: src/raye/portal/filedialog.cpp:262
+#, kde-format
+msgctxt "@info"
+msgid "%1 file will be saved in the folder on screen."
+msgid_plural "%1 files will be saved in the folder on screen."
+msgstr[0] "%1 fichier sera enregistré dans le dossier à l'écran."
+msgstr[1] "%1 fichiers seront enregistrés dans le dossier à l'écran."
+
+#: src/raye/portal/filedialog.cpp:268 src/raye/portal/filedialog.cpp:278
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Save as type:"
+msgstr "Type :"
+
+#: src/raye/portal/filedialog.cpp:268
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Type of file:"
+msgstr "Type de fichier :"
+
+#: src/raye/portal/filedialog.cpp:320 src/raye/preview/detailspane.cpp:103
+#, kde-format
+msgctxt "@action:button"
+msgid "Open"
+msgstr "Ouvrir"
+
+#: src/raye/portal/filedialog.cpp:323
+#, kde-format
+msgctxt "@action:button"
+msgid "Select folder"
+msgstr "Sélectionner le dossier"
+
+#: src/raye/portal/filedialog.cpp:327
+#: src/raye/qml/archive/CompressOptionsPage.qml:370
+#, kde-format
+msgctxt "@action:button"
+msgid "Save"
+msgstr "Enregistrer"
+
+#: src/raye/portal/filedialog.cpp:525
+#, kde-format
+msgctxt "@info"
+msgid "Choose a file on this PC."
+msgstr "Choisissez un fichier de ce PC."
+
+#: src/raye/portal/filedialog.cpp:535
+#, kde-format
+msgctxt "@info %1 is a file name"
+msgid ""
+"%1\n"
+"File not found. Check the file name and try again."
+msgstr ""
+"%1\n"
+"Fichier introuvable. Vérifiez le nom du fichier et réessayez."
+
+#: src/raye/portal/filedialog.cpp:541
+#, kde-format
+msgctxt "@info"
+msgid "Choose one file."
+msgstr "Choisissez un seul fichier."
+
+#: src/raye/portal/filedialog.cpp:553
+#, kde-format
+msgctxt "@info"
+msgid "Choose one folder."
+msgstr "Choisissez un seul dossier."
+
+#: src/raye/portal/filedialog.cpp:561 src/raye/portal/filedialog.cpp:587
+#: src/raye/portal/filedialog.cpp:606
+#, kde-format
+msgctxt "@info"
+msgid "Choose a folder on this PC."
+msgstr "Choisissez un dossier de ce PC."
+
+#: src/raye/portal/filedialog.cpp:565
+#, kde-format
+msgctxt "@info %1 is a folder name"
+msgid ""
+"%1\n"
+"Folder not found. Check the name and try again."
+msgstr ""
+"%1\n"
+"Dossier introuvable. Vérifiez le nom et réessayez."
+
+#: src/raye/portal/filedialog.cpp:592
+#, kde-format
+msgctxt "@info %1 is a folder"
+msgid ""
+"%1\n"
+"Folder not found. Check the name and try again."
+msgstr ""
+"%1\n"
+"Dossier introuvable. Vérifiez le nom et réessayez."
+
+#: src/raye/portal/filedialog.cpp:655
+#, kde-format
+msgctxt "@title:window"
+msgid "New folder"
+msgstr "Nouveau dossier"
+
+#: src/raye/portal/filedialog.cpp:656
+#, kde-format
+msgctxt "@item:intext the name a new folder starts with"
+msgid "New folder"
+msgstr "Nouveau dossier"
+
+#: src/raye/portal/main.cpp:96
+#, kde-format
+msgctxt "@title the part of the system that shows Open and Save dialogs"
+msgid "File dialogs"
+msgstr "Boîtes de dialogue de fichiers"
+
+#: src/raye/portal/main.cpp:102
+#, kde-format
+msgctxt "@info:shell"
+msgid "Ask which app opens these files, then open them."
+msgstr "Demande quelle application ouvre ces fichiers, puis les ouvre."
+
+#: src/raye/portal/main.cpp:104
+#, kde-format
+msgctxt "@info:shell"
+msgid "Files to open."
+msgstr "Fichiers à ouvrir."
+
+#: src/raye/portal/request.cpp:33
+#, kde-format
+msgctxt "@item:inlistbox a file type and its name patterns"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: src/raye/preview/detailsmodel.cpp:31
+#, kde-format
+msgctxt "@item size, then the exact count of bytes"
+msgid "%1 (%2 bytes)"
+msgstr "%1 (%2 octets)"
+
+#: src/raye/preview/detailsmodel.cpp:74
+#, kde-format
+msgctxt "@item a range of dates"
+msgid "%1 – %2"
+msgstr "%1 – %2"
+
+#: src/raye/preview/detailsmodel.cpp:80
+#, kde-format
+msgctxt "@label details pane"
+msgid "Type"
+msgstr "Type"
+
+#: src/raye/preview/detailsmodel.cpp:81
+#, kde-format
+msgctxt "@label details pane"
+msgid "Size"
+msgstr "Taille"
+
+#: src/raye/preview/detailsmodel.cpp:82
+#, kde-format
+msgctxt "@label details pane"
+msgid "Location"
+msgstr "Emplacement"
+
+#: src/raye/preview/detailsmodel.cpp:83
+#, kde-format
+msgctxt "@label details pane"
+msgid "Date modified"
+msgstr "Modifié le"
+
+#: src/raye/preview/detailsmodel.cpp:84
+#, kde-format
+msgctxt "@label details pane"
+msgid "Date created"
+msgstr "Créé le"
+
+#: src/raye/preview/detailsmodel.cpp:88
+#, kde-format
+msgctxt "@label details pane"
+msgid "%1 item selected"
+msgid_plural "%1 items selected"
+msgstr[0] "%1 élément sélectionné"
+msgstr[1] "%1 éléments sélectionnés"
+
+#: src/raye/preview/detailsmodel.cpp:109
+#, kde-format
+msgctxt "@label details pane, the size of every selected file"
+msgid "Total size"
+msgstr "Taille totale"
+
+#: src/raye/preview/detailsmodel.cpp:148
+#, kde-format
+msgctxt "@item width × height in pixels"
+msgid "%1 × %2"
+msgstr "%1 × %2"
+
+#: src/raye/preview/detailsmodel.cpp:148
+#, kde-format
+msgctxt "@label details pane"
+msgid "Dimensions"
+msgstr "Dimensions"
+
+#: src/raye/preview/detailspane.cpp:114
+#, kde-format
+msgctxt "@title details pane"
+msgid "Properties"
+msgstr "Propriétés"
+
+#: src/raye/preview/previewpane.cpp:173
+#, kde-format
+msgctxt "@info font sample, a sentence with every letter"
+msgid "The quick brown fox jumps over the lazy dog. 1234567890"
+msgstr "Portez ce vieux whisky au juge blond qui fume. 1234567890"
+
+#: src/raye/preview/previewpane.cpp:440
+#, kde-format
+msgctxt "@info preview pane"
+msgid "Select a file to preview."
+msgstr "Sélectionnez un fichier pour afficher son aperçu."
+
+#: src/raye/preview/previewpane.cpp:517 src/raye/preview/previewpane.cpp:636
+#: src/raye/preview/previewpane.cpp:661 src/raye/preview/previewpane.cpp:681
+#, kde-format
+msgctxt "@info preview pane"
+msgid "No preview available."
+msgstr "Aucun aperçu disponible."
+
+#: src/raye/properties/properties.cpp:47
+#, kde-format
+msgctxt "@info file size"
+msgid "%1 byte"
+msgid_plural "%1 bytes"
+msgstr[0] "%1 octet"
+msgstr[1] "%1 octets"
+
+#: src/raye/properties/properties.cpp:94
+#, kde-format
+msgctxt "@label owner of a file: the person using the computer"
+msgid "You"
+msgstr "Vous"
+
+#: src/raye/properties/properties.cpp:97
+#, kde-format
+msgctxt "@label owner of a file: the system"
+msgid "System"
+msgstr "Système"
+
+#: src/raye/properties/properties.cpp:144
+#, kde-format
+msgctxt "@info size of a file, then its exact size"
+msgid "%2 (%3 byte)"
+msgid_plural "%2 (%3 bytes)"
+msgstr[0] "%2 (%3 octet)"
+msgstr[1] "%2 (%3 octets)"
+
+#: src/raye/properties/properties.cpp:150
+#, kde-format
+msgctxt "@info what a folder holds, e.g. 12 files, 3 folders"
+msgid "%1, %2"
+msgstr "%1, %2"
+
+#: src/raye/properties/properties.cpp:151
+#, kde-format
+msgctxt "@info"
+msgid "%1 file"
+msgid_plural "%1 files"
+msgstr[0] "%1 fichier"
+msgstr[1] "%1 fichiers"
+
+#: src/raye/properties/properties.cpp:152
+#, kde-format
+msgctxt "@info"
+msgid "%1 folder"
+msgid_plural "%1 folders"
+msgstr[0] "%1 dossier"
+msgstr[1] "%1 dossiers"
+
+#: src/raye/properties/properties.cpp:178
+#, kde-format
+msgctxt "@info a date then a time"
+msgid "%1, %2"
+msgstr "%1 à %2"
+
+#: src/raye/properties/properties.cpp:222
+#, kde-format
+msgctxt "@label size of a picture or video in pixels"
+msgid "Dimensions"
+msgstr "Dimensions"
+
+#: src/raye/properties/properties.cpp:232
+#: src/raye/properties/properties.cpp:246
+#, kde-format
+msgctxt "@info width x height"
+msgid "%1 x %2"
+msgstr "%1 x %2"
+
+#: src/raye/properties/properties.cpp:322
+#, kde-format
+msgctxt "@info type of a drive"
+msgid "Local Disk"
+msgstr "Disque local"
+
+#: src/raye/properties/properties.cpp:334
+#, kde-format
+msgctxt "@info type of a folder"
+msgid "File folder"
+msgstr "Dossier de fichiers"
+
+#: src/raye/properties/properties.cpp:338
+#, kde-format
+msgctxt "@info file type, then its extension"
+msgid "%1 (.%2)"
+msgstr "%1 (.%2)"
+
+#: src/raye/properties/properties.cpp:352
+#, kde-format
+msgctxt "@info several files chosen"
+msgid "%1 item"
+msgid_plural "%1 items"
+msgstr[0] "%1 élément"
+msgstr[1] "%1 éléments"
+
+#: src/raye/properties/properties.cpp:354
+#, kde-format
+msgctxt "@info type of several items"
+msgid "Several types"
+msgstr "Plusieurs types"
+
+#: src/raye/properties/properties.cpp:358
+#, kde-format
+msgctxt "@info items from different folders"
+msgid "Several locations"
+msgstr "Plusieurs emplacements"
+
+#: src/raye/properties/properties.cpp:412
+#, kde-format
+msgctxt "@info type of a shared folder connected as a drive"
+msgid "Network drive"
+msgstr "Lecteur réseau"
+
+#: src/raye/properties/properties.cpp:420
+#, kde-format
+msgctxt "@info connected without a user name"
+msgid "Guest"
+msgstr "Invité"
+
+#: src/raye/properties/properties.cpp:445
+#, kde-format
+msgctxt "@info type of a computer seen on the network"
+msgid "Computer on the network"
+msgstr "Ordinateur du réseau"
+
+#: src/raye/properties/properties.cpp:446
+#, kde-format
+msgctxt "@info type of a shared folder not connected as a drive"
+msgid "Network location"
+msgstr "Emplacement réseau"
+
+#: src/raye/properties/properties.cpp:538
+#, kde-format
+msgctxt "@info"
+msgid "You can't change who can open \"%1\"."
+msgstr "Vous ne pouvez pas changer qui peut ouvrir « %1 »."
+
+#: src/raye/properties/properties.cpp:549
+#, kde-format
+msgctxt "@info"
+msgid "A file name can't be empty or contain /."
+msgstr "Un nom de fichier ne peut pas être vide ni contenir /."
+
+#: src/raye/properties/properties.cpp:555
+#, kde-format
+msgctxt "@info"
+msgid "There is already a file named \"%1\" here."
+msgstr "Il y a déjà un fichier nommé « %1 » ici."
+
+#: src/raye/properties/properties.cpp:564
+#, kde-format
+msgctxt "@info"
+msgid "\"%1\" could not be renamed."
+msgstr "« %1 » n’a pas pu être renommé."
+
+#: src/raye/properties/properties.cpp:578
+#, kde-format
+msgctxt "@info"
+msgid "\"%1\" could not be hidden."
+msgstr "« %1 » n’a pas pu être masqué."
+
+#: src/raye/properties/propertiesdialog.cpp:42
+#, kde-format
+msgctxt "@title:window, %1 is a file name"
+msgid "%1 Properties"
+msgstr "Propriétés de %1"
+
+#: src/raye/qml/archive/ArchivePasswordPage.qml:58
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Password"
+msgstr "Mot de passe"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:56
+#: src/raye/qml/archive/CompressOptionsPage.qml:64
+#, kde-format
+msgctxt "@label archive file name"
+msgid "Name"
+msgstr "Nom"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:75
+#: src/raye/qml/archive/CompressOptionsPage.qml:82
+#, kde-format
+msgctxt "@label the folder an archive is saved in"
+msgid "Save in"
+msgstr "Enregistrer dans"
+
+# FX-16 (archives): to append to po/fr/raye-files.po after Messages.sh has
+# put the msgids in po/raye-files.pot.
+#: src/raye/qml/archive/CompressOptionsPage.qml:88
+#: src/raye/qml/archive/ExtractAllPage.qml:62
+#, kde-format
+msgctxt "@action:button"
+msgid "Browse…"
+msgstr "Parcourir…"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:94
+#: src/raye/qml/archive/CompressOptionsPage.qml:98
+#, kde-format
+msgctxt "@label archive format"
+msgid "Format"
+msgstr "Format"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:106
+#, kde-format
+msgctxt "@info"
+msgid ""
+"RAR archives open in Files but can't be made: the format is closed. 7z packs "
+"as tightly."
+msgstr ""
+"Les archives RAR s'ouvrent dans Fichiers mais ne peuvent pas être créées : "
+"le format est fermé. 7z compresse aussi bien."
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:114
+#: src/raye/qml/archive/CompressOptionsPage.qml:119
+#, kde-format
+msgctxt "@label compression level"
+msgid "Level"
+msgstr "Niveau"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:120
+#, kde-format
+msgctxt "@item compression level"
+msgid "Fastest"
+msgstr "La plus rapide"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:120
+#, kde-format
+msgctxt "@item compression level"
+msgid "Store"
+msgstr "Aucune"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:121
+#, kde-format
+msgctxt "@item compression level"
+msgid "Fast"
+msgstr "Rapide"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:121
+#, kde-format
+msgctxt "@item compression level"
+msgid "Normal"
+msgstr "Normale"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:122
+#, kde-format
+msgctxt "@item compression level"
+msgid "Maximum"
+msgstr "Maximale"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:122
+#, kde-format
+msgctxt "@item compression level"
+msgid "Ultra"
+msgstr "Ultra"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:128
+#: src/raye/qml/archive/CompressOptionsPage.qml:140
+#, kde-format
+msgctxt "@label"
+msgid "Password"
+msgstr "Mot de passe"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:138
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "No password"
+msgstr "Aucun mot de passe"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:138
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "tar can't be protected"
+msgstr "Un tar ne peut pas être protégé"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:148
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Type it again"
+msgstr "Retapez-le"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:150
+#, kde-format
+msgctxt "@label"
+msgid "Confirm password"
+msgstr "Confirmer le mot de passe"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:160
+#, kde-format
+msgctxt "@option:check"
+msgid "Hide file names too (AES-256)"
+msgstr "Masquer aussi les noms de fichiers (AES-256)"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:168
+#, kde-format
+msgctxt "@action:button"
+msgid "Advanced options ⌄"
+msgstr "Options avancées ⌄"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:168
+#, kde-format
+msgctxt "@action:button"
+msgid "Fewer options ⌃"
+msgstr "Moins d'options ⌃"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:203
+#, kde-format
+msgctxt "@label compression of a tar"
+msgid "Compression"
+msgstr "Compression"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:203
+#: src/raye/qml/archive/CompressOptionsPage.qml:207
+#, kde-format
+msgctxt "@label compression method"
+msgid "Method"
+msgstr "Méthode"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:212
+#: src/raye/qml/archive/CompressOptionsPage.qml:217
+#, kde-format
+msgctxt "@label"
+msgid "Dictionary"
+msgstr "Dictionnaire"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:223
+#: src/raye/qml/archive/CompressOptionsPage.qml:228
+#, kde-format
+msgctxt "@label compression word size"
+msgid "Word size"
+msgstr "Taille des mots"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:233
+#: src/raye/qml/archive/CompressOptionsPage.qml:238
+#, kde-format
+msgctxt "@label"
+msgid "Solid blocks"
+msgstr "Blocs solides"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:244
+#: src/raye/qml/archive/CompressOptionsPage.qml:248
+#, kde-format
+msgctxt "@label processor threads"
+msgid "Threads"
+msgstr "Fils d'exécution"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:253
+#: src/raye/qml/archive/CompressOptionsPage.qml:257
+#, kde-format
+msgctxt "@label"
+msgid "Split into parts"
+msgstr "Découper en parties"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:258
+#, kde-format
+msgctxt "@item part size"
+msgid "700 MB (CD)"
+msgstr "700 Mo (CD)"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:258
+#, kde-format
+msgctxt "@item no split"
+msgid "Don't split"
+msgstr "Ne pas découper"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:259
+#, kde-format
+msgctxt "@item part size"
+msgid "4 GB (FAT32 drive)"
+msgstr "4 Go (clé FAT32)"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:259
+#, kde-format
+msgctxt "@item part size"
+msgid "Other size…"
+msgstr "Autre taille…"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:264
+#: src/raye/qml/archive/CompressOptionsPage.qml:268
+#, kde-format
+msgctxt "@label what to do with an existing archive"
+msgid "If it exists"
+msgstr "Si elle existe"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:269
+#, kde-format
+msgctxt "@item"
+msgid "Add and replace files"
+msgstr "Ajouter et remplacer les fichiers"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:269
+#, kde-format
+msgctxt "@item"
+msgid "Make a new archive"
+msgstr "Créer une nouvelle archive"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:270
+#, kde-format
+msgctxt "@item"
+msgid "Add newer files only"
+msgstr "Ajouter seulement les fichiers plus récents"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:270
+#, kde-format
+msgctxt "@item"
+msgid "Synchronize"
+msgstr "Synchroniser"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:275
+#: src/raye/qml/archive/CompressOptionsPage.qml:294
+#, kde-format
+msgctxt "@label zip encryption"
+msgid "Encryption"
+msgstr "Chiffrement"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:275
+#: src/raye/qml/archive/CompressOptionsPage.qml:287
+#, kde-format
+msgctxt "@label size of each part"
+msgid "Part size"
+msgstr "Taille des parties"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:285
+#, kde-format
+msgctxt "@info:placeholder an example part size"
+msgid "250 MB"
+msgstr "250 Mo"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:295
+#, kde-format
+msgctxt "@item zip encryption"
+msgid "ZipCrypto (opens in Windows)"
+msgstr "ZipCrypto (s'ouvre dans Windows)"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:301
+#: src/raye/qml/archive/CompressOptionsPage.qml:308
+#, kde-format
+msgctxt "@label file name patterns to leave out"
+msgid "Leave out"
+msgstr "Exclure"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:323
+#, kde-format
+msgctxt "@option:check"
+msgid "Delete the files after (to the Recycle Bin)"
+msgstr "Supprimer les fichiers ensuite (vers la Corbeille)"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:330
+#, kde-format
+msgctxt "@option:check"
+msgid "Keep symbolic links"
+msgstr "Conserver les liens symboliques"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:337
+#, kde-format
+msgctxt "@option:check"
+msgid "Store last opened time"
+msgstr "Garder la date de dernière ouverture"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:344
+#, kde-format
+msgctxt "@option:check"
+msgid "Store creation time"
+msgstr "Garder la date de création"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:350
+#: src/raye/qml/archive/CompressOptionsPage.qml:358
+#, kde-format
+msgctxt "@label saved settings"
+msgid "Profile"
+msgstr "Profil"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:359
+#, kde-format
+msgctxt "@item no saved profile picked"
+msgid "—"
+msgstr "—"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:365
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Name for these settings"
+msgstr "Nom de ces réglages"
+
+#: src/raye/qml/archive/CompressOptionsPage.qml:366
+#, kde-format
+msgctxt "@label"
+msgid "Profile name"
+msgstr "Nom du profil"
+
+#: src/raye/qml/archive/ExtractAllPage.qml:42
+#: src/raye/qml/archive/ExtractAllPage.qml:56
+#, kde-format
+msgctxt "@label"
+msgid "Files will be extracted to this folder:"
+msgstr "Les fichiers seront extraits dans ce dossier :"
+
+#: src/raye/qml/archive/ExtractAllPage.qml:55
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Folder"
+msgstr "Dossier"
+
+#: src/raye/qml/archive/ExtractAllPage.qml:81
+#, kde-format
+msgctxt "@option:check"
+msgid "Show extracted files when complete"
+msgstr "Afficher les fichiers extraits une fois l'opération terminée"
+
+#: src/raye/qml/components/SplitButton.qml:66 src/raye/ui/splitbutton.cpp:49
+#, kde-format
+msgctxt "@action:button the menu part of a split button"
+msgid "More options"
+msgstr "Plus d'options"
+
+#: src/raye/qml/gallery/GalleryPage.qml:55
+#, kde-format
+msgctxt "@action:button folders shown in Gallery"
+msgid "Collection"
+msgstr "Collection"
+
+#: src/raye/qml/gallery/GalleryPage.qml:82
+#, kde-format
+msgctxt "@action:inmenu add a folder to Gallery"
+msgid "Add a folder…"
+msgstr "Ajouter un dossier…"
+
+#: src/raye/qml/gallery/GalleryPage.qml:132
+#, kde-format
+msgctxt "@info empty Gallery"
+msgid "Pictures and videos you save in Pictures will show here."
+msgstr "Les photos et vidéos enregistrées dans Images s’afficheront ici."
+
+#: src/raye/qml/home/HomeCard.qml:110
+#, kde-format
+msgctxt "@action:button"
+msgid "Pin to Quick access"
+msgstr "Épingler à l'accès rapide"
+
+#: src/raye/qml/home/HomeCard.qml:110
+#, kde-format
+msgctxt "@action:button"
+msgid "Unpin from Quick access"
+msgstr "Désépingler de l'accès rapide"
+
+#: src/raye/qml/home/HomeFileRow.qml:102
+#, kde-format
+msgctxt "@action:button"
+msgid "Open file location"
+msgstr "Ouvrir l'emplacement du fichier"
+
+#: src/raye/qml/home/HomeFileRow.qml:109
+#, kde-format
+msgctxt "@action:button"
+msgid "Add to Favorites"
+msgstr "Ajouter aux favoris"
+
+#: src/raye/qml/home/HomeFileRow.qml:109
+#, kde-format
+msgctxt "@action:button"
+msgid "Remove from Favorites"
+msgstr "Retirer des favoris"
+
+#: src/raye/qml/home/HomePage.qml:61
+#, kde-format
+msgctxt "@title:group files to go back to"
+msgid "Continue"
+msgstr "Reprendre"
+
+#: src/raye/qml/home/HomePage.qml:81
+#, kde-format
+msgctxt "@title:group"
+msgid "Quick access"
+msgstr "Accès rapide"
+
+#: src/raye/qml/home/HomePage.qml:105
+#, kde-format
+msgctxt "@action:button"
+msgid "Show less"
+msgstr "Afficher moins"
+
+#: src/raye/qml/home/HomePage.qml:105 src/raye/qml/home/HomePage.qml:172
+#, kde-format
+msgctxt "@action:button"
+msgid "Show more"
+msgstr "Afficher plus"
+
+#: src/raye/qml/home/HomePage.qml:113
+#, kde-format
+msgctxt "@info"
+msgid "Pin folders here to get to them quickly."
+msgstr "Épinglez des dossiers ici pour y accéder rapidement."
+
+#: src/raye/qml/home/HomePage.qml:126
+#, kde-format
+msgctxt "@title:tab"
+msgid "Recent"
+msgstr "Récent"
+
+#: src/raye/qml/home/HomePage.qml:127
+#, kde-format
+msgctxt "@title:tab"
+msgid "Favorites"
+msgstr "Favoris"
+
+#: src/raye/qml/home/HomePage.qml:143
+#, kde-format
+msgctxt "@title:column"
+msgid "Name"
+msgstr "Nom"
+
+#: src/raye/qml/home/HomePage.qml:144
+#, kde-format
+msgctxt "@title:column"
+msgid "Date accessed"
+msgstr "Date d'accès"
+
+#: src/raye/qml/home/HomePage.qml:144
+#, kde-format
+msgctxt "@title:column"
+msgid "Date modified"
+msgstr "Modifié le"
+
+#: src/raye/qml/home/HomePage.qml:145
+#, kde-format
+msgctxt "@title:column"
+msgid "Location"
+msgstr "Emplacement"
+
+#: src/raye/qml/home/HomePage.qml:181
+#, kde-format
+msgctxt "@info"
+msgid "Files you open will show here."
+msgstr "Les fichiers que vous ouvrez s'afficheront ici."
+
+#: src/raye/qml/home/HomePage.qml:182
+#, kde-format
+msgctxt "@info"
+msgid "Files you add to Favorites will show here."
+msgstr "Les fichiers ajoutés aux favoris s'afficheront ici."
+
+#: src/raye/qml/jobs/ConflictPage.qml:74
+#, kde-format
+msgctxt "@info"
+msgid "The destination already has a folder named \"%1\"."
+msgstr "La destination contient déjà un dossier nommé « %1 »."
+
+#: src/raye/qml/jobs/ConflictPage.qml:76
+#, kde-format
+msgctxt "@info"
+msgid "The source and destination file names are the same."
+msgstr "Les noms des fichiers source et destination sont identiques."
+
+#: src/raye/qml/jobs/ConflictPage.qml:77
+#, kde-format
+msgctxt "@info"
+msgid "The destination already has a file named \"%1\"."
+msgstr "La destination contient déjà un fichier nommé « %1 »."
+
+#: src/raye/qml/jobs/ConflictPage.qml:87
+#, kde-format
+msgctxt "@info"
+msgid ""
+"If files in it have the same names, you'll be asked about each of them. "
+"Merge the folders?"
+msgstr ""
+"Si des fichiers portent le même nom, la question vous sera posée pour "
+"chacun. Fusionner les dossiers ?"
+
+#: src/raye/qml/jobs/ConflictPage.qml:102
+#, kde-format
+msgctxt "@info"
+msgid "Files go into the folder that is already there"
+msgstr "Les fichiers vont dans le dossier déjà présent"
+
+#: src/raye/qml/jobs/ConflictPage.qml:102
+#, kde-format
+msgctxt "@action:button"
+msgid "Merge the folders"
+msgstr "Fusionner les dossiers"
+
+#: src/raye/qml/jobs/ConflictPage.qml:104
+#, kde-format
+msgctxt "@info"
+msgid "Leave both folders as they are"
+msgstr "Laisser les deux dossiers tels quels"
+
+#: src/raye/qml/jobs/ConflictPage.qml:104
+#, kde-format
+msgctxt "@action:button"
+msgid "Skip this folder"
+msgstr "Ignorer ce dossier"
+
+#: src/raye/qml/jobs/ConflictPage.qml:108
+#, kde-format
+msgctxt "@action:button"
+msgid "Replace the file in the destination"
+msgstr "Remplacer le fichier dans la destination"
+
+#: src/raye/qml/jobs/ConflictPage.qml:110
+#, kde-format
+msgctxt "@info"
+msgid "Leave the file in the destination as it is"
+msgstr "Laisser le fichier de la destination tel quel"
+
+#: src/raye/qml/jobs/ConflictPage.qml:110
+#, kde-format
+msgctxt "@action:button"
+msgid "Skip this file"
+msgstr "Ignorer ce fichier"
+
+#: src/raye/qml/jobs/ConflictPage.qml:112
+#, kde-format
+msgctxt "@info"
+msgid "Choose which files to keep"
+msgstr "Choisir les fichiers à conserver"
+
+#: src/raye/qml/jobs/ConflictPage.qml:112
+#, kde-format
+msgctxt "@action:button"
+msgid "Compare info for both files"
+msgstr "Comparer les informations des deux fichiers"
+
+#: src/raye/qml/jobs/ConflictPage.qml:140
+#, kde-format
+msgctxt "@title:column"
+msgid "Files from %1"
+msgstr "Fichiers de %1"
+
+#: src/raye/qml/jobs/ConflictPage.qml:140
+#, kde-format
+msgctxt "@title:column"
+msgid "Files to copy"
+msgstr "Fichiers à copier"
+
+#: src/raye/qml/jobs/ConflictPage.qml:141
+#, kde-format
+msgctxt "@title:column"
+msgid "Files already in %1"
+msgstr "Fichiers déjà dans %1"
+
+#: src/raye/qml/jobs/ConflictPage.qml:141
+#, kde-format
+msgctxt "@title:column"
+msgid "Files already there"
+msgstr "Fichiers déjà présents"
+
+#: src/raye/qml/jobs/ConflictPage.qml:202
+#, kde-format
+msgctxt "@info"
+msgid "Newer"
+msgstr "Plus récent"
+
+#: src/raye/qml/jobs/ConflictPage.qml:226 src/raye/qml/jobs/ErrorPage.qml:45
+#: src/raye/qml/jobs/ProgressPage.qml:185
+#, kde-format
+msgctxt "@option:check"
+msgid "Do this for all current items"
+msgstr "Faire de même pour tous les éléments en cours"
+
+#: src/raye/qml/jobs/DeletePage.qml:94
+#, kde-format
+msgctxt "@label"
+msgid "Type: %1"
+msgstr "Type : %1"
+
+#: src/raye/qml/jobs/DeletePage.qml:103
+#, kde-format
+msgctxt "@label"
+msgid "Size: %1"
+msgstr "Taille : %1"
+
+#: src/raye/qml/jobs/DeletePage.qml:111
+#, kde-format
+msgctxt "@label"
+msgid "Date modified: %1"
+msgstr "Modifié le : %1"
+
+#: src/raye/qml/jobs/ProgressPage.qml:108
+#, kde-format
+msgctxt "@action:button"
+msgid "Pause"
+msgstr "Suspendre"
+
+#: src/raye/qml/jobs/ProgressPage.qml:108
+#, kde-format
+msgctxt "@action:button"
+msgid "Resume"
+msgstr "Reprendre"
+
+#: src/raye/qml/jobs/ProgressPage.qml:151
+#, kde-format
+msgctxt "@label"
+msgid "Name:"
+msgstr "Nom :"
+
+#: src/raye/qml/jobs/ProgressPage.qml:153
+#, kde-format
+msgctxt "@label"
+msgid "Time remaining:"
+msgstr "Temps restant :"
+
+#: src/raye/qml/jobs/ProgressPage.qml:155
+#, kde-format
+msgctxt "@label"
+msgid "Items remaining:"
+msgstr "Éléments restants :"
+
+#: src/raye/qml/jobs/ProgressPage.qml:221
+#, kde-format
+msgctxt "@action:button"
+msgid "Fewer details"
+msgstr "Moins de détails"
+
+#: src/raye/qml/jobs/ProgressPage.qml:221
+#, kde-format
+msgctxt "@action:button"
+msgid "More details"
+msgstr "Plus de détails"
+
+#: src/raye/qml/netdrive/MapDrivePage.qml:48
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Pick the shared folder and where it shows up. You'll find it in This PC and "
+"in the navigation pane."
+msgstr ""
+"Choisissez le dossier partagé et l'endroit où il apparaît. Vous le "
+"retrouverez dans Ce PC et dans le volet de navigation."
+
+#: src/raye/qml/netdrive/MapDrivePage.qml:57
+#: src/raye/qml/properties/PropertiesPage.qml:222
+#, kde-format
+msgctxt "@label shared folder on another computer"
+msgid "Folder:"
+msgstr "Dossier :"
+
+#: src/raye/qml/netdrive/MapDrivePage.qml:64
+#, kde-format
+msgctxt "@info:placeholder a shared folder"
+msgid "\\\\server\\share"
+msgstr "\\\\serveur\\partage"
+
+#: src/raye/qml/netdrive/MapDrivePage.qml:73
+#, kde-format
+msgctxt "@info example of a shared folder"
+msgid "Example: \\\\server\\share"
+msgstr "Exemple : \\\\serveur\\partage"
+
+#: src/raye/qml/netdrive/MapDrivePage.qml:77
+#, kde-format
+msgctxt "@label name of the drive"
+msgid "Name:"
+msgstr "Nom :"
+
+#: src/raye/qml/netdrive/MapDrivePage.qml:84
+#, kde-format
+msgctxt "@label where the drive shows up"
+msgid "Location:"
+msgstr "Emplacement :"
+
+#: src/raye/qml/netdrive/MapDrivePage.qml:95
+#, kde-format
+msgctxt "@action:button pick another folder"
+msgid "Browse…"
+msgstr "Parcourir…"
+
+#: src/raye/qml/netdrive/MapDrivePage.qml:102
+#, kde-format
+msgctxt "@option:check"
+msgid "Reconnect at sign-in"
+msgstr "Se reconnecter à l'ouverture de session"
+
+#: src/raye/qml/netdrive/MapDrivePage.qml:107
+#, kde-format
+msgctxt "@option:check"
+msgid "Connect using different credentials"
+msgstr "Se connecter avec d'autres identifiants"
+
+#: src/raye/qml/netdrive/MapDrivePage.qml:119
+#, kde-format
+msgctxt "@label"
+msgid "User name:"
+msgstr "Nom d'utilisateur :"
+
+#: src/raye/qml/netdrive/MapDrivePage.qml:122
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "name or DOMAIN\\name"
+msgstr "nom ou DOMAINE\\nom"
+
+#: src/raye/qml/netdrive/MapDrivePage.qml:126
+#, kde-format
+msgctxt "@label"
+msgid "Password:"
+msgstr "Mot de passe :"
+
+#: src/raye/qml/netdrive/MapDrivePage.qml:136
+#, kde-format
+msgctxt "@option:check keep the password in the wallet"
+msgid "Remember my credentials"
+msgstr "Mémoriser mes identifiants"
+
+#: src/raye/qml/openwith/OpenWithPage.qml:74
+#, kde-format
+msgctxt "@title:group"
+msgid "Apps on this PC"
+msgstr "Applications sur ce PC"
+
+#: src/raye/qml/openwith/OpenWithPage.qml:74
+#, kde-format
+msgctxt "@title:group"
+msgid "Recommended apps"
+msgstr "Applications recommandées"
+
+#: src/raye/qml/openwith/OpenWithPage.qml:112
+#, kde-format
+msgctxt "@info"
+msgid "No app on this PC opens this kind of file."
+msgstr "Aucune application de ce PC n'ouvre ce type de fichier."
+
+#: src/raye/qml/openwith/OpenWithPage.qml:135
+#, kde-format
+msgctxt "@title:group"
+msgid "More apps"
+msgstr "Plus d'applications"
+
+#: src/raye/qml/openwith/OpenWithPage.qml:196
+#, kde-format
+msgctxt "@info the app now used for this type"
+msgid "Current default"
+msgstr "Par défaut actuellement"
+
+#: src/raye/qml/openwith/OpenWithPage.qml:211
+#, kde-format
+msgctxt "@action:button"
+msgid "Look for an app on this PC"
+msgstr "Rechercher une application sur ce PC"
+
+#: src/raye/qml/openwith/OpenWithPage.qml:219
+#, kde-format
+msgctxt "@action:button"
+msgid "Find an app in the Store"
+msgstr "Trouver une application dans le Store"
+
+#: src/raye/qml/options/FolderOptionsPage.qml:33
+#: src/raye/qml/properties/PropertiesPage.qml:45
+#: src/raye/qml/properties/PropertiesPage.qml:46
+#, kde-format
+msgctxt "@title:tab"
+msgid "General"
+msgstr "Général"
+
+#: src/raye/qml/options/FolderOptionsPage.qml:33
+#, kde-format
+msgctxt "@title:tab"
+msgid "Search"
+msgstr "Rechercher"
+
+#: src/raye/qml/options/FolderOptionsPage.qml:33
+#, kde-format
+msgctxt "@title:tab"
+msgid "View"
+msgstr "Affichage"
+
+#: src/raye/qml/options/FolderOptionsPage.qml:51
+#, kde-format
+msgctxt "@title:group"
+msgid "Open Files to"
+msgstr "Ouvrir Fichiers sur"
+
+#: src/raye/qml/options/FolderOptionsPage.qml:53
+#, kde-format
+msgctxt "@option:radio"
+msgid "Home"
+msgstr "Accueil"
+
+#: src/raye/qml/options/FolderOptionsPage.qml:58
+#, kde-format
+msgctxt "@option:radio"
+msgid "This PC"
+msgstr "Ce PC"
+
+#: src/raye/qml/options/FolderOptionsPage.qml:63
+#, kde-format
+msgctxt "@title:group"
+msgid "Browse folders"
+msgstr "Parcourir les dossiers"
+
+#: src/raye/qml/options/FolderOptionsPage.qml:65
+#, kde-format
+msgctxt "@option:radio"
+msgid "Open each folder in the same window"
+msgstr "Ouvrir chaque dossier dans la même fenêtre"
+
+#: src/raye/qml/options/FolderOptionsPage.qml:70
+#, kde-format
+msgctxt "@option:radio"
+msgid "Open each folder in its own window"
+msgstr "Ouvrir chaque dossier dans une nouvelle fenêtre"
+
+#: src/raye/qml/options/FolderOptionsPage.qml:75
+#, kde-format
+msgctxt "@title:group"
+msgid "Click items as follows"
+msgstr "Cliquer sur les éléments de la manière suivante"
+
+#: src/raye/qml/options/FolderOptionsPage.qml:77
+#, kde-format
+msgctxt "@option:radio"
+msgid "Single-click to open an item (point to select)"
+msgstr "Ouvrir les éléments par simple clic (pointer pour sélectionner)"
+
+#: src/raye/qml/options/FolderOptionsPage.qml:82
+#, kde-format
+msgctxt "@option:radio"
+msgid "Double-click to open an item (single-click to select)"
+msgstr "Ouvrir les éléments par double-clic (un clic pour sélectionner)"
+
+#: src/raye/qml/options/FolderOptionsPage.qml:87
+#, kde-format
+msgctxt "@title:group"
+msgid "Privacy"
+msgstr "Confidentialité"
+
+#: src/raye/qml/options/FolderOptionsPage.qml:90
+#, kde-format
+msgctxt "@option:check"
+msgid "Show recently used files"
+msgstr "Afficher les fichiers récemment utilisés"
+
+#: src/raye/qml/options/FolderOptionsPage.qml:96
+#, kde-format
+msgctxt "@option:check"
+msgid "Show frequently used folders"
+msgstr "Afficher les dossiers fréquemment utilisés"
+
+#: src/raye/qml/options/FolderOptionsPage.qml:102
+#, kde-format
+msgctxt "@option:check"
+msgid "Show files from Favorites"
+msgstr "Afficher les fichiers des favoris"
+
+#: src/raye/qml/options/FolderOptionsPage.qml:113
+#, kde-format
+msgctxt "@label"
+msgid "Clear Files history"
+msgstr "Effacer l'historique de Fichiers"
+
+#: src/raye/qml/options/FolderOptionsPage.qml:120
+#, kde-format
+msgctxt "@action:button"
+msgid "Clear"
+msgstr "Effacer"
+
+#: src/raye/qml/options/FolderOptionsPage.qml:123
+#, kde-format
+msgctxt "@info the history is gone"
+msgid "Cleared"
+msgstr "Effacé"
+
+#: src/raye/qml/options/FolderOptionsPage.qml:133
+#: src/raye/qml/options/FolderOptionsPage.qml:222
+#: src/raye/qml/options/FolderOptionsPage.qml:261
+#, kde-format
+msgctxt "@action:button"
+msgid "Restore defaults"
+msgstr "Paramètres par défaut"
+
+#: src/raye/qml/options/FolderOptionsPage.qml:145
+#, kde-format
+msgctxt "@title:group"
+msgid "Folder views"
+msgstr "Affichage des dossiers"
+
+#: src/raye/qml/options/FolderOptionsPage.qml:149
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Folders you changed keep their own view. Reset folders to give them all the "
+"default view again."
+msgstr ""
+"Les dossiers modifiés gardent leur propre affichage. Réinitialisez les "
+"dossiers pour leur redonner à tous l'affichage par défaut."
+
+#: src/raye/qml/options/FolderOptionsPage.qml:158
+#, kde-format
+msgctxt "@action:button"
+msgid "Reset folders"
+msgstr "Réinitialiser les dossiers"
+
+#: src/raye/qml/options/FolderOptionsPage.qml:161
+#, kde-format
+msgctxt "@info the folders were reset"
+msgid "Folders reset"
+msgstr "Dossiers réinitialisés"
+
+#: src/raye/qml/options/FolderOptionsPage.qml:167
+#, kde-format
+msgctxt "@title:group"
+msgid "Advanced settings"
+msgstr "Paramètres avancés"
+
+#: src/raye/qml/options/FolderOptionsPage.qml:170
+#, kde-format
+msgctxt "@option:check"
+msgid "Always show icons, never thumbnails"
+msgstr "Toujours afficher des icônes, jamais de miniatures"
+
+#: src/raye/qml/options/FolderOptionsPage.qml:176
+#, kde-format
+msgctxt "@option:check"
+msgid "Show hidden files and folders"
+msgstr "Afficher les fichiers et dossiers cachés"
+
+#: src/raye/qml/options/FolderOptionsPage.qml:182
+#, kde-format
+msgctxt "@option:check"
+msgid "Hide extensions for known file types"
+msgstr "Masquer les extensions des fichiers dont le type est connu"
+
+#: src/raye/qml/options/FolderOptionsPage.qml:188
+#, kde-format
+msgctxt "@option:check"
+msgid "Show status bar"
+msgstr "Afficher la barre d'état"
+
+#: src/raye/qml/options/FolderOptionsPage.qml:194
+#, kde-format
+msgctxt "@option:check"
+msgid "Decrease space between items (compact view)"
+msgstr "Réduire l'espace entre les éléments (affichage compact)"
+
+#: src/raye/qml/options/FolderOptionsPage.qml:200
+#, kde-format
+msgctxt "@option:check"
+msgid "Use check boxes to select items"
+msgstr "Utiliser des cases à cocher pour sélectionner les éléments"
+
+#: src/raye/qml/options/FolderOptionsPage.qml:204
+#, kde-format
+msgctxt "@title:group"
+msgid "Navigation pane"
+msgstr "Volet de navigation"
+
+#: src/raye/qml/options/FolderOptionsPage.qml:207
+#, kde-format
+msgctxt "@option:check"
+msgid "Show all folders"
+msgstr "Afficher tous les dossiers"
+
+#: src/raye/qml/options/FolderOptionsPage.qml:213
+#, kde-format
+msgctxt "@option:check"
+msgid "Expand to open folder"
+msgstr "Développer jusqu'au dossier ouvert"
+
+#: src/raye/qml/options/FolderOptionsPage.qml:234
+#, kde-format
+msgctxt "@title:group"
+msgid "When searching"
+msgstr "Lors de la recherche"
+
+#: src/raye/qml/options/FolderOptionsPage.qml:237
+#, kde-format
+msgctxt "@option:check"
+msgid "Search file contents as well as names"
+msgstr "Rechercher dans le contenu des fichiers en plus des noms"
+
+#: src/raye/qml/options/FolderOptionsPage.qml:245
+#, kde-format
+msgctxt "@info"
+msgid "Searches take longer to get ready when file contents are included."
+msgstr ""
+"La recherche met plus de temps à être prête quand le contenu des fichiers "
+"est inclus."
+
+#: src/raye/qml/options/FolderOptionsPage.qml:253
+#, kde-format
+msgctxt "@action:button"
+msgid "Search settings"
+msgstr "Paramètres de recherche"
+
+#: src/raye/qml/properties/PropertiesPage.qml:46
+#, kde-format
+msgctxt "@title:tab"
+msgid "Security"
+msgstr "Sécurité"
+
+#: src/raye/qml/properties/PropertiesPage.qml:48
+#, kde-format
+msgctxt "@title:tab"
+msgid "Details"
+msgstr "Détails"
+
+#: src/raye/qml/properties/PropertiesPage.qml:98
+#, kde-format
+msgctxt "@label"
+msgid "Name"
+msgstr "Nom"
+
+#: src/raye/qml/properties/PropertiesPage.qml:142
+#, kde-format
+msgctxt "@label"
+msgid "Opens with:"
+msgstr "S’ouvre avec :"
+
+#: src/raye/qml/properties/PropertiesPage.qml:156
+#, kde-format
+msgctxt "@info no app opens this file"
+msgid "No app chosen"
+msgstr "Aucune application choisie"
+
+#: src/raye/qml/properties/PropertiesPage.qml:160
+#, kde-format
+msgctxt "@action:button choose the app that opens a file"
+msgid "Change…"
+msgstr "Modifier…"
+
+#: src/raye/qml/properties/PropertiesPage.qml:166
+#, kde-format
+msgctxt "@label"
+msgid "Location:"
+msgstr "Emplacement :"
+
+#: src/raye/qml/properties/PropertiesPage.qml:168
+#, kde-format
+msgctxt "@label"
+msgid "Size:"
+msgstr "Taille :"
+
+#: src/raye/qml/properties/PropertiesPage.qml:169
+#: src/raye/qml/properties/PropertiesPage.qml:171
+#: src/raye/qml/properties/PropertiesPage.qml:176
+#, kde-format
+msgctxt "@info still counting"
+msgid "Counting…"
+msgstr "Calcul en cours…"
+
+#: src/raye/qml/properties/PropertiesPage.qml:170
+#, kde-format
+msgctxt "@label"
+msgid "Size on disk:"
+msgstr "Sur disque :"
+
+#: src/raye/qml/properties/PropertiesPage.qml:172
+#, kde-format
+msgctxt "@label"
+msgid "Contains:"
+msgstr "Contenu :"
+
+#: src/raye/qml/properties/PropertiesPage.qml:180
+#, kde-format
+msgctxt "@label"
+msgid "Created:"
+msgstr "Créé le :"
+
+#: src/raye/qml/properties/PropertiesPage.qml:182
+#, kde-format
+msgctxt "@label"
+msgid "Modified:"
+msgstr "Modifié le :"
+
+#: src/raye/qml/properties/PropertiesPage.qml:184
+#, kde-format
+msgctxt "@label"
+msgid "Accessed:"
+msgstr "Dernier accès :"
+
+#: src/raye/qml/properties/PropertiesPage.qml:188
+#, kde-format
+msgctxt "@label"
+msgid "Attributes:"
+msgstr "Attributs :"
+
+#: src/raye/qml/properties/PropertiesPage.qml:193
+#, kde-format
+msgctxt "@option:check file attribute"
+msgid "Read-only"
+msgstr "Lecture seule"
+
+#: src/raye/qml/properties/PropertiesPage.qml:199
+#, kde-format
+msgctxt "@option:check file attribute"
+msgid "Hidden"
+msgstr "Caché"
+
+#: src/raye/qml/properties/PropertiesPage.qml:220
+#, kde-format
+msgctxt "@label"
+msgid "File system:"
+msgstr "Système de fichiers :"
+
+#: src/raye/qml/properties/PropertiesPage.qml:224
+#, kde-format
+msgctxt "@label computer a share is on"
+msgid "Computer:"
+msgstr "Ordinateur :"
+
+#: src/raye/qml/properties/PropertiesPage.qml:226
+#, kde-format
+msgctxt "@label network protocol"
+msgid "Connected through:"
+msgstr "Connecté avec :"
+
+#: src/raye/qml/properties/PropertiesPage.qml:228
+#, kde-format
+msgctxt "@label user name used for a share"
+msgid "Signed in as:"
+msgstr "Connecté en tant que :"
+
+#: src/raye/qml/properties/PropertiesPage.qml:230
+#, kde-format
+msgctxt "@label folder a network drive is in"
+msgid "Shown in:"
+msgstr "Affiché dans :"
+
+#: src/raye/qml/properties/PropertiesPage.qml:233
+#, kde-format
+msgctxt "@label drive space"
+msgid "Used space:"
+msgstr "Espace utilisé :"
+
+#: src/raye/qml/properties/PropertiesPage.qml:235
+#, kde-format
+msgctxt "@label drive space"
+msgid "Free space:"
+msgstr "Espace libre :"
+
+#: src/raye/qml/properties/PropertiesPage.qml:238
+#, kde-format
+msgctxt "@label drive space"
+msgid "Capacity:"
+msgstr "Capacité :"
+
+#: src/raye/qml/properties/PropertiesPage.qml:285
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Free up space by removing temporary files, old updates and restore points "
+"you no longer need."
+msgstr ""
+"Libérez de l’espace en supprimant les fichiers temporaires, les anciennes "
+"mises à jour et les points de restauration dont vous n’avez plus besoin."
+
+#: src/raye/qml/properties/PropertiesPage.qml:293
+#, kde-format
+msgctxt "@action:button free up space on a drive"
+msgid "Clean up"
+msgstr "Nettoyer"
+
+#: src/raye/qml/properties/PropertiesPage.qml:309
+#, kde-format
+msgctxt "@label"
+msgid "Owner:"
+msgstr "Propriétaire :"
+
+#: src/raye/qml/properties/PropertiesPage.qml:311
+#, kde-format
+msgctxt "@label"
+msgid "Group:"
+msgstr "Groupe :"
+
+#: src/raye/qml/properties/PropertiesPage.qml:317
+#, kde-format
+msgctxt "@title"
+msgid "Who can open this folder"
+msgstr "Qui peut ouvrir ce dossier"
+
+#: src/raye/qml/properties/PropertiesPage.qml:318
+#, kde-format
+msgctxt "@title"
+msgid "Who can open this file"
+msgstr "Qui peut ouvrir ce fichier"
+
+#: src/raye/qml/properties/PropertiesPage.qml:324
+#, kde-format
+msgctxt "@label permission for the owner"
+msgid "Owner (%1)"
+msgstr "Propriétaire (%1)"
+
+#: src/raye/qml/properties/PropertiesPage.qml:325
+#, kde-format
+msgctxt "@label permission for the group"
+msgid "Group (%1)"
+msgstr "Groupe (%1)"
+
+#: src/raye/qml/properties/PropertiesPage.qml:326
+#, kde-format
+msgctxt "@label permission for everyone else"
+msgid "Everyone else"
+msgstr "Tous les autres"
+
+#: src/raye/qml/properties/PropertiesPage.qml:336
+#, kde-format
+msgctxt "@option permission"
+msgid "None"
+msgstr "Aucun"
+
+#: src/raye/qml/properties/PropertiesPage.qml:336
+#, kde-format
+msgctxt "@option permission"
+msgid "Read"
+msgstr "Lecture"
+
+#: src/raye/qml/properties/PropertiesPage.qml:336
+#, kde-format
+msgctxt "@option permission"
+msgid "Read and write"
+msgstr "Lecture et écriture"
+
+#: src/raye/qml/properties/PropertiesPage.qml:351
+#, kde-format
+msgctxt "@info"
+msgid "Only the owner can change who can open this."
+msgstr "Seul le propriétaire peut changer qui peut ouvrir cet élément."
+
+#: src/raye/qml/properties/PropertiesPage.qml:359
+#, kde-format
+msgctxt "@action:button the full permissions dialog"
+msgid "Advanced settings…"
+msgstr "Paramètres avancés…"
+
+#: src/raye/qml/share/ShareSheet.qml:88
+#, kde-format
+msgctxt "@title the targets of the share flyout"
+msgid "Share with"
+msgstr "Partager avec"
+
+#: src/raye/qml/share/ShareSheet.qml:165
+#, kde-format
+msgctxt "@action:button every share target, in a list"
+msgid "More options"
+msgstr "Plus d'options"
+
+#: src/raye/qml/share/ShareSheet.qml:185
+#, kde-format
+msgctxt "@action:button back to the share row"
+msgid "Back"
+msgstr "Retour"
+
+#: src/raye/qml/share/ShareSheet.qml:190
+#, kde-format
+msgctxt "@title every share target"
+msgid "More options"
+msgstr "Plus d'options"
+
+#: src/raye/qml/share/ShareSheet.qml:246
+#, kde-format
+msgctxt "@info %1 is the reason"
+msgid "Couldn't share. %1"
+msgstr "Impossible de partager. %1"
+
+#: src/raye/qml/share/ShareSheet.qml:254
+#, kde-format
+msgctxt "@action:button"
+msgid "Back"
+msgstr "Retour"
+
+#: src/raye/qml/thispc/ThisPcPage.qml:73
+#, kde-format
+msgctxt "@info This PC with no drive"
+msgid "No drives found."
+msgstr "Aucun lecteur trouvé."
+
+#: src/raye/search/searchbox.cpp:62
+#, kde-format
+msgctxt "@label"
+msgid "Recent searches"
+msgstr "Recherches récentes"
+
+#: src/raye/search/searchbox.cpp:94
+#, kde-format
+msgctxt "@title"
+msgid "Recent searches"
+msgstr "Recherches récentes"
+
+#: src/raye/search/searchbox.cpp:115
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Clear search history"
+msgstr "Effacer l’historique des recherches"
+
+#: src/raye/search/searchbox.cpp:222
+#, kde-format
+msgctxt "@label the search box"
+msgid "Search"
+msgstr "Rechercher"
+
+#: src/raye/search/searchbox.cpp:234
+#, kde-format
+msgctxt "@action:button the search options menu"
+msgid "Search options"
+msgstr "Options de recherche"
+
+#: src/raye/search/searchbox.cpp:238
+#, kde-format
+msgctxt "@action:button"
+msgid "Close search"
+msgstr "Fermer la recherche"
+
+#: src/raye/search/searchbox.cpp:432
+#, kde-format
+msgctxt "@title:menu"
+msgid "Search options"
+msgstr "Options de recherche"
+
+#: src/raye/search/searchbox.cpp:443
+#, kde-format
+msgctxt "@title:menu"
+msgid "Date modified"
+msgstr "Date de modification"
+
+#: src/raye/search/searchbox.cpp:446
+#, kde-format
+msgctxt "@action:inmenu date modified"
+msgid "Any time"
+msgstr "N’importe quand"
+
+#: src/raye/search/searchbox.cpp:448
+#, kde-format
+msgctxt "@action:inmenu date modified"
+msgid "Today"
+msgstr "Aujourd’hui"
+
+#: src/raye/search/searchbox.cpp:449
+#, kde-format
+msgctxt "@action:inmenu date modified"
+msgid "Yesterday"
+msgstr "Hier"
+
+#: src/raye/search/searchbox.cpp:450
+#, kde-format
+msgctxt "@action:inmenu date modified"
+msgid "This week"
+msgstr "Cette semaine"
+
+#: src/raye/search/searchbox.cpp:451
+#, kde-format
+msgctxt "@action:inmenu date modified"
+msgid "Last week"
+msgstr "La semaine dernière"
+
+#: src/raye/search/searchbox.cpp:452
+#, kde-format
+msgctxt "@action:inmenu date modified"
+msgid "This month"
+msgstr "Ce mois-ci"
+
+#: src/raye/search/searchbox.cpp:453
+#, kde-format
+msgctxt "@action:inmenu date modified"
+msgid "Last month"
+msgstr "Le mois dernier"
+
+#: src/raye/search/searchbox.cpp:454
+#, kde-format
+msgctxt "@action:inmenu date modified"
+msgid "This year"
+msgstr "Cette année"
+
+#: src/raye/search/searchbox.cpp:455
+#, kde-format
+msgctxt "@action:inmenu date modified"
+msgid "Last year"
+msgstr "L’année dernière"
+
+#: src/raye/search/searchbox.cpp:462
+#, kde-format
+msgctxt "@title:menu file kind"
+msgid "Kind"
+msgstr "Type"
+
+#: src/raye/search/searchbox.cpp:465
+#, kde-format
+msgctxt "@action:inmenu file kind"
+msgid "Any kind"
+msgstr "Tous les types"
+
+#: src/raye/search/searchbox.cpp:467
+#, kde-format
+msgctxt "@action:inmenu file kind"
+msgid "Folder"
+msgstr "Dossier"
+
+#: src/raye/search/searchbox.cpp:468
+#, kde-format
+msgctxt "@action:inmenu file kind"
+msgid "Document"
+msgstr "Document"
+
+#: src/raye/search/searchbox.cpp:469
+#, kde-format
+msgctxt "@action:inmenu file kind"
+msgid "Picture"
+msgstr "Image"
+
+#: src/raye/search/searchbox.cpp:470
+#, kde-format
+msgctxt "@action:inmenu file kind"
+msgid "Music"
+msgstr "Musique"
+
+#: src/raye/search/searchbox.cpp:471
+#, kde-format
+msgctxt "@action:inmenu file kind"
+msgid "Video"
+msgstr "Vidéo"
+
+#: src/raye/search/searchbox.cpp:472
+#, kde-format
+msgctxt "@action:inmenu file kind"
+msgid "Compressed folder"
+msgstr "Dossier compressé"
+
+#: src/raye/search/searchbox.cpp:479
+#, kde-format
+msgctxt "@title:menu file size"
+msgid "Size"
+msgstr "Taille"
+
+#: src/raye/search/searchbox.cpp:482
+#, kde-format
+msgctxt "@action:inmenu file size"
+msgid "Any size"
+msgstr "Toutes les tailles"
+
+#: src/raye/search/searchbox.cpp:484
+#, kde-format
+msgctxt "@action:inmenu file size"
+msgid "Empty (0 KB)"
+msgstr "Vide (0 Ko)"
+
+#: src/raye/search/searchbox.cpp:485
+#, kde-format
+msgctxt "@action:inmenu file size"
+msgid "Tiny (0 – 16 KB)"
+msgstr "Minuscule (0 – 16 Ko)"
+
+#: src/raye/search/searchbox.cpp:486
+#, kde-format
+msgctxt "@action:inmenu file size"
+msgid "Small (16 KB – 1 MB)"
+msgstr "Petit (16 Ko – 1 Mo)"
+
+#: src/raye/search/searchbox.cpp:487
+#, kde-format
+msgctxt "@action:inmenu file size"
+msgid "Medium (1 – 128 MB)"
+msgstr "Moyen (1 – 128 Mo)"
+
+#: src/raye/search/searchbox.cpp:488
+#, kde-format
+msgctxt "@action:inmenu file size"
+msgid "Large (128 MB – 1 GB)"
+msgstr "Grand (128 Mo – 1 Go)"
+
+#: src/raye/search/searchbox.cpp:489
+#, kde-format
+msgctxt "@action:inmenu file size"
+msgid "Huge (1 – 4 GB)"
+msgstr "Énorme (1 – 4 Go)"
+
+#: src/raye/search/searchbox.cpp:490
+#, kde-format
+msgctxt "@action:inmenu file size"
+msgid "Gigantic (> 4 GB)"
+msgstr "Gigantesque (> 4 Go)"
+
+#: src/raye/search/searchbox.cpp:498
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Search file contents"
+msgstr "Rechercher dans le contenu des fichiers"
+
+#: src/raye/search/searchbox.cpp:509
+#, kde-format
+msgctxt "@action:inmenu where to search"
+msgid "Current folder"
+msgstr "Dossier actif"
+
+#: src/raye/search/searchbox.cpp:510
+#, kde-format
+msgctxt "@action:inmenu where to search"
+msgid "All subfolders"
+msgstr "Tous les sous-dossiers"
+
+#: src/raye/search/searchoptions.cpp:64
+#, kde-format
+msgctxt "@info:placeholder the search box"
+msgid "Search"
+msgstr "Rechercher"
+
+#: src/raye/search/searchoptions.cpp:66
+#, kde-format
+msgctxt "@info:placeholder the search box, %1 is the folder"
+msgid "Search %1"
+msgstr "Rechercher dans %1"
+
+#: src/raye/share/shareflyout.cpp:107
+#, kde-format
+msgctxt "@info"
+msgid "Sharing isn't available right now."
+msgstr "Le partage n'est pas disponible pour le moment."
+
+#: src/raye/share/sharemodel.cpp:169
+#, kde-format
+msgctxt "@info the files being shared"
+msgid "%1 item"
+msgid_plural "%1 items"
+msgstr[0] "%1 élément"
+msgstr[1] "%1 éléments"
+
+#: src/raye/share/sharetargets.cpp:18
+#, kde-format
+msgctxt "@action:button share target: copy the files"
+msgid "Copy"
+msgstr "Copier"
+
+#: src/raye/share/sharetargets.cpp:21
+#, kde-format
+msgctxt "@action:button share target: copy the address of network files"
+msgid "Copy link"
+msgstr "Copier le lien"
+
+#: src/raye/share/sharetargets.cpp:24
+#, kde-format
+msgctxt "@action:button share target: a phone or computer paired with this one"
+msgid "Nearby devices"
+msgstr "Appareils à proximité"
+
+#: src/raye/share/sharetargets.cpp:27
+#, kde-format
+msgctxt "@action:button share target"
+msgid "Bluetooth"
+msgstr "Bluetooth"
+
+#: src/raye/share/sharetargets.cpp:30
+#, kde-format
+msgctxt "@action:button share target: the mail app"
+msgid "Email"
+msgstr "E-mail"
+
+#: src/raye/share/sharetargets.cpp:37
+#, kde-format
+msgctxt "@action:button share target: save a copy somewhere else"
+msgid "Save a copy"
+msgstr "Enregistrer une copie"
+
+#: src/raye/share/sharetargets.cpp:40
+#, kde-format
+msgctxt "@action:button share target"
+msgid "QR code"
+msgstr "Code QR"
+
+#: src/raye/titlebar/tabbar.cpp:382
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Close tab (Ctrl+W)"
+msgstr "Fermer l’onglet (Ctrl+W)"
+
+#: src/raye/titlebar/tabbar.cpp:383
+#, kde-format
+msgctxt "@action:button"
+msgid "Close tab"
+msgstr "Fermer l’onglet"
+
+#: src/raye/titlebar/tabbar.cpp:741
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Close tab"
+msgstr "Fermer l’onglet"
+
+#: src/raye/titlebar/tabbar.cpp:742
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Close other tabs"
+msgstr "Fermer les autres onglets"
+
+#: src/raye/titlebar/tabbar.cpp:743
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Close tabs to the right"
+msgstr "Fermer les onglets à droite"
+
+#: src/raye/titlebar/tabbar.cpp:745
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Duplicate tab"
+msgstr "Dupliquer l’onglet"
+
+#: src/raye/titlebar/tabbar.cpp:746
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Move tab to new window"
+msgstr "Déplacer l’onglet vers une nouvelle fenêtre"
+
+#: src/raye/titlebar/titlebar.cpp:157
+#, kde-format
+msgctxt "@action:button"
+msgid "New tab"
+msgstr "Nouvel onglet"
+
+#: src/raye/titlebar/titlebar.cpp:158
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "New tab (Ctrl+T)"
+msgstr "Nouvel onglet (Ctrl+T)"
+
+#: src/raye/titlebar/titlebar.cpp:161
+#, kde-format
+msgctxt "@action:button"
+msgid "Minimize"
+msgstr "Réduire"
+
+#: src/raye/titlebar/titlebar.cpp:164
+#, kde-format
+msgctxt "@action:button"
+msgid "Maximize"
+msgstr "Agrandir"
+
+#: src/raye/titlebar/titlebar.cpp:164
+#, kde-format
+msgctxt "@action:button"
+msgid "Restore down"
+msgstr "Niveau inférieur"
+
+#: src/raye/titlebar/titlebar.cpp:167
+#, kde-format
+msgctxt "@action:button"
+msgid "Close"
+msgstr "Fermer"
+
+#: src/raye/typenames/filenames.cpp:128
+#, kde-format
+msgctxt "@item file size in whole kilobytes"
+msgid "%1 KB"
+msgstr "%1 Ko"
+
+#: src/raye/typenames/typenames.cpp:33
+#, kde-format
+msgctxt "@item file type"
+msgid "File folder"
+msgstr "Dossier de fichiers"
+
+#: src/raye/typenames/typenames.cpp:34
+#, kde-format
+msgctxt "@item file type"
+msgid "Text document"
+msgstr "Document texte"
+
+#: src/raye/typenames/typenames.cpp:35
+#, kde-format
+msgctxt "@item file type"
+msgid "Log file"
+msgstr "Fichier journal"
+
+#: src/raye/typenames/typenames.cpp:36
+#, kde-format
+msgctxt "@item file type"
+msgid "Markdown file"
+msgstr "Fichier Markdown"
+
+#: src/raye/typenames/typenames.cpp:37
+#, kde-format
+msgctxt "@item file type"
+msgid "CSV file"
+msgstr "Fichier CSV"
+
+#: src/raye/typenames/typenames.cpp:38
+#, kde-format
+msgctxt "@item file type"
+msgid "HTML document"
+msgstr "Document HTML"
+
+#: src/raye/typenames/typenames.cpp:39
+#, kde-format
+msgctxt "@item file type"
+msgid "CSS file"
+msgstr "Fichier CSS"
+
+#: src/raye/typenames/typenames.cpp:40 src/raye/typenames/typenames.cpp:41
+#, kde-format
+msgctxt "@item file type"
+msgid "JavaScript file"
+msgstr "Fichier JavaScript"
+
+#: src/raye/typenames/typenames.cpp:42
+#, kde-format
+msgctxt "@item file type"
+msgid "JSON file"
+msgstr "Fichier JSON"
+
+#: src/raye/typenames/typenames.cpp:43 src/raye/typenames/typenames.cpp:44
+#, kde-format
+msgctxt "@item file type"
+msgid "XML document"
+msgstr "Document XML"
+
+#: src/raye/typenames/typenames.cpp:45 src/raye/typenames/typenames.cpp:46
+#, kde-format
+msgctxt "@item file type"
+msgid "YAML file"
+msgstr "Fichier YAML"
+
+#: src/raye/typenames/typenames.cpp:47 src/raye/typenames/typenames.cpp:48
+#, kde-format
+msgctxt "@item file type"
+msgid "Python file"
+msgstr "Fichier Python"
+
+#: src/raye/typenames/typenames.cpp:49
+#, kde-format
+msgctxt "@item file type"
+msgid "C source file"
+msgstr "Fichier source C"
+
+#: src/raye/typenames/typenames.cpp:50
+#, kde-format
+msgctxt "@item file type"
+msgid "C++ source file"
+msgstr "Fichier source C++"
+
+#: src/raye/typenames/typenames.cpp:51
+#, kde-format
+msgctxt "@item file type"
+msgid "C header file"
+msgstr "Fichier d'en-tête C"
+
+#: src/raye/typenames/typenames.cpp:52
+#, kde-format
+msgctxt "@item file type"
+msgid "C++ header file"
+msgstr "Fichier d'en-tête C++"
+
+#: src/raye/typenames/typenames.cpp:53 src/raye/typenames/typenames.cpp:54
+#, kde-format
+msgctxt "@item file type"
+msgid "Rich text document"
+msgstr "Document texte enrichi"
+
+#: src/raye/typenames/typenames.cpp:55
+#, kde-format
+msgctxt "@item file type"
+msgid "Calendar file"
+msgstr "Fichier de calendrier"
+
+#: src/raye/typenames/typenames.cpp:56
+#, kde-format
+msgctxt "@item file type"
+msgid "Contact file"
+msgstr "Fichier de contact"
+
+#: src/raye/typenames/typenames.cpp:58
+#, kde-format
+msgctxt "@item file type"
+msgid "PNG file"
+msgstr "Fichier PNG"
+
+#: src/raye/typenames/typenames.cpp:59
+#, kde-format
+msgctxt "@item file type"
+msgid "JPG file"
+msgstr "Fichier JPG"
+
+#: src/raye/typenames/typenames.cpp:60
+#, kde-format
+msgctxt "@item file type"
+msgid "GIF file"
+msgstr "Fichier GIF"
+
+#: src/raye/typenames/typenames.cpp:61
+#, kde-format
+msgctxt "@item file type"
+msgid "Bitmap image"
+msgstr "Image bitmap"
+
+#: src/raye/typenames/typenames.cpp:62
+#, kde-format
+msgctxt "@item file type"
+msgid "WEBP file"
+msgstr "Fichier WEBP"
+
+#: src/raye/typenames/typenames.cpp:63
+#, kde-format
+msgctxt "@item file type"
+msgid "AVIF file"
+msgstr "Fichier AVIF"
+
+#: src/raye/typenames/typenames.cpp:64
+#, kde-format
+msgctxt "@item file type"
+msgid "HEIC file"
+msgstr "Fichier HEIC"
+
+#: src/raye/typenames/typenames.cpp:65
+#, kde-format
+msgctxt "@item file type"
+msgid "TIFF file"
+msgstr "Fichier TIFF"
+
+#: src/raye/typenames/typenames.cpp:66
+#, kde-format
+msgctxt "@item file type"
+msgid "SVG document"
+msgstr "Document SVG"
+
+#: src/raye/typenames/typenames.cpp:67
+#, kde-format
+msgctxt "@item file type"
+msgid "Icon"
+msgstr "Icône"
+
+#: src/raye/typenames/typenames.cpp:68
+#, kde-format
+msgctxt "@item file type"
+msgid "PSD file"
+msgstr "Fichier PSD"
+
+#: src/raye/typenames/typenames.cpp:70
+#, kde-format
+msgctxt "@item file type"
+msgid "MP3 file"
+msgstr "Fichier MP3"
+
+#: src/raye/typenames/typenames.cpp:71
+#, kde-format
+msgctxt "@item file type"
+msgid "FLAC file"
+msgstr "Fichier FLAC"
+
+#: src/raye/typenames/typenames.cpp:72
+#, kde-format
+msgctxt "@item file type"
+msgid "WAV file"
+msgstr "Fichier WAV"
+
+#: src/raye/typenames/typenames.cpp:73 src/raye/typenames/typenames.cpp:74
+#, kde-format
+msgctxt "@item file type"
+msgid "OGG file"
+msgstr "Fichier OGG"
+
+#: src/raye/typenames/typenames.cpp:75
+#, kde-format
+msgctxt "@item file type"
+msgid "OPUS file"
+msgstr "Fichier OPUS"
+
+#: src/raye/typenames/typenames.cpp:76
+#, kde-format
+msgctxt "@item file type"
+msgid "M4A file"
+msgstr "Fichier M4A"
+
+#: src/raye/typenames/typenames.cpp:77
+#, kde-format
+msgctxt "@item file type"
+msgid "AAC file"
+msgstr "Fichier AAC"
+
+#: src/raye/typenames/typenames.cpp:78
+#, kde-format
+msgctxt "@item file type"
+msgid "MP4 file"
+msgstr "Fichier MP4"
+
+#: src/raye/typenames/typenames.cpp:79
+#, kde-format
+msgctxt "@item file type"
+msgid "MKV file"
+msgstr "Fichier MKV"
+
+#: src/raye/typenames/typenames.cpp:80
+#, kde-format
+msgctxt "@item file type"
+msgid "WEBM file"
+msgstr "Fichier WEBM"
+
+#: src/raye/typenames/typenames.cpp:81
+#, kde-format
+msgctxt "@item file type"
+msgid "MOV file"
+msgstr "Fichier MOV"
+
+#: src/raye/typenames/typenames.cpp:82
+#, kde-format
+msgctxt "@item file type"
+msgid "AVI file"
+msgstr "Fichier AVI"
+
+#: src/raye/typenames/typenames.cpp:84
+#, kde-format
+msgctxt "@item file type"
+msgid "PDF document"
+msgstr "Document PDF"
+
+#: src/raye/typenames/typenames.cpp:85
+#, kde-format
+msgctxt "@item file type"
+msgid "EPUB book"
+msgstr "Livre EPUB"
+
+#: src/raye/typenames/typenames.cpp:86
+#, kde-format
+msgctxt "@item file type"
+msgid "Word document"
+msgstr "Document Word"
+
+#: src/raye/typenames/typenames.cpp:87
+#, kde-format
+msgctxt "@item file type"
+msgid "Word 97-2003 document"
+msgstr "Document Word 97-2003"
+
+#: src/raye/typenames/typenames.cpp:88
+#, kde-format
+msgctxt "@item file type"
+msgid "Excel worksheet"
+msgstr "Feuille de calcul Excel"
+
+#: src/raye/typenames/typenames.cpp:89
+#, kde-format
+msgctxt "@item file type"
+msgid "Excel 97-2003 worksheet"
+msgstr "Feuille de calcul Excel 97-2003"
+
+#: src/raye/typenames/typenames.cpp:90
+#, kde-format
+msgctxt "@item file type"
+msgid "PowerPoint presentation"
+msgstr "Présentation PowerPoint"
+
+#: src/raye/typenames/typenames.cpp:91
+#, kde-format
+msgctxt "@item file type"
+msgid "PowerPoint 97-2003 presentation"
+msgstr "Présentation PowerPoint 97-2003"
+
+#: src/raye/typenames/typenames.cpp:92
+#, kde-format
+msgctxt "@item file type"
+msgid "OpenDocument text"
+msgstr "Texte OpenDocument"
+
+#: src/raye/typenames/typenames.cpp:93
+#, kde-format
+msgctxt "@item file type"
+msgid "OpenDocument spreadsheet"
+msgstr "Classeur OpenDocument"
+
+#: src/raye/typenames/typenames.cpp:94
+#, kde-format
+msgctxt "@item file type"
+msgid "OpenDocument presentation"
+msgstr "Présentation OpenDocument"
+
+#: src/raye/typenames/typenames.cpp:96
+#, kde-format
+msgctxt "@item file type"
+msgid "Compressed (zipped) folder"
+msgstr "Dossier compressé"
+
+#: src/raye/typenames/typenames.cpp:97
+#, kde-format
+msgctxt "@item file type"
+msgid "7Z archive"
+msgstr "Archive 7Z"
+
+#: src/raye/typenames/typenames.cpp:98
+#, kde-format
+msgctxt "@item file type"
+msgid "RAR archive"
+msgstr "Archive RAR"
+
+#: src/raye/typenames/typenames.cpp:99
+#, kde-format
+msgctxt "@item file type"
+msgid "TAR archive"
+msgstr "Archive TAR"
+
+#: src/raye/typenames/typenames.cpp:100
+#, kde-format
+msgctxt "@item file type"
+msgid "TAR.GZ archive"
+msgstr "Archive TAR.GZ"
+
+#: src/raye/typenames/typenames.cpp:101
+#, kde-format
+msgctxt "@item file type"
+msgid "TAR.XZ archive"
+msgstr "Archive TAR.XZ"
+
+#: src/raye/typenames/typenames.cpp:102
+#, kde-format
+msgctxt "@item file type"
+msgid "TAR.BZ2 archive"
+msgstr "Archive TAR.BZ2"
+
+#: src/raye/typenames/typenames.cpp:103
+#, kde-format
+msgctxt "@item file type"
+msgid "TAR.ZST archive"
+msgstr "Archive TAR.ZST"
+
+#: src/raye/typenames/typenames.cpp:104
+#, kde-format
+msgctxt "@item file type"
+msgid "GZ archive"
+msgstr "Archive GZ"
+
+#: src/raye/typenames/typenames.cpp:105 src/raye/typenames/typenames.cpp:106
+#, kde-format
+msgctxt "@item file type"
+msgid "Disc image file"
+msgstr "Fichier image disque"
+
+#: src/raye/typenames/typenames.cpp:108 src/raye/typenames/typenames.cpp:109
+#: src/raye/typenames/typenames.cpp:110 src/raye/typenames/typenames.cpp:111
+#: src/raye/typenames/typenames.cpp:112
+#, kde-format
+msgctxt "@item file type"
+msgid "Application"
+msgstr "Application"
+
+#: src/raye/typenames/typenames.cpp:113
+#, kde-format
+msgctxt "@item file type"
+msgid "Windows Installer package"
+msgstr "Package Windows Installer"
+
+#: src/raye/typenames/typenames.cpp:114
+#, kde-format
+msgctxt "@item file type"
+msgid "Application extension"
+msgstr "Extension de l'application"
+
+#: src/raye/typenames/typenames.cpp:115
+#, kde-format
+msgctxt "@item file type"
+msgid "Windows batch file"
+msgstr "Fichier de commandes Windows"
+
+#: src/raye/typenames/typenames.cpp:116
+#, kde-format
+msgctxt "@item file type"
+msgid "Shell script"
+msgstr "Script shell"
+
+#: src/raye/typenames/typenames.cpp:117 src/raye/typenames/typenames.cpp:118
+#, kde-format
+msgctxt "@item file type"
+msgid "Shortcut"
+msgstr "Raccourci"
+
+#: src/raye/typenames/typenames.cpp:119
+#, kde-format
+msgctxt "@item file type"
+msgid "Software package"
+msgstr "Paquet logiciel"
+
+#: src/raye/typenames/typenames.cpp:120
+#, kde-format
+msgctxt "@item file type"
+msgid "JAR file"
+msgstr "Fichier JAR"
+
+#: src/raye/typenames/typenames.cpp:121
+#, kde-format
+msgctxt "@item file type"
+msgid "SQLite database"
+msgstr "Base de données SQLite"
+
+#: src/raye/typenames/typenames.cpp:123
+#, kde-format
+msgctxt "@item file type"
+msgid "TrueType font file"
+msgstr "Fichier de police TrueType"
+
+#: src/raye/typenames/typenames.cpp:124
+#, kde-format
+msgctxt "@item file type"
+msgid "OpenType font file"
+msgstr "Fichier de police OpenType"
+
+#: src/raye/typenames/typenames.cpp:125 src/raye/typenames/typenames.cpp:126
+#, kde-format
+msgctxt "@item file type"
+msgid "Web font file"
+msgstr "Fichier de police web"
+
+#: src/raye/ui/commandbutton.cpp:209
+#, kde-format
+msgctxt "@info:tooltip a command and its keyboard shortcut"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: src/raye/ui/splitbutton.cpp:50
+#, kde-format
+msgctxt "@info:tooltip the menu part of a split button"
+msgid "More options"
+msgstr "Plus d'options"
+
+#: src/raye/ui/usagebar.cpp:39
+#, kde-format
+msgctxt "@info accessible text of a drive usage bar"
+msgid "%1 % used"
+msgstr "%1 % utilisé"
+
+#: src/raye/viewdefaults/viewdefaults.cpp:253
+#, kde-format
+msgctxt "@title:group date"
+msgid "Today"
+msgstr "Aujourd'hui"
+
+#: src/raye/viewdefaults/viewdefaults.cpp:255
+#, kde-format
+msgctxt "@title:group date"
+msgid "Yesterday"
+msgstr "Hier"
+
+#: src/raye/viewdefaults/viewdefaults.cpp:257
+#, kde-format
+msgctxt "@title:group date"
+msgid "Earlier this week"
+msgstr "Plus tôt cette semaine"
+
+#: src/raye/viewdefaults/viewdefaults.cpp:259
+#, kde-format
+msgctxt "@title:group date"
+msgid "Last week"
+msgstr "La semaine dernière"
+
+#: src/raye/viewdefaults/viewdefaults.cpp:261
+#, kde-format
+msgctxt "@title:group date"
+msgid "Earlier this month"
+msgstr "Plus tôt ce mois-ci"
+
+#: src/raye/viewdefaults/viewdefaults.cpp:263
+#, kde-format
+msgctxt "@title:group date"
+msgid "Last month"
+msgstr "Le mois dernier"
+
+#: src/raye/viewdefaults/viewdefaults.cpp:265
+#, kde-format
+msgctxt "@title:group date"
+msgid "Earlier this year"
+msgstr "Plus tôt cette année"
+
+#: src/raye/viewdefaults/viewdefaults.cpp:267
+#, kde-format
+msgctxt "@title:group date"
+msgid "A long time ago"
+msgstr "Il y a longtemps"
+
+#: src/raye/viewdefaults/viewdefaults.cpp:269
+#, kde-format
+msgctxt "@title:group date"
+msgid "Tomorrow"
+msgstr "Demain"
+
+#: src/raye/viewdefaults/viewdefaults.cpp:271
+#, kde-format
+msgctxt "@title:group date"
+msgid "Later this week"
+msgstr "Plus tard cette semaine"
+
+#: src/raye/viewdefaults/viewdefaults.cpp:273
+#, kde-format
+msgctxt "@title:group date"
+msgid "Next week"
+msgstr "La semaine prochaine"
+
+#: src/raye/viewdefaults/viewdefaults.cpp:275
+#, kde-format
+msgctxt "@title:group date"
+msgid "Later this month"
+msgstr "Plus tard ce mois-ci"
+
+#: src/raye/viewdefaults/viewdefaults.cpp:277
+#, kde-format
+msgctxt "@title:group date"
+msgid "Next month"
+msgstr "Le mois prochain"
+
+#: src/raye/viewdefaults/viewdefaults.cpp:279
+#, kde-format
+msgctxt "@title:group date"
+msgid "Later this year"
+msgstr "Plus tard cette année"
+
+#: src/raye/viewdefaults/viewdefaults.cpp:281
+#, kde-format
+msgctxt "@title:group date"
+msgid "A long time from now"
+msgstr "Dans longtemps"
+
+#: src/raye/window/statusbar.cpp:47
+#, kde-format
+msgctxt "@action:button status bar"
+msgid "Details"
+msgstr "Détails"
+
+#: src/raye/window/statusbar.cpp:48
+#, kde-format
+msgctxt "@action:button status bar"
+msgid "Large icons"
+msgstr "Grandes icônes"
+
+#: src/raye/window/statustext.cpp:16
+#, kde-format
+msgctxt "@info:status"
+msgid "%1 item"
+msgid_plural "%1 items"
+msgstr[0] "%1 élément"
+msgstr[1] "%1 éléments"
+
+#: src/raye/window/statustext.cpp:24
+#, kde-format
+msgctxt "@info:status"
+msgid "%1 item selected"
+msgid_plural "%1 items selected"
+msgstr[0] "%1 élément sélectionné"
+msgstr[1] "%1 éléments sélectionnés"
+
+#: src/raye/window/statustext.cpp:28
+#, kde-format
+msgctxt "@info:status size of empty files"
+msgid "0 bytes"
+msgstr "0 octet"
+
+#: src/raye/window/statustext.cpp:30
+#, kde-format
+msgctxt "@info:status %1 is '3 items selected', %2 a size"
+msgid "%1  %2"
+msgstr "%1  %2"
+
+#: src/views/dolphinview.cpp:2761
+msgid "No items match your search."
+msgstr "Aucun élément ne correspond à votre recherche."
+
+#: src/views/dolphinview.cpp:2763 src/views/dolphinview.cpp:2785
+msgid "This folder is empty."
+msgstr "Ce dossier est vide."

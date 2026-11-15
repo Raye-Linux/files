@@ -1,0 +1,77 @@
+raye-files (25.12.3+raye6) resolute; urgency=medium
+
+  * Map network drive: connect a shared folder (\\server\share) into a
+    folder of yours, as a guest or with a name and password kept in the
+    wallet, and reconnect it at sign-in. Disconnect from the right-click
+    menu.
+  * This PC lists the computers and NAS found on the network, and network
+    drives with their space, or Disconnected when they are offline.
+  * Network drives show up under This PC in the navigation pane and in
+    the address bar.
+  * Properties of a network drive or location say what it is: the shared
+    folder, the computer, SMB, the space. No more Local Disk or cifs.
+  * Right-click a drive in This PC for new tab, new window, pin, eject,
+    format, copy as path and properties.
+  * Recycle Bin gets Empty Recycle Bin, Restore all items and Restore the
+    selected items in the command bar, and Empty in the navigation pane.
+  * Right-click files and folders on Home and pictures in Gallery.
+  * Gallery's Collection can add any folder.
+
+ -- techoraye <190692880+techoraye@users.noreply.github.com>  Fri, 13 Nov 2026 18:11:49 +0000
+
+raye-files (25.12.3+raye5) resolute; urgency=medium
+
+  * Files opens, extracts and makes archives with the Raye archive
+    engine: ZIP, 7z, RAR, tar and more open like folders, even with no
+    extension. Extract all, Extract here and Extract to; Compress to
+    ZIP, 7z or tar.zst; an Add to archive window with levels, methods,
+    dictionary, solid blocks, threads, split parts, AES-256 passwords,
+    update modes and saved profiles.
+  * A canceled archive operation says canceled, in American spelling.
+
+ -- techoraye <190692880+techoraye@users.noreply.github.com>  Thu, 12 Nov 2026 20:41:21 +0000
+
+raye-files (25.12.3+raye3) resolute; urgency=medium
+
+  * Files opens as a Windows-style window: tabs in the title row,
+    address row with search, command bar, navigation pane, Details and
+    Preview pane, and a status bar that says "12 items | 1 item selected
+    2.4 MB".
+  * New This PC (drives with usage bars, phones and cameras, network
+    locations) and Gallery (pictures and videos by month, rows that fill
+    the width, a Collection menu to pick its folders).
+  * The eight Windows views in View (Ctrl+Shift+1 to 8), Ctrl+1 to 9 to
+    switch tabs, and the File Explorer keys for search, address, panes,
+    new folder and full screen.
+  * New Properties dialog: General, Security in plain words, Details for
+    pictures, videos and music, and a drive page with its space and
+    Clean up. The full dialog stays behind Advanced settings.
+  * A new window and Meta+E open Home, and the places list is set up
+    like Quick access on first start.
+  * New offers Folder, Shortcut, Text document and Compressed (zipped)
+    folder, and a new file starts with its name ready to type. Column
+    headers are never cut.
+  * Files follows the new Raye Night and Day colours.
+
+ -- techoraye <190692880+techoraye@users.noreply.github.com>  Wed, 11 Nov 2026 13:00:51 +0000
+
+raye-files (25.12.3+raye2) resolute; urgency=medium
+
+  * Raye Open and Save dialogs for every app, with a search box, and they
+    keep their size.
+  * Address row, command bar, panes, tabs in the title row, archives and a
+    Home page.
+  * "Open with" lists the apps, opens at full size and has a Cancel button.
+  * Files asks for administrator permission the Windows way.
+  * A file name with quotes opens that file, and Save adds the extension
+    even when the folder name has a dot.
+
+ -- techoraye <190692880+techoraye@users.noreply.github.com>  Sun, 08 Nov 2026 11:07:43 +0000
+
+raye-files (25.12.3+raye1) resolute; urgency=medium
+
+  * Files: Dolphin 25.12.3 imported as the Raye file explorer, packaged as
+    raye-files (replaces dolphin and dolphin-data, uses the system
+    libdolphinvcs6).
+
+ -- techoraye <190692880+techoraye@users.noreply.github.com>  Fri, 30 Oct 2026 08:20:00 +0000

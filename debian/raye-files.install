@@ -1,0 +1,28 @@
+# What the package ships. Globs on purpose: a later work package that adds a
+# plugin, a KCM, an icon, a .kcfg or a catalog lands here with no edit.
+#
+# Roots that only exist once a later package lands (the QML module, etc/xdg,
+# udev, portal, notifyrc, .hidden...) are not listed: debian/rules picks them up.
+
+usr/bin/dolphin
+usr/bin/servicemenuinstaller
+usr/lib/*/kconf_update_bin/*
+usr/lib/*/libraye-files-private.so.*
+usr/lib/*/qt6/plugins/dolphin/kcms/*.so
+usr/lib/*/qt6/plugins/kf6/kfileitemaction/*.so
+usr/lib/*/qt6/plugins/kf6/kio/*.so
+usr/lib/*/qt6/plugins/kf6/parts/*.so
+usr/lib/systemd/user/*.service
+usr/share/applications/*.desktop
+usr/share/config.kcfg/*.kcfg
+usr/share/dbus-1/services/*.service
+usr/share/dolphin/*
+usr/share/icons/hicolor/*/apps/*
+usr/share/kconf_update/*
+usr/share/kglobalaccel/*.desktop
+usr/share/knsrcfiles/*.knsrc
+usr/share/locale/*/LC_MESSAGES/*.mo
+usr/share/metainfo/*.xml
+usr/share/polkit-1/actions/*.policy
+usr/share/qlogging-categories6/*.categories
+usr/share/zsh/site-functions/*

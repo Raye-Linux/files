@@ -1,0 +1,6 @@
+# Files mounts removable drives itself and asks what to do with them
+# (AutoPlay, explorer spec 3.17), so KDE's own automounter stays off.
+# Installed as /etc/xdg/kded_device_automounterrc.
+
+[General]
+AutomountEnabled=false

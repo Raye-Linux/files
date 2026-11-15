@@ -1,0 +1,22 @@
+FX-1 - system defaults and first run
+Upstream files this package changed, and why.
+
+None. Everything is new:
+
+config/dolphinrc
+    /etc/xdg/dolphinrc: Dolphin's own keys set the Windows way (explorer
+    spec 3.18) and the [Raye] group with its defaults.
+config/kded_device_automounterrc
+    /etc/xdg: KDE's automounter off, Files' AutoPlay mounts instead.
+config/CMakeLists.txt
+    Installs the two files; gives the Raye object target KIO's file widgets
+    (the first run uses KFilePlacesModel).
+src/raye/firstrun/
+    Raye::FirstRun::runOnce(): the shared places list made like Quick
+    access, Recycle Bin defaults for the home trash, Templates and Public
+    added to ~/.hidden when they sit in the home. Guarded by [Raye]
+    PlacesMigrated and [Raye] DefaultsVersion in dolphinrc.
+
+On a rebase: the keys of config/dolphinrc are checked against the .kcfg
+files of src/settings by tests/raye/test_firstrun.cpp; a key Dolphin renames
+fails that test instead of doing nothing.

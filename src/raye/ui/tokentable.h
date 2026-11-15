@@ -1,0 +1,81 @@
+/*
+ * SPDX-FileCopyrightText: 2026 techoraye
+ *
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ */
+
+// The Raye colour table, Night and Day, as the theme writes it into
+// org.raye.ui (theme: tokens/raye-tokens.json, qml/org/raye/ui/Tokens.qml).
+// Names are the QML names. Values are 0xAARRGGBB: a colour with alpha is
+// drawn over the surface below it; "Solid" is the opaque value KDE stores.
+// The accent shades are not here: they follow the user's accent (tokens.cpp).
+//
+// test_ui_tokens compares this table with org.raye.ui whenever that module
+// is installed, so a change in the theme shows up as a failing test here.
+
+// RAYE_TOKEN(name, night, day)
+RAYE_TOKEN(acrylicTaskbar, 0xdb131217, 0xdb131217)
+RAYE_TOKEN(acrylicTaskbarSolid, 0xff131217, 0xff333236)
+RAYE_TOKEN(acrylicTint, 0xcc1b1a20, 0xd1fafafb)
+RAYE_TOKEN(acrylicTintSolid, 0xff1a191e, 0xfff9f9fa)
+RAYE_TOKEN(bgBase, 0xff141318, 0xfff5f4f7)
+RAYE_TOKEN(bgCard, 0x0dffffff, 0xd9ffffff)
+RAYE_TOKEN(bgCardSolid, 0xff212026, 0xffffffff)
+RAYE_TOKEN(bgCardHover, 0x14ffffff, 0xfff7f7f9)
+RAYE_TOKEN(bgCardHoverSolid, 0xff28272d, 0xfff7f7f9)
+RAYE_TOKEN(bgLayer, 0x08ffffff, 0x99ffffff)
+RAYE_TOKEN(bgLayerSolid, 0xff1b1a1f, 0xfffbfbfc)
+RAYE_TOKEN(bgQuarternary, 0xff211f26, 0xffffffff)
+RAYE_TOKEN(bgSecondary, 0xff100f13, 0xffeeedf1)
+RAYE_TOKEN(bgSmoke, 0x73000000, 0x4c17151c)
+RAYE_TOKEN(bgSmokeSolid, 0xff0b0a0d, 0xffb2b1b5)
+RAYE_TOKEN(bgTertiary, 0xff1a191f, 0xfffafafb)
+RAYE_TOKEN(bgTooltip, 0xff2a292f, 0xffffffff)
+RAYE_TOKEN(captionClose, 0xffe5334f, 0xffe5334f)
+RAYE_TOKEN(captionClosePressed, 0xffc22a44, 0xffc22a44)
+RAYE_TOKEN(edgeLit, 0x1fffffff, 0x1fffffff)
+RAYE_TOKEN(edgeLitSolid, 0xff302f34, 0xfff6f5f8)
+RAYE_TOKEN(fillControl, 0x12ffffff, 0xd9ffffff)
+RAYE_TOKEN(fillControlSolid, 0xff26252b, 0xfffdfdfd)
+RAYE_TOKEN(fillControlDisabled, 0xff1c1b20, 0xfff2f1f4)
+RAYE_TOKEN(fillControlHover, 0x1affffff, 0xfff7f7f9)
+RAYE_TOKEN(fillControlHoverSolid, 0xff2c2b31, 0xfff7f7f9)
+RAYE_TOKEN(fillControlPressed, 0x0affffff, 0xfff2f1f4)
+RAYE_TOKEN(fillControlPressedSolid, 0xff201f25, 0xfff2f1f4)
+RAYE_TOKEN(fillInputActive, 0xff100f13, 0xffffffff)
+RAYE_TOKEN(fillSubtleHover, 0x0fffffff, 0x0a17151c)
+RAYE_TOKEN(fillSubtleHoverSolid, 0xff222126, 0xffecebee)
+RAYE_TOKEN(fillSubtlePressed, 0x0affffff, 0x0617151c)
+RAYE_TOKEN(fillSubtlePressedSolid, 0xff1d1c21, 0xffefeef2)
+RAYE_TOKEN(fillSubtleSelectedSolid, 0xff29282d, 0xffe8e7ea)
+RAYE_TOKEN(focusInner, 0xb2000000, 0xb2ffffff)
+RAYE_TOKEN(focusInnerSolid, 0xff060607, 0xfffcfcfd)
+RAYE_TOKEN(focusOuter, 0xfff1f0f4, 0xff17151c)
+RAYE_TOKEN(glow, 0x387b3cff, 0x247b3cff)
+RAYE_TOKEN(glowSolid, 0xff2b1c4b, 0xffe4daf8)
+RAYE_TOKEN(linkVisited, 0xffd3a6ff, 0xff8a35c8)
+RAYE_TOKEN(selectionInactive, 0xfff0eaff, 0xfff0eaff)
+RAYE_TOKEN(selectionNegative, 0xffffe8ec, 0xffffe8ec)
+RAYE_TOKEN(selectionNeutral, 0xffffebc0, 0xffffebc0)
+RAYE_TOKEN(selectionPositive, 0xffcff6e0, 0xffcff6e0)
+RAYE_TOKEN(selectionVisited, 0xfff2eaff, 0xfff2eaff)
+RAYE_TOKEN(shadow, 0xff000000, 0xff17151c)
+RAYE_TOKEN(statusCaution, 0xffffc857, 0xff945e00)
+RAYE_TOKEN(statusCritical, 0xffff6b85, 0xffc4264b)
+RAYE_TOKEN(statusInfo, 0xff8fb8ff, 0xff2f5fc9)
+RAYE_TOKEN(statusSuccess, 0xff5fe0a1, 0xff0e7a47)
+RAYE_TOKEN(strokeCard, 0x33000000, 0x1217151c)
+RAYE_TOKEN(strokeCardSolid, 0xff100f13, 0xffe5e4e8)
+RAYE_TOKEN(strokeControl, 0x12ffffff, 0x1417151c)
+RAYE_TOKEN(strokeControlSolid, 0xff2a292f, 0xffe1e0e4)
+RAYE_TOKEN(strokeControlBottom, 0x0affffff, 0x2917151c)
+RAYE_TOKEN(strokeControlBottomSolid, 0xff1d1c21, 0xffcfcdd4)
+RAYE_TOKEN(strokeDivider, 0x14ffffff, 0x1417151c)
+RAYE_TOKEN(strokeDividerSolid, 0xff27262a, 0xffe3e2e5)
+RAYE_TOKEN(strokeStrong, 0xff8b8893, 0xff85828d)
+RAYE_TOKEN(strokeSurface, 0x17ffffff, 0x1a17151c)
+RAYE_TOKEN(strokeSurfaceSolid, 0xff29282d, 0xffdfdee1)
+RAYE_TOKEN(textDisabled, 0xff5d5b64, 0xffaaa8b0)
+RAYE_TOKEN(textPrimary, 0xfff1f0f4, 0xff17151c)
+RAYE_TOKEN(textSecondary, 0xffb5b3bc, 0xff54525b)
+RAYE_TOKEN(textTertiary, 0xff97949f, 0xff6c6975)

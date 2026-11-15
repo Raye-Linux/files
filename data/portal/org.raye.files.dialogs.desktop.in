@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=File dialogs
+Name[fr]=Boîtes de dialogue de fichiers
+Exec=@RAYE_PORTAL_BINARY@
+Icon=system-file-manager
+NoDisplay=true

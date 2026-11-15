@@ -1,0 +1,47 @@
+FX-9 - Main window assembly, status bar, shortcuts
+Upstream files this package changed, and why. The window itself is new code
+in src/raye/window/ (Shell, StatusBar, the shortcut table) and
+src/dolphinmainwindow_raye.cpp, which wires it to the window's actions.
+
+src/dolphinmainwindow.{h,cpp}
+    Calls rayeAddActions() after setupActions() and, at the end of the
+    constructor, rayeApplyShortcuts() and rayeSetupWindow(): the menu bar,
+    the toolbar and every dock are hidden, the tab widget goes into
+    Raye::Window::Shell between the navigation pane and the right pane
+    (the Information panel taken out of its dock), and the shell becomes
+    the central widget. changeUrl() lets raye: page URLs through instead of
+    returning on "not listable".
+src/dolphinmainwindow_raye.cpp (new, in dolphinstatic)
+    The raye_* actions the command bar and View menu use, the File
+    Explorer key map, and the glue between the active view and the address
+    row, search box, command bar context, navigation pane and status bar.
+src/dolphinviewcontainer.{h,cpp}
+    A tab shows Raye::Pages::PageHost instead of the view for raye: URLs
+    (Home, This PC); url() and caption() answer for the page; a tab opened
+    on a page lists the home folder behind it rather than raye:. caption()
+    uses LocationNames ("Downloads", "This PC", "Recycle Bin"). Dolphin's
+    own status bar is never shown. Three messages that said "Dolphin" now
+    come from the raye-files catalog.
+src/dolphintabwidget.{h,cpp}
+    The tab bar is always shown; once the title row has taken it, the pages
+    get the whole widget (event filter on the stack). Tab icons come from
+    LocationNames. A new tab opens Home.
+src/main.cpp
+    Raye::FirstRun::runOnce() before the first window, so the places list
+    is migrated once per account.
+src/CMakeLists.txt
+    dolphinmainwindow_raye.cpp added to dolphinstatic.
+
+Also, without upstream files: the eight view modes are raye_mode_* actions
+(Ctrl+Shift+1..8) that call DolphinView::setRayeViewMode(); the View menu of
+the command bar lists them when the window has them. Dolphin's Ctrl+1..3
+went to the tabs. Gallery (raye:gallery, src/raye/pages/gallerymodel.*,
+qml/gallery/) and This PC (raye:thispc, thispcmodel.*, qml/thispc/) are
+registered next to Home in pages/host.cpp.
+src/global.cpp
+    Dolphin::homeUrl() is the start page of [Raye] StartPage (raye:home,
+    raye:thispc), so a new window and Meta+E open Home like File Explorer.
+New ⌄ keeps only office templates of KNewFileMenu (setSupportedMimeTypes);
+Folder, Shortcut, Text document and Compressed (zipped) folder are Raye's
+(raye_new_text, raye_new_shortcut, raye_new_zip), and a new file opens in
+rename mode with the name selected.

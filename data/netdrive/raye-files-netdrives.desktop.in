@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Network drives
+Name[fr]=Lecteurs réseau
+Comment=Connects your network drives again when you sign in
+Comment[fr]=Reconnecte vos lecteurs réseau à l'ouverture de session
+Exec=@RAYE_LIBEXEC@/raye-files-netdrives
+NoDisplay=true
+OnlyShowIn=KDE;
+X-KDE-autostart-phase=2
