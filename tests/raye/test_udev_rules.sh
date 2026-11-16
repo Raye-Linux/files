@@ -9,13 +9,12 @@ set -eu
 src="${RAYE_FILES_SOURCE_DIR:?}/data/system"
 rules="$src/90-raye-hide-system.rules"
 helper="$src/raye-is-system-dm"
-hidden="$src/dot-hidden"
 cmake="$src/CMakeLists.txt"
 
 fail=0
 bad() { echo "FAIL: $*"; fail=1; }
 
-for f in "$rules" "$helper" "$hidden" "$cmake"; do
+for f in "$rules" "$helper" "$cmake"; do
     [ -f "$f" ] || { echo "missing $f"; exit 1; }
 done
 
@@ -408,19 +407,12 @@ else
     echo "note: udevadm not installed, syntax checked by the evaluator only"
 fi
 
-# --- /.hidden --------------------------------------------------------------
-# One name per line, nothing else: KIO reads every line as a file name.
-for name in bin boot dev etc lib lib64 proc root run sbin snap srv sys tmp usr var \
-            lost+found .snapshots cdrom swap.img swap swapfile; do
-    grep -qxF "$name" "$hidden" || bad ".hidden does not list $name"
-done
-for name in home media mnt opt; do
-    grep -qxF "$name" "$hidden" && bad ".hidden hides $name, which must stay visible"
-done
-grep -qn '^$\|^#\|/\|^[[:space:]]\|[[:space:]]$' "$hidden" \
-    && bad ".hidden has a blank line, a comment, a slash or stray spaces"
-[ -z "$(sort "$hidden" | uniq -d)" ] || bad ".hidden lists a name twice"
-[ "$(tail -c 1 "$hidden" | od -An -c | tr -d ' ')" = '\n' ] || bad ".hidden does not end with a newline"
+# --- no /.hidden ------------------------------------------------------------
+# Every folder of the Raye drive must stay visible: nothing may install a
+# /.hidden again.
+if grep -v '^#' "$cmake" | grep -q '\.hidden\|dot-hidden'; then
+    bad "data/system installs a .hidden file again"
+fi
 
 [ "$fail" = 0 ] || exit 1
-echo "ok: $n rule cases, helper, .hidden"
+echo "ok: $n rule cases, helper, no .hidden"

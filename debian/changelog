@@ -1,3 +1,9 @@
+raye-files (25.12.3+raye10) resolute; urgency=high
+
+  * Every folder of the Raye drive is shown: no /.hidden list anymore.
+
+ -- techoraye <190692880+techoraye@users.noreply.github.com>  Mon, 16 Nov 2026 00:16:36 +0000
+
 raye-files (25.12.3+raye9) resolute; urgency=high
 
   * This PC: USB sticks and disks that are plugged in but not mounted show
