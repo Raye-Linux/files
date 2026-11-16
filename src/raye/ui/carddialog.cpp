@@ -279,8 +279,13 @@ void CardDialog::keyPressEvent(QKeyEvent *event)
 
 void CardDialog::mousePressEvent(QMouseEvent *event)
 {
-    // The card has no title bar: its body above the button row moves it.
-    if (event->button() == Qt::LeftButton && event->position().y() < buttonRowTop() && windowHandle()) {
+    // The card has no title bar: its top strip (the title) moves it, like
+    // one would. Not the whole body: a click on a label, a gap or the edge
+    // of a tab must not drag the window away.
+    const qreal moveStrip = m_title->isVisible() ? m_title->geometry().bottom() + Metrics::dialogPadding
+                                                 : qreal(Metrics::dialogPadding) * 2;
+    if (event->button() == Qt::LeftButton && event->position().y() < qMin(moveStrip, qreal(buttonRowTop()))
+        && windowHandle()) {
         windowHandle()->startSystemMove();
         event->accept();
         return;

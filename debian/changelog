@@ -1,3 +1,11 @@
+raye-files (25.12.3+raye11) resolute; urgency=medium
+
+  * Dialogs (Folder options, Properties...) move only by their title strip:
+    a click inside no longer drags the window away.
+  * Navigation pane: a folder with no sub-folder shows no expand arrow.
+
+ -- techoraye <190692880+techoraye@users.noreply.github.com>  Mon, 16 Nov 2026 14:36:39 +0000
+
 raye-files (25.12.3+raye10) resolute; urgency=high
 
   * Every folder of the Raye drive is shown: no /.hidden list anymore.

@@ -142,7 +142,10 @@ private Q_SLOTS:
         QVERIFY(!(model.flags(model.index(0, 0)) & Qt::ItemIsDropEnabled)); // Home is a page
         QCOMPARE(model.flags(model.index(2, 0)), Qt::NoItemFlags); // separator
         QVERIFY(model.flags(model.index(3, 0)) & Qt::ItemIsDropEnabled); // Desktop
-        QVERIFY(model.hasChildren(model.index(3, 0))); // a chevron before listing
+        // no chevron on a folder known to hold no sub-folder (Desktop is
+        // empty here), one on a folder that has some, before any listing
+        QVERIFY(!model.hasChildren(model.index(3, 0)));
+        QVERIFY(model.hasChildren(model.index(5, 0))); // Documents
         const QModelIndex network = model.indexForUrl(NavigationModel::networkUrl());
         QCOMPARE(network.data().toString(), QStringLiteral("Network"));
         QVERIFY(!(model.flags(network) & Qt::ItemIsDropEnabled));
@@ -219,10 +222,7 @@ private Q_SLOTS:
         QCOMPARE(work.data().toString(), QStringLiteral("Work"));
         QCOMPARE(work.data(NavigationModel::KindRole).toInt(), int(NavigationModel::Folder));
         QCOMPARE(work.data(NavigationModel::DepthRole).toInt(), 1);
-        // An empty folder loses its chevron once listed.
-        QVERIFY(model.hasChildren(work));
-        model.fetchMore(work);
-        QVERIFY(finished.wait(5000));
+        // An empty folder shows no chevron at all, listed or not.
         QVERIFY(!model.hasChildren(work));
 
         // A folder made later shows up.

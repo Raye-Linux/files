@@ -15,6 +15,7 @@
 
 #include <QCollator>
 #include <QDir>
+#include <QDirIterator>
 #include <QLocale>
 #include <QMimeData>
 
@@ -58,6 +59,21 @@ namespace
 {
 using Node = NavigationModel::Node;
 
+// A local folder with no visible sub-folder gets no chevron right away
+// (Windows shows none either); one read of the folder, stopped at the first
+// sub-folder. Other places are only known once listed.
+bool mayHaveSubfolders(const QUrl &url)
+{
+    if (!url.isLocalFile())
+        return true;
+    // unknown (missing, unreadable): keep the chevron, the listing decides
+    const QDir dir(url.toLocalFile());
+    if (!dir.exists() || !dir.isReadable())
+        return true;
+    QDirIterator it(dir.path(), QDir::Dirs | QDir::NoDotAndDotDot);
+    return it.hasNext();
+}
+
 std::unique_ptr<Node> makeNode(NavigationModel::Kind kind, const QUrl &url, const QString &text, const QString &icon)
 {
     auto node = std::make_unique<Node>();
@@ -65,7 +81,8 @@ std::unique_ptr<Node> makeNode(NavigationModel::Kind kind, const QUrl &url, cons
     node->url = url;
     node->text = text;
     node->iconName = icon;
-    node->expandable = kind == NavigationModel::Pin || kind == NavigationModel::Drive || kind == NavigationModel::Folder;
+    node->expandable = (kind == NavigationModel::Pin || kind == NavigationModel::Drive || kind == NavigationModel::Folder)
+        && mayHaveSubfolders(url);
     return node;
 }
 
@@ -253,7 +270,8 @@ void NavigationModel::reloadPins()
             }
             // Only local and KIO folders list sub-folders; a search or a
             // recent-files place has none to show.
-            node->expandable = url.isLocalFile() || url.scheme() == QLatin1String("smb") || url.scheme() == QLatin1String("sftp");
+            node->expandable = (url.isLocalFile() || url.scheme() == QLatin1String("smb") || url.scheme() == QLatin1String("sftp"))
+                && mayHaveSubfolders(url);
             pins.push_back(std::move(node));
         }
     }
