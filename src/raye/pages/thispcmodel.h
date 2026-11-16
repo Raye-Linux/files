@@ -10,6 +10,7 @@
 #include "locations/locationnames.h"
 
 #include <QAbstractListModel>
+#include <QSet>
 #include <QUrl>
 
 #include <functional>
@@ -130,5 +131,8 @@ private:
     SpaceReader m_space;
     QList<Row> m_rows;
     QHash<int, QUrl> m_urls;
+    bool m_watchMounts = false;
+    QSet<QString> m_watched;
+    void addUnmountedDrives();
 };
 }

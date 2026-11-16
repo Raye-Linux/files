@@ -15,6 +15,8 @@
 #include <KService>
 #include <Solid/OpticalDrive>
 #include <Solid/StorageAccess>
+#include <Solid/StorageDrive>
+#include <Solid/StorageVolume>
 
 #include <QClipboard>
 #include <QGuiApplication>
@@ -70,6 +72,9 @@ ThisPcModel::ThisPcModel(const DriveLister &drives, const SpaceReader &space, QO
         };
         connect(notifier, &Solid::DeviceNotifier::deviceAdded, this, later);
         connect(notifier, &Solid::DeviceNotifier::deviceRemoved, this, later);
+        // A drive mounted or unmounted while This PC is open: no device is
+        // added or removed, only its access changes.
+        m_watchMounts = true;
         m_phones = &ThisPcModel::systemPhones;
         m_network = &ThisPcModel::systemNetworkLocations;
         m_computers = &ThisPcModel::findSystemComputers;
@@ -116,6 +121,10 @@ void ThisPcModel::reload()
             m_rows.append({d, m_space(d.mountPoint), QStringLiteral("drives")});
         }
     }
+    m_urls.clear();
+    if (m_watchMounts) {
+        addUnmountedDrives();
+    }
     const auto addPlaces = [this](const QList<Place> &places, const QString &section) {
         for (const Place &p : places) {
             Locations::Drive d;
@@ -128,7 +137,6 @@ void ThisPcModel::reload()
             m_urls.insert(m_rows.size() - 1, p.url);
         }
     };
-    m_urls.clear();
     addPlaces(m_phones ? m_phones() : QList<Place>(), QStringLiteral("phones"));
     addPlaces(network, QStringLiteral("network"));
     addPlaces(m_foundComputers, QStringLiteral("computers"));
@@ -170,6 +178,9 @@ QVariant ThisPcModel::data(const QModelIndex &index, int role) const
     case SpaceRole:
         if (!r.connected) {
             return i18nc("@info a network drive that is not connected right now", "Disconnected");
+        }
+        if (m_urls.value(index.row()).scheme() == QLatin1String("solid")) {
+            return i18nc("@info a USB drive that is plugged in but not opened yet", "Click to open");
         }
         return spaceText(r.space.free, r.space.total);
     case RemovableRole:
@@ -348,9 +359,82 @@ void ThisPcModel::findSystemComputers(QObject *context, const std::function<void
     });
 }
 
+// USB sticks and disks that are plugged in but not mounted yet: shown like
+// the others, mounted on the first click. Internal partitions stay hidden.
+void ThisPcModel::addUnmountedDrives()
+{
+    const QList<Solid::Device> devices = Solid::Device::listFromType(Solid::DeviceInterface::StorageAccess);
+    for (const Solid::Device &device : devices) {
+        auto *access = device.as<Solid::StorageAccess>();
+        if (!access) {
+            continue;
+        }
+        if (!m_watched.contains(device.udi())) {
+            m_watched.insert(device.udi());
+            connect(access, &Solid::StorageAccess::accessibilityChanged, this, [this] {
+                QTimer::singleShot(300, this, &ThisPcModel::reload);
+            });
+        }
+        if (access->isAccessible()) {
+            continue;
+        }
+        const auto *volume = device.as<Solid::StorageVolume>();
+        if (volume && (volume->isIgnored() || volume->usage() != Solid::StorageVolume::FileSystem)) {
+            continue;
+        }
+        bool removable = false;
+        for (Solid::Device parent = device; parent.isValid(); parent = parent.parent()) {
+            if (const auto *drive = parent.as<Solid::StorageDrive>()) {
+                removable = drive->isRemovable() || drive->isHotpluggable();
+                break;
+            }
+        }
+        if (!removable) {
+            continue;
+        }
+        Locations::Drive d;
+        d.name = device.description();
+        d.iconName = device.icon();
+        d.removable = true;
+        m_rows.append({d, Space(), QStringLiteral("drives")});
+        m_urls.insert(m_rows.size() - 1, QUrl(QStringLiteral("solid:") + device.udi()));
+    }
+}
+
 void ThisPcModel::open(const QUrl &url)
 {
-    Q_EMIT openRequested(url);
+    if (url.scheme() != QLatin1String("solid")) {
+        Q_EMIT openRequested(url);
+        return;
+    }
+    const QString udi = url.path();
+    Solid::Device device(udi);
+    auto *access = device.as<Solid::StorageAccess>();
+    if (!access) {
+        return;
+    }
+    if (access->isAccessible()) {
+        Q_EMIT openRequested(QUrl::fromLocalFile(access->filePath()));
+        return;
+    }
+    QPointer<ThisPcModel> self(this);
+    connect(access, &Solid::StorageAccess::setupDone, this,
+            [self, udi](Solid::ErrorType error, const QVariant &errorData, const QString &done) {
+                if (!self || done != udi) {
+                    return;
+                }
+                if (error != Solid::NoError) {
+                    const QString detail = errorData.toString();
+                    Q_EMIT self->errorOccurred(detail.isEmpty() ? i18nc("@info", "This drive could not be opened.") : detail);
+                    return;
+                }
+                Solid::Device mounted(udi);
+                if (const auto *a = mounted.as<Solid::StorageAccess>(); a && !a->filePath().isEmpty()) {
+                    Q_EMIT self->openRequested(QUrl::fromLocalFile(a->filePath()));
+                }
+            },
+            Qt::SingleShotConnection);
+    access->setup();
 }
 }
 
