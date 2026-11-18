@@ -9,6 +9,7 @@
 #include "kstandarditemlistview.h"
 
 #include "kstandarditemlistwidget.h"
+#include "ui/tokens.h" // Raye
 
 #include <KIconLoader>
 
@@ -157,13 +158,15 @@ bool KStandardItemListView::itemLayoutSupportsItemExpanding(ItemLayout layout) c
 
 qreal KStandardItemListView::scrollSingleStep() const
 {
-    if (itemLayout() == DetailsLayout) {
-        // We want each scroll in details view mode to move by some number of complete rows.
-        const int rowsPerFullScroll = qCeil((KItemListView::scrollSingleStep() * QApplication::wheelScrollLines()) / itemSize().height());
-        return (rowsPerFullScroll * itemSize().height()) / QApplication::wheelScrollLines();
+    // Raye: one notch is the Windows step, about 100 px at 3 lines, whatever
+    // the font. Details moves by the number of whole rows closest to it.
+    const int lines = qMax(1, QApplication::wheelScrollLines());
+    const qreal rowHeight = m_rayeRowHeight > 0 ? m_rayeRowHeight : itemSize().height();
+    if (itemLayout() == DetailsLayout && rowHeight > 0) {
+        const int rows = qMax(1, qRound(qreal(lines * Raye::Ui::Metrics::wheelLine) / rowHeight));
+        return rows * rowHeight / lines;
     }
-
-    return KItemListView::scrollSingleStep();
+    return Raye::Ui::Metrics::wheelLine;
 }
 
 void KStandardItemListView::onItemLayoutChanged(ItemLayout current, ItemLayout previous)

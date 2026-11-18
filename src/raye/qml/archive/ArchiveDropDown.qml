@@ -87,6 +87,7 @@ T.ComboBox {
         padding: 4
         contentItem: ListView {
             id: list
+            WheelScroll { target: list }
             clip: true
             model: box.popup.visible ? box.delegateModel : null
             currentIndex: box.highlightedIndex

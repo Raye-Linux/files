@@ -13,6 +13,8 @@
 #include <QPointer>
 #include <QTimer>
 
+#include <functional>
+
 namespace Raye::Jobs
 {
 
@@ -44,6 +46,12 @@ public:
     {
         m_showDelay = ms;
     }
+    // Whether a local folder is on a USB drive or memory card: copies there
+    // wait for the drive before they end. isOnRemovableDrive by default.
+    void setRemovableCheck(const std::function<bool(const QString &)> &check)
+    {
+        m_removable = check;
+    }
 
 public Q_SLOTS:
     void registerJob(KJob *job) override;
@@ -62,12 +70,19 @@ private:
     void showSoon(KJob *job);
     void updateLauncher();
     void maybeClose();
+    void watchWriteback(int row);
+    bool startFinishing(KJob *job);
+    void updateWriteback();
+    void flushThenFinish(quint64 id, const QString &path);
+    void removeSoon(quint64 id);
 
     JobsModel *m_model;
     QPointer<ProgressWindow> m_window;
     int m_showDelay = 1000;
     QTimer m_launcherTimer;
     bool m_launcherVisible = false;
+    std::function<bool(const QString &)> m_removable;
+    QTimer m_writebackTimer;
 };
 
 // The Unity launcher entry signal for org.kde.dolphin.desktop.

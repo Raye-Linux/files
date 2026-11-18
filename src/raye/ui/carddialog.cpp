@@ -293,6 +293,20 @@ void CardDialog::mousePressEvent(QMouseEvent *event)
     QDialog::mousePressEvent(event);
 }
 
+bool CardDialog::event(QEvent *event)
+{
+    const bool done = QDialog::event(event);
+    // Whatever made the content taller, the card follows: the buttons are
+    // never drawn over by the body.
+    if (event->type() == QEvent::LayoutRequest) {
+        const int needed = minimumSizeHint().height();
+        if (height() < needed) {
+            resize(width(), needed);
+        }
+    }
+    return done;
+}
+
 void CardDialog::showEvent(QShowEvent *event)
 {
     QDialog::showEvent(event);

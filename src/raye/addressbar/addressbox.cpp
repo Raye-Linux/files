@@ -13,6 +13,7 @@
 #include "ui/focusring.h"
 #include "ui/motion.h"
 #include "ui/tokens.h"
+#include "ui/wheelstep.h"
 
 #include <KCompletionBox>
 #include <KLineEdit>
@@ -269,6 +270,7 @@ void SubfolderFlyout::fill()
     auto *scroll = new QScrollArea;
     scroll->setFrameShape(QFrame::NoFrame);
     scroll->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    Ui::setWheelStep(scroll);
     scroll->setWidgetResizable(true);
     scroll->viewport()->setAutoFillBackground(false);
     list->setAutoFillBackground(false);

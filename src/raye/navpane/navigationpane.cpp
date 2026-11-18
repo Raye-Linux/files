@@ -12,6 +12,7 @@
 
 #include "navpane/droprules.h"
 #include "ui/tokens.h"
+#include "ui/wheelstep.h"
 
 #include <KConfigGroup>
 #include <KFilePlacesModel>
@@ -467,6 +468,13 @@ void NavigationPane::mousePressEvent(QMouseEvent *event)
             Q_EMIT openInNewTabRequested(url);
         }
     }
+}
+
+void NavigationPane::updateGeometries()
+{
+    QTreeView::updateGeometries();
+    // QTreeView sets its own wheel step on every layout.
+    Raye::Ui::setWheelStep(this);
 }
 
 void NavigationPane::keyPressEvent(QKeyEvent *event)

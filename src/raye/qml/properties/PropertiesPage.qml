@@ -83,8 +83,8 @@ Item {
             Layout.fillWidth: true
             spacing: 16
             Kirigami.Icon {
-                implicitWidth: 48
-                implicitHeight: 48
+                implicitWidth: 56
+                implicitHeight: 56
                 source: page.model ? page.model.iconName : ""
             }
             ColumnLayout {
@@ -132,74 +132,79 @@ Item {
 
             // General
             Item {
-                GridLayout {
+                ColumnLayout {
                     visible: page.model && !page.model.drive
                     width: parent.width
-                    columns: 2
-                    columnSpacing: 12
-                    rowSpacing: 8
+                    spacing: 8
 
-                    Label { text: i18nc("@label", "Opens with:"); visible: openWith.visible; Layout.alignment: Qt.AlignVCenter }
-                    RowLayout {
-                        id: openWith
-                        Layout.fillWidth: true
+                    InfoCard {
+                        // not from the row inside: a hidden card hides it too
                         visible: page.model && page.model.count === 1 && !page.model.folder
-                        spacing: 8
-                        Kirigami.Icon {
-                            implicitWidth: 20
-                            implicitHeight: 20
-                            visible: page.model && page.model.openWithIcon.length > 0
-                            source: page.model ? page.model.openWithIcon : ""
+                        Label { text: i18nc("@label", "Opens with:"); Layout.alignment: Qt.AlignVCenter }
+                        RowLayout {
+                            id: openWith
+                            Layout.fillWidth: true
+                            spacing: 8
+                            Kirigami.Icon {
+                                implicitWidth: 20
+                                implicitHeight: 20
+                                visible: page.model && page.model.openWithIcon.length > 0
+                                source: page.model ? page.model.openWithIcon : ""
+                            }
+                            Value {
+                                text: page.model && page.model.openWithName.length > 0 ? page.model.openWithName
+                                                                                         : i18nc("@info no app opens this file", "No app chosen")
+                            }
+                            CommandButton {
+                                kind: "standard"
+                                text: i18nc("@action:button choose the app that opens a file", "Change…")
+                                onClicked: page.model.changeApp()
+                            }
                         }
+                    }
+
+                    InfoCard {
+                        Label { text: i18nc("@label", "Location:") }
+                        Value { text: page.model ? page.model.location : "" }
+                        Label { text: i18nc("@label", "Size:") }
+                        Value { text: page.model && !page.model.measuring ? page.model.sizeText : i18nc("@info still counting", "Counting…") }
+                        Label { text: i18nc("@label", "Size on disk:") }
+                        Value { text: page.model && !page.model.measuring ? page.model.onDiskText : i18nc("@info still counting", "Counting…") }
+                        Label { text: i18nc("@label", "Contains:"); visible: contains.visible }
                         Value {
-                            text: page.model && page.model.openWithName.length > 0 ? page.model.openWithName
-                                                                                     : i18nc("@info no app opens this file", "No app chosen")
-                        }
-                        CommandButton {
-                            kind: "standard"
-                            text: i18nc("@action:button choose the app that opens a file", "Change…")
-                            onClicked: page.model.changeApp()
+                            id: contains
+                            visible: page.model && (page.model.folder || page.model.count > 1)
+                            text: page.model && !page.model.measuring ? page.model.containsText : i18nc("@info still counting", "Counting…")
                         }
                     }
-                    Divider { visible: openWith.visible }
 
-                    Label { text: i18nc("@label", "Location:") }
-                    Value { text: page.model ? page.model.location : "" }
-                    Label { text: i18nc("@label", "Size:") }
-                    Value { text: page.model && !page.model.measuring ? page.model.sizeText : i18nc("@info still counting", "Counting…") }
-                    Label { text: i18nc("@label", "Size on disk:") }
-                    Value { text: page.model && !page.model.measuring ? page.model.onDiskText : i18nc("@info still counting", "Counting…") }
-                    Label { text: i18nc("@label", "Contains:"); visible: contains.visible }
-                    Value {
-                        id: contains
-                        visible: page.model && (page.model.folder || page.model.count > 1)
-                        text: page.model && !page.model.measuring ? page.model.containsText : i18nc("@info still counting", "Counting…")
+                    InfoCard {
+                        visible: page.model && (page.model.created.length > 0 || page.model.modified.length > 0 || page.model.accessed.length > 0)
+                        Label { text: i18nc("@label", "Created:"); visible: created.visible }
+                        Value { id: created; visible: text.length > 0; text: page.model ? page.model.created : "" }
+                        Label { text: i18nc("@label", "Modified:"); visible: modified.visible }
+                        Value { id: modified; visible: text.length > 0; text: page.model ? page.model.modified : "" }
+                        Label { text: i18nc("@label", "Accessed:"); visible: accessed.visible }
+                        Value { id: accessed; visible: text.length > 0; text: page.model ? page.model.accessed : "" }
                     }
 
-                    Divider { visible: page.model && page.model.count === 1 }
-                    Label { text: i18nc("@label", "Created:"); visible: created.visible }
-                    Value { id: created; visible: text.length > 0; text: page.model ? page.model.created : "" }
-                    Label { text: i18nc("@label", "Modified:"); visible: modified.visible }
-                    Value { id: modified; visible: text.length > 0; text: page.model ? page.model.modified : "" }
-                    Label { text: i18nc("@label", "Accessed:"); visible: accessed.visible }
-                    Value { id: accessed; visible: text.length > 0; text: page.model ? page.model.accessed : "" }
-
-                    Divider {}
-                    Label { text: i18nc("@label", "Attributes:"); Layout.alignment: Qt.AlignVCenter }
-                    RowLayout {
-                        Layout.fillWidth: true
-                        spacing: 24
-                        OptionCheckBox {
-                            text: i18nc("@option:check file attribute", "Read-only")
-                            enabled: page.model && page.model.canChange
-                            checked: page.model ? page.model.readOnly : false
-                            onToggled: page.model.readOnly = checked
-                        }
-                        OptionCheckBox {
-                            text: i18nc("@option:check file attribute", "Hidden")
-                            enabled: page.model && page.model.canHide
-                            checked: page.model ? page.model.hidden : false
-                            onToggled: page.model.hidden = checked
+                    InfoCard {
+                        Label { text: i18nc("@label", "Attributes:"); Layout.alignment: Qt.AlignVCenter }
+                        RowLayout {
+                            Layout.fillWidth: true
+                            spacing: 24
+                            OptionCheckBox {
+                                text: i18nc("@option:check file attribute", "Read-only")
+                                enabled: page.model && page.model.canChange
+                                checked: page.model ? page.model.readOnly : false
+                                onToggled: page.model.readOnly = checked
+                            }
+                            OptionCheckBox {
+                                text: i18nc("@option:check file attribute", "Hidden")
+                                enabled: page.model && page.model.canHide
+                                checked: page.model ? page.model.hidden : false
+                                onToggled: page.model.hidden = checked
+                            }
                         }
                     }
                 }
@@ -300,46 +305,45 @@ Item {
 
             // Security
             ColumnLayout {
-                spacing: 12
-                GridLayout {
-                    Layout.fillWidth: true
-                    columns: 2
-                    columnSpacing: 12
-                    rowSpacing: 8
+                spacing: 8
+                InfoCard {
                     Label { text: i18nc("@label", "Owner:") }
                     Value { text: page.model ? page.model.ownerName : "" }
                     Label { text: i18nc("@label", "Group:") }
                     Value { text: page.model ? page.model.groupName : "" }
                 }
-                Text {
-                    Layout.topMargin: 8
-                    textFormat: Text.PlainText
-                    text: page.model && page.model.folder ? i18nc("@title", "Who can open this folder")
-                                                          : i18nc("@title", "Who can open this file")
-                    font: Kit.bodyStrong
-                    color: Kit.colors.textPrimary
-                }
-                Repeater {
-                    model: [
-                        { who: 0, name: page.model ? i18nc("@label permission for the owner", "Owner (%1)", page.model.ownerName) : "" },
-                        { who: 1, name: page.model ? i18nc("@label permission for the group", "Group (%1)", page.model.groupName) : "" },
-                        { who: 2, name: i18nc("@label permission for everyone else", "Everyone else") }
-                    ]
-                    RowLayout {
-                        required property var modelData
-                        Layout.fillWidth: true
-                        spacing: 12
-                        Label { text: modelData.name; Layout.preferredWidth: 160; Layout.alignment: Qt.AlignVCenter }
-                        ArchiveChoice {
-                            enabled: page.model && page.model.canChange
-                            accessibleName: modelData.name
-                            options: [i18nc("@option permission", "None"), i18nc("@option permission", "Read"), i18nc("@option permission", "Read and write")]
-                            currentIndex: !page.model ? 0 : modelData.who === 0 ? page.model.ownerAccess
-                                                       : modelData.who === 1 ? page.model.groupAccess : page.model.othersAccess
-                            onActivated: index => {
-                                if (modelData.who === 0) page.model.ownerAccess = index
-                                else if (modelData.who === 1) page.model.groupAccess = index
-                                else page.model.othersAccess = index
+                InfoCard {
+                    columns: 1
+                    Text {
+                        Layout.bottomMargin: 2
+                        textFormat: Text.PlainText
+                        text: page.model && page.model.folder ? i18nc("@title", "Who can open this folder")
+                                                              : i18nc("@title", "Who can open this file")
+                        font: Kit.bodyStrong
+                        color: Kit.colors.textPrimary
+                    }
+                    Repeater {
+                        model: [
+                            { who: 0, name: page.model ? i18nc("@label permission for the owner", "Owner (%1)", page.model.ownerName) : "" },
+                            { who: 1, name: page.model ? i18nc("@label permission for the group", "Group (%1)", page.model.groupName) : "" },
+                            { who: 2, name: i18nc("@label permission for everyone else", "Everyone else") }
+                        ]
+                        RowLayout {
+                            required property var modelData
+                            Layout.fillWidth: true
+                            spacing: 12
+                            Label { text: modelData.name; Layout.preferredWidth: 128; Layout.alignment: Qt.AlignVCenter }
+                            ArchiveChoice {
+                                enabled: page.model && page.model.canChange
+                                accessibleName: modelData.name
+                                options: [i18nc("@option permission", "None"), i18nc("@option permission", "Read"), i18nc("@option permission", "Read and write")]
+                                currentIndex: !page.model ? 0 : modelData.who === 0 ? page.model.ownerAccess
+                                                           : modelData.who === 1 ? page.model.groupAccess : page.model.othersAccess
+                                onActivated: index => {
+                                    if (modelData.who === 0) page.model.ownerAccess = index
+                                    else if (modelData.who === 1) page.model.groupAccess = index
+                                    else page.model.othersAccess = index
+                                }
                             }
                         }
                     }
@@ -363,6 +367,8 @@ Item {
 
             // Details
             Flickable {
+                id: detailsFlick
+                WheelScroll { target: detailsFlick }
                 clip: true
                 contentHeight: details.implicitHeight
                 boundsBehavior: Flickable.StopAtBounds

@@ -194,6 +194,8 @@ Item {
         }
 
         ListView {
+            id: appList
+            WheelScroll { target: appList }
             width: parent.width
             height: Math.min(contentHeight, 10 * Kit.controlHeight)
             clip: true

@@ -9,6 +9,7 @@
 #include "pages/thumbnails.h"
 #include "ui/tokens.h"
 
+#include <QLayout>
 #include <QPointer>
 #include <QQmlContext>
 #include <QQmlEngine>
@@ -54,6 +55,21 @@ QQuickWidget *quickPage(const QString &type, const QVariantMap &properties, QWid
     return view;
 }
 
+namespace
+{
+// Qt Quick layouts work out their size when polished, on the first frame.
+// Polish now, children first, so the window has its real height before it
+// maps instead of growing (or not) once it is up.
+void polishTree(QQuickItem *item)
+{
+    const auto children = item->childItems();
+    for (QQuickItem *child : children) {
+        polishTree(child);
+    }
+    item->ensurePolished();
+}
+}
+
 void fitToPage(QQuickWidget *view, int width, QWidget *resize)
 {
     QQuickItem *root = view ? view->rootObject() : nullptr;
@@ -62,6 +78,8 @@ void fitToPage(QQuickWidget *view, int width, QWidget *resize)
     }
     view->setResizeMode(QQuickWidget::SizeViewToRootObject);
     root->setWidth(width);
+    polishTree(root);
+    polishTree(root);
     root->setHeight(root->implicitHeight());
     QObject::connect(root, &QQuickItem::implicitHeightChanged, root, [root] {
         root->setHeight(root->implicitHeight());
@@ -70,6 +88,11 @@ void fitToPage(QQuickWidget *view, int width, QWidget *resize)
     auto fit = [view, root, width, target] {
         view->setFixedSize(width, qMax(1, qCeil(root->height())));
         if (target) {
+            // the new fixed size reaches the window's own limits first,
+            // or adjustSize() is held to the old ones
+            if (target->layout()) {
+                target->layout()->activate();
+            }
             target->adjustSize();
         }
     };

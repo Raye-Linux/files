@@ -124,6 +124,7 @@ QHash<int, QByteArray> JobsModel::roleNames() const
         {ErrorCanRetryRole, "errorCanRetry"},
         {ErrorMultipleRole, "errorMultiple"},
         {DoneRole, "done"},
+        {FinishingRole, "finishing"},
     };
 }
 
@@ -143,6 +144,9 @@ QVariant JobsModel::data(const QModelIndex &index, int role) const
     case PercentTextRole:
         if (r.paused) {
             return i18nc("@info progress", "Paused - %1% complete", r.percent);
+        }
+        if (r.finishing) {
+            return i18nc("@info progress, the copy is over and the drive is still being written", "Finishing writing - %1% complete", r.percent);
         }
         return i18nc("@info progress", "%1% complete", r.done ? 100 : r.percent);
     case PausedRole:
@@ -174,7 +178,7 @@ QVariant JobsModel::data(const QModelIndex &index, int role) const
     case NameRole:
         return r.currentName;
     case RemainingRole:
-        if (r.paused) {
+        if (r.paused || r.finishing) {
             return QString();
         }
         return remainingText(r.probe ? r.probe->sampler().remainingMs() : r.fixedRemaining);
@@ -191,6 +195,8 @@ QVariant JobsModel::data(const QModelIndex &index, int role) const
         return r.errorMultiple;
     case DoneRole:
         return r.done;
+    case FinishingRole:
+        return r.finishing;
     }
     return {};
 }

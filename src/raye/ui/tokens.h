@@ -52,6 +52,8 @@ constexpr int usageBarHeight = 4;
 constexpr int dialogPadding = 24;
 constexpr int dialogButtonRow = 80;
 constexpr int dialogButtonGap = 8;
+// One line of the mouse wheel: Windows' 3 lines per notch come to about 100 px.
+constexpr int wheelLine = 33;
 constexpr qreal usageCautionAbove = 0.9; // a drive this full turns to the caution colour
 }
 
@@ -161,6 +163,7 @@ class RAYE_UI_EXPORT Tokens : public QObject
     Q_PROPERTY(bool night READ night NOTIFY changed)
     Q_PROPERTY(QVariantMap colors READ colors NOTIFY changed)
     Q_PROPERTY(int controlHeight READ controlHeight CONSTANT)
+    Q_PROPERTY(int wheelLine READ wheelLine CONSTANT)
     Q_PROPERTY(int compactHeight READ compactHeight CONSTANT)
     Q_PROPERTY(int iconButtonWidth READ iconButtonWidth CONSTANT)
     Q_PROPERTY(int iconSize READ iconSize CONSTANT)
@@ -197,6 +200,10 @@ public:
     int controlHeight() const
     {
         return Metrics::controlHeight;
+    }
+    int wheelLine() const
+    {
+        return Metrics::wheelLine;
     }
     int compactHeight() const
     {

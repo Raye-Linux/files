@@ -119,3 +119,31 @@ RAYE_SHOWCASE(progressWindow, "ProgressWindow", "Copy progress with two stacked 
     window->setParent(parent);
     return window;
 }
+
+RAYE_SHOWCASE(progressFinishing, "ProgressWindowFinishing", "A copy to a USB drive waiting for the drive")
+{
+    using Raye::Jobs::JobsModel;
+    auto *model = new JobsModel;
+    JobsModel::Row copy;
+    copy.op = Raye::Jobs::Operation::Copy;
+    copy.from = QUrl::fromLocalFile(QStringLiteral("/home/ann/Videos"));
+    copy.to = QUrl::fromLocalFile(QStringLiteral("/media/ann/USB Drive"));
+    copy.itemsTotal = 3;
+    copy.itemsDone = 3;
+    copy.bytesTotal = 2147483648ULL;
+    copy.bytesDone = 2147483648ULL;
+    copy.percent = 96;
+    copy.flushes = true;
+    copy.finishing = true;
+    copy.currentName = QStringLiteral("Wedding.mp4");
+    for (int i = 0; i < 120; ++i) {
+        copy.fixedHistory.append((i < 100 ? 38.0 : 21.0) * 1024 * 1024 * qMin(1.0, i / 12.0));
+    }
+    copy.fixedSpeed = 21.0 * 1024 * 1024;
+    model->addRow(copy);
+    auto *window = new Raye::Jobs::ProgressWindow(model, nullptr);
+    model->setParent(window);
+    window->setWindowFlags(Qt::Widget);
+    window->setParent(parent);
+    return window;
+}

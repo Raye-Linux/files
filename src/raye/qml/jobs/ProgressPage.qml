@@ -51,6 +51,7 @@ Rectangle {
                 required property bool errorCanRetry
                 required property bool errorMultiple
                 required property bool done
+                required property bool finishing
 
                 Layout.fillWidth: true
                 Layout.leftMargin: 20
@@ -102,14 +103,14 @@ Rectangle {
                         Behavior on opacity { NumberAnimation { duration: Kit.durationNormal } }
                     }
                     CommandButton {
-                        visible: card.canPause && !card.done
+                        visible: card.canPause && !card.done && !card.finishing
                         icon.name: card.paused ? "media-playback-start" : "media-playback-pause"
                         text: ""
                         Accessible.name: card.paused ? i18nc("@action:button", "Resume") : i18nc("@action:button", "Pause")
                         onClicked: page.model.pause(card.index)
                     }
                     CommandButton {
-                        visible: !card.done
+                        visible: !card.done && !card.finishing
                         icon.name: "dialog-cancel"
                         text: ""
                         Accessible.name: i18nc("@action:button", "Cancel")
@@ -150,10 +151,21 @@ Rectangle {
                     rowSpacing: 4
                     Text { textFormat: Text.PlainText; text: i18nc("@label", "Name:"); font: Kit.body; color: Kit.colors.textSecondary }
                     Text { textFormat: Text.PlainText; Layout.fillWidth: true; text: card.name; font: Kit.body; color: Kit.colors.textPrimary; elide: Text.ElideMiddle }
-                    Text { textFormat: Text.PlainText; text: i18nc("@label", "Time remaining:"); font: Kit.body; color: Kit.colors.textSecondary }
-                    Text { textFormat: Text.PlainText; Layout.fillWidth: true; text: card.remaining; font: Kit.body; color: Kit.colors.textPrimary }
-                    Text { textFormat: Text.PlainText; text: i18nc("@label", "Items remaining:"); font: Kit.body; color: Kit.colors.textSecondary }
-                    Text { textFormat: Text.PlainText; Layout.fillWidth: true; text: card.items; font: Kit.body; color: Kit.colors.textPrimary }
+                    Text { textFormat: Text.PlainText; visible: !card.finishing; text: i18nc("@label", "Time remaining:"); font: Kit.body; color: Kit.colors.textSecondary }
+                    Text { textFormat: Text.PlainText; visible: !card.finishing; Layout.fillWidth: true; text: card.remaining; font: Kit.body; color: Kit.colors.textPrimary }
+                    Text { textFormat: Text.PlainText; visible: !card.finishing; text: i18nc("@label", "Items remaining:"); font: Kit.body; color: Kit.colors.textSecondary }
+                    Text { textFormat: Text.PlainText; visible: !card.finishing; Layout.fillWidth: true; text: card.items; font: Kit.body; color: Kit.colors.textPrimary }
+                }
+
+                // the copy is over, the drive is still being written
+                Text {
+                    visible: card.finishing
+                    Layout.fillWidth: true
+                    textFormat: Text.PlainText
+                    text: i18nc("@info", "The files are being written to the drive. Don't remove it until this is done.")
+                    font: Kit.body
+                    color: Kit.colors.textSecondary
+                    wrapMode: Text.Wrap
                 }
 
                 // an error, inline in its card

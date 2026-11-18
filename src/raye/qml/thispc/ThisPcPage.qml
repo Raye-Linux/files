@@ -27,6 +27,8 @@ Rectangle {
     }
 
     Flickable {
+        id: flick
+        WheelScroll { target: flick }
         anchors.fill: parent
         contentHeight: column.implicitHeight + 2 * page.sideMargin
         clip: true

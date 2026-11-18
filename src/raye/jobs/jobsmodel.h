@@ -68,6 +68,7 @@ public:
         ErrorCanRetryRole,
         ErrorMultipleRole,
         DoneRole,
+        FinishingRole,
     };
 
     struct Row {
@@ -87,6 +88,12 @@ public:
         bool canPause = false;
         QString currentName;
         bool done = false;
+        // a copy to a USB drive: the card stays until the drive has it all
+        bool flushes = false;
+        bool finishing = false;
+        QString flushPath;
+        qulonglong pendingBase = 0;
+        qulonglong pending = 0;
         // fixed values for the harness (no job)
         QList<qreal> fixedHistory;
         qreal fixedSpeed = 0;

@@ -8,6 +8,7 @@
 
 #include "ui/commandbutton.h"
 #include "ui/tokens.h"
+#include "ui/wheelstep.h"
 
 #include <KConfigGroup>
 #include <KIO/PreviewJob>
@@ -69,6 +70,7 @@ DetailsPane::DetailsPane(QWidget *parent)
     scroll->setFrameShape(QFrame::NoFrame);
     scroll->setWidgetResizable(true);
     scroll->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    Raye::Ui::setWheelStep(scroll);
     scroll->viewport()->setAutoFillBackground(false);
     outer->addWidget(scroll);
 

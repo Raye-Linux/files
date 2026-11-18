@@ -8,12 +8,16 @@
 
 #include "jobsmodel.h"
 #include "progresswindow.h"
+#include "writeback.h"
 
 #include <KJob>
 
 #include <QCoreApplication>
 #include <QDBusConnection>
 #include <QDBusMessage>
+#include <QFileInfo>
+#include <QFutureWatcher>
+#include <QtConcurrentRun>
 #include <QUrl>
 
 namespace Raye::Jobs
@@ -41,6 +45,9 @@ JobTracker::JobTracker(QObject *parent)
             m_launcherTimer.start();
         }
     });
+    m_removable = isOnRemovableDrive;
+    m_writebackTimer.setInterval(250);
+    connect(&m_writebackTimer, &QTimer::timeout, this, &JobTracker::updateWriteback);
 }
 
 JobTracker::~JobTracker()
@@ -66,12 +73,90 @@ void JobTracker::registerJob(KJob *job)
     }
     KJobTrackerInterface::registerJob(job);
     m_model->addJob(job);
+    watchWriteback(m_model->rowOf(job));
     showSoon(job);
+}
+
+void JobTracker::watchWriteback(int i)
+{
+    JobsModel::Row *r = m_model->row(i);
+    if (!r || (r->op != Operation::Copy && r->op != Operation::Move) || !r->to.isLocalFile() || !m_removable) {
+        return;
+    }
+    // the destination may be a name that does not exist yet
+    QString path = r->to.toLocalFile();
+    while (!path.isEmpty() && !QFileInfo::exists(path) && path != QLatin1String("/")) {
+        path = QFileInfo(path).path();
+    }
+    if (path.isEmpty() || !m_removable(path)) {
+        return;
+    }
+    r->flushes = true;
+    r->flushPath = path;
+    r->pendingBase = pendingWriteBytes();
+    if (!m_writebackTimer.isActive()) {
+        m_writebackTimer.start();
+    }
+}
+
+void JobTracker::updateWriteback()
+{
+    const qulonglong now = pendingWriteBytes();
+    bool any = false;
+    for (int i = 0; i < m_model->rowCount(); ++i) {
+        JobsModel::Row *r = m_model->row(i);
+        if (!r->flushes || r->done) {
+            continue;
+        }
+        any = true;
+        r->pending = now > r->pendingBase ? now - r->pendingBase : 0;
+        if (r->bytesTotal > 0) {
+            const qulonglong done = r->finishing ? r->bytesTotal : r->bytesDone;
+            // never backwards: other programs write too
+            r->percent = qMax(r->percent, writtenPercent(r->bytesTotal, done, r->pending));
+        }
+        m_model->touch(i);
+    }
+    if (!any) {
+        m_writebackTimer.stop();
+    }
+}
+
+void JobTracker::flushThenFinish(quint64 id, const QString &path)
+{
+    auto *watcher = new QFutureWatcher<bool>(this);
+    connect(watcher, &QFutureWatcher<bool>::finished, this, [this, watcher, id] {
+        watcher->deleteLater();
+        JobsModel::Row *r = m_model->row(m_model->rowOfId(id));
+        if (!r) {
+            return;
+        }
+        r->finishing = false;
+        r->done = true;
+        r->percent = 100;
+        m_model->touch(m_model->rowOfId(id));
+        removeSoon(id);
+    });
+    watcher->setFuture(QtConcurrent::run(flushFileSystem, path));
+}
+
+void JobTracker::removeSoon(quint64 id)
+{
+    // The success check plays for 250 ms, then the card goes.
+    QTimer::singleShot(m_window && m_window->isVisible() ? 400 : 0, this, [this, id] {
+        m_model->removeRow(m_model->rowOfId(id));
+        maybeClose();
+    });
 }
 
 void JobTracker::unregisterJob(KJob *job)
 {
     KJobTrackerInterface::unregisterJob(job);
+    // KJob::finished reaches this slot before finished(): a copy to a USB
+    // drive keeps its card here
+    if (startFinishing(job)) {
+        return;
+    }
     const int i = m_model->rowOf(job);
     if (i >= 0) {
         m_model->removeRow(i);
@@ -79,15 +164,36 @@ void JobTracker::unregisterJob(KJob *job)
     maybeClose();
 }
 
+bool JobTracker::startFinishing(KJob *job)
+{
+    const int i = m_model->rowOf(job);
+    JobsModel::Row *r = m_model->row(i);
+    if (!r || !r->flushes || job->error() != 0) {
+        return false;
+    }
+    // KIO is done, the drive is not: say so until it has everything.
+    r->job = nullptr;
+    r->finishing = true;
+    r->bytesDone = r->bytesTotal;
+    r->itemsDone = r->itemsTotal;
+    r->percent = qMin(r->percent, 99);
+    m_model->touch(i);
+    updateWriteback();
+    flushThenFinish(r->id, r->flushPath);
+    return true;
+}
+
 void JobTracker::showSoon(KJob *job)
 {
-    QPointer<KJob> guard(job);
-    QTimer::singleShot(m_showDelay, this, [this, guard] {
-        if (!guard) {
-            return;
-        }
-        const int i = m_model->rowOf(guard);
-        if (i >= 0 && !m_model->row(i)->done) {
+    // by row: a copy to a USB drive outlives its job while the drive writes
+    const int at = m_model->rowOf(job);
+    if (at < 0) {
+        return;
+    }
+    const quint64 id = m_model->row(at)->id;
+    QTimer::singleShot(m_showDelay, this, [this, id] {
+        const JobsModel::Row *r = m_model->row(m_model->rowOfId(id));
+        if (r && !r->done) {
             window()->showOperations();
         }
     });
@@ -99,17 +205,15 @@ void JobTracker::finished(KJob *job)
     if (i < 0) {
         return;
     }
+    if (startFinishing(job)) {
+        return;
+    }
     JobsModel::Row *r = m_model->row(i);
+    r->job = nullptr;
     r->done = true;
     r->percent = 100;
-    r->job = nullptr;
     m_model->touch(i);
-    // The success check plays for 250 ms, then the card goes.
-    const quint64 id = r->id;
-    QTimer::singleShot(m_window && m_window->isVisible() ? 400 : 0, this, [this, id] {
-        m_model->removeRow(m_model->rowOfId(id));
-        maybeClose();
-    });
+    removeSoon(r->id);
 }
 
 void JobTracker::maybeClose()
@@ -194,6 +298,10 @@ void JobTracker::processedAmount(KJob *job, KJob::Unit unit, qulonglong amount)
 void JobTracker::percent(KJob *job, unsigned long value)
 {
     const int i = m_model->rowOf(job);
+    // a copy to a USB drive counts what is on the drive (updateWriteback)
+    if (i >= 0 && m_model->row(i)->flushes && m_model->row(i)->bytesTotal > 0) {
+        return;
+    }
     if (i >= 0) {
         m_model->row(i)->percent = int(qMin<unsigned long>(value, 100));
         m_model->touch(i);

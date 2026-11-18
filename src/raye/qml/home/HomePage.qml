@@ -42,6 +42,7 @@ Rectangle {
 
     Flickable {
         id: flick
+        WheelScroll { target: flick }
         anchors.fill: parent
         contentWidth: width
         contentHeight: column.implicitHeight + 32

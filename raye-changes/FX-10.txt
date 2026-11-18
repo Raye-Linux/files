@@ -29,6 +29,9 @@ src/kitemviews/kitemlistview.{h,cpp}
 src/kitemviews/kstandarditemlistview.{h,cpp}
     setRayeMetrics(rowHeight, cellWidth, flowRows): Windows' 32/24 rows,
     fixed cells, compact layout in rows. No alternating row backgrounds.
+    scrollSingleStep(): one wheel notch is Windows' step, 3 lines of
+    Raye::Ui::Metrics::wheelLine (about 100 px) whatever the font; Details
+    moves by the number of whole rows closest to it.
 src/kitemviews/kstandarditemlistgroupheader.cpp
     Group headers painted the Windows way: Body strong, divider to the
     right. Rating headers and horizontal flows keep the upstream painting.

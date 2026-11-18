@@ -172,6 +172,7 @@ Item {
 
         Flickable {
             id: more
+            WheelScroll { target: more }
             Layout.fillWidth: true
             Layout.preferredHeight: Math.min(advancedGrid.implicitHeight, page.advancedRoom)
             visible: page.advanced
