@@ -1,3 +1,10 @@
+raye-files (25.12.3+raye12) resolute; urgency=medium
+
+  * The light taskbar colour of the theme, in the Explorer's own windows too.
+  * French for "Click to open" and "This drive could not be opened.".
+
+ -- techoraye <190692880+techoraye@users.noreply.github.com>  Wed, 18 Nov 2026 13:31:51 +0000
+
 raye-files (25.12.3+raye11) resolute; urgency=medium
 
   * Dialogs (Folder options, Properties...) move only by their title strip:

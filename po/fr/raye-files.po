@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: raye-files\n"
 "Report-Msgid-Bugs-To: https://github.com/techoraye\n"
-"POT-Creation-Date: 2026-11-13 20:08+0000\n"
+"POT-Creation-Date: 2026-11-18 13:31+0000\n"
 "PO-Revision-Date: 2026-10-30 06:00+0000\n"
 "Last-Translator: techoraye\n"
 "Language-Team: French\n"
@@ -19,57 +19,57 @@ msgctxt "@action:inmenu %1 is a folder name"
 msgid "Extract to “%1/”"
 msgstr "Extraire vers « %1/ »"
 
-#: src/dolphinmainwindow_raye.cpp:184
+#: src/dolphinmainwindow_raye.cpp:185
 msgctxt "@action:inmenu"
 msgid "Options"
 msgstr "Options"
 
-#: src/dolphinmainwindow_raye.cpp:206
+#: src/dolphinmainwindow_raye.cpp:207
 msgctxt "@action:inmenu"
 msgid "Compact view"
 msgstr "Affichage compact"
 
-#: src/dolphinmainwindow_raye.cpp:226
+#: src/dolphinmainwindow_raye.cpp:227
 msgctxt "@action:inmenu"
 msgid "Text document"
 msgstr "Document texte"
 
-#: src/dolphinmainwindow_raye.cpp:229
+#: src/dolphinmainwindow_raye.cpp:230
 msgctxt "@item the name of a new file, before .txt"
 msgid "New Text Document"
 msgstr "Nouveau document texte"
 
-#: src/dolphinmainwindow_raye.cpp:238
+#: src/dolphinmainwindow_raye.cpp:239
 msgctxt "@item the name of a new archive, before .zip"
 msgid "New Compressed (zipped) Folder"
 msgstr "Nouveau dossier compressé"
 
-#: src/dolphinmainwindow_raye.cpp:242
+#: src/dolphinmainwindow_raye.cpp:243
 msgctxt "@action:inmenu"
 msgid "Shortcut"
 msgstr "Raccourci"
 
-#: src/dolphinmainwindow_raye.cpp:247
+#: src/dolphinmainwindow_raye.cpp:248
 msgctxt "@title:window"
 msgid "Choose what the shortcut opens"
 msgstr "Choisir ce qu'ouvre le raccourci"
 
-#: src/dolphinmainwindow_raye.cpp:252
+#: src/dolphinmainwindow_raye.cpp:253
 msgctxt "@item %1 is the name of what a shortcut opens"
 msgid "%1 - Shortcut"
 msgstr "%1 - Raccourci"
 
-#: src/dolphinmainwindow_raye.cpp:262
+#: src/dolphinmainwindow_raye.cpp:263
 msgctxt "@action"
 msgid "Search"
 msgstr "Rechercher"
 
-#: src/dolphinmainwindow_raye.cpp:270
+#: src/dolphinmainwindow_raye.cpp:271
 msgctxt "@action"
 msgid "Edit the address"
 msgstr "Modifier l'adresse"
 
-#: src/dolphinmainwindow_raye.cpp:287
+#: src/dolphinmainwindow_raye.cpp:288
 msgctxt "@action:inmenu"
 msgid "Full screen"
 msgstr "Plein écran"
@@ -657,7 +657,7 @@ msgid "Invert selection"
 msgstr "Inverser la sélection"
 
 #: src/raye/commandbar/commandbar.cpp:715 src/raye/menu/compactmenu.cpp:287
-#: src/raye/navpane/navigationpane.cpp:561
+#: src/raye/navpane/navigationpane.cpp:567
 #: src/raye/qml/components/ItemMenu.qml:93
 #: src/raye/qml/thispc/DriveTile.qml:120
 #, kde-format
@@ -1619,14 +1619,14 @@ msgctxt "@action:inmenu"
 msgid "Open with"
 msgstr "Ouvrir avec"
 
-#: src/raye/menu/compactmenu.cpp:256 src/raye/navpane/navigationpane.cpp:508
+#: src/raye/menu/compactmenu.cpp:256 src/raye/navpane/navigationpane.cpp:514
 #: src/raye/qml/components/ItemMenu.qml:50 src/raye/qml/thispc/DriveTile.qml:70
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open in new tab"
 msgstr "Ouvrir dans un nouvel onglet"
 
-#: src/raye/menu/compactmenu.cpp:257 src/raye/navpane/navigationpane.cpp:511
+#: src/raye/menu/compactmenu.cpp:257 src/raye/navpane/navigationpane.cpp:517
 #: src/raye/qml/components/ItemMenu.qml:56 src/raye/qml/thispc/DriveTile.qml:76
 #, kde-format
 msgctxt "@action:inmenu"
@@ -1639,21 +1639,21 @@ msgctxt "@action:inmenu"
 msgid "Open file location"
 msgstr "Ouvrir l’emplacement du fichier"
 
-#: src/raye/menu/compactmenu.cpp:259 src/raye/navpane/navigationpane.cpp:521
+#: src/raye/menu/compactmenu.cpp:259 src/raye/navpane/navigationpane.cpp:527
 #: src/raye/qml/components/ItemMenu.qml:75 src/raye/qml/thispc/DriveTile.qml:83
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Pin to Quick access"
 msgstr "Épingler dans Accès rapide"
 
-#: src/raye/menu/compactmenu.cpp:260 src/raye/navpane/navigationpane.cpp:543
+#: src/raye/menu/compactmenu.cpp:260 src/raye/navpane/navigationpane.cpp:549
 #: src/raye/qml/thispc/DriveTile.qml:90
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Map network drive…"
 msgstr "Connecter un lecteur réseau…"
 
-#: src/raye/menu/compactmenu.cpp:261 src/raye/navpane/navigationpane.cpp:533
+#: src/raye/menu/compactmenu.cpp:261 src/raye/navpane/navigationpane.cpp:539
 #: src/raye/qml/thispc/DriveTile.qml:96
 #, kde-format
 msgctxt "@action:inmenu remove a network drive"
@@ -1763,7 +1763,7 @@ msgctxt "@action:inmenu put back from the Recycle Bin"
 msgid "Restore"
 msgstr "Restaurer"
 
-#: src/raye/menu/compactmenu.cpp:280 src/raye/navpane/navigationpane.cpp:554
+#: src/raye/menu/compactmenu.cpp:280 src/raye/navpane/navigationpane.cpp:560
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Empty Recycle Bin"
@@ -1811,7 +1811,7 @@ msgctxt "@action:inmenu"
 msgid "Open as administrator"
 msgstr "Ouvrir en tant qu’administrateur"
 
-#: src/raye/menu/compactmenu.cpp:292 src/raye/navpane/navigationpane.cpp:517
+#: src/raye/menu/compactmenu.cpp:292 src/raye/navpane/navigationpane.cpp:523
 #: src/raye/qml/components/ItemMenu.qml:75 src/raye/qml/thispc/DriveTile.qml:82
 #, kde-format
 msgctxt "@action:inmenu"
@@ -1860,32 +1860,32 @@ msgctxt "@item the name of a new shortcut, %1 is the item's name"
 msgid "%1 - Shortcut"
 msgstr "%1 - Raccourci"
 
-#: src/raye/navpane/navigationmodel.cpp:193
+#: src/raye/navpane/navigationmodel.cpp:210
 #, kde-format
 msgctxt "@item navigation pane"
 msgid "Home"
 msgstr "Accueil"
 
-#: src/raye/navpane/navigationmodel.cpp:194
+#: src/raye/navpane/navigationmodel.cpp:211
 #, kde-format
 msgctxt "@item navigation pane"
 msgid "Gallery"
 msgstr "Galerie"
 
-#: src/raye/navpane/navigationmodel.cpp:197
+#: src/raye/navpane/navigationmodel.cpp:214
 #, kde-format
 msgctxt "@item navigation pane"
 msgid "This PC"
 msgstr "Ce PC"
 
-#: src/raye/navpane/navigationmodel.cpp:201
+#: src/raye/navpane/navigationmodel.cpp:218
 #, kde-format
 msgctxt "@item navigation pane"
 msgid "Network"
 msgstr "Réseau"
 
-#: src/raye/navpane/navigationmodel.cpp:203
-#: src/raye/navpane/navigationmodel.cpp:219
+#: src/raye/navpane/navigationmodel.cpp:220
+#: src/raye/navpane/navigationmodel.cpp:236
 #, kde-format
 msgctxt "@item navigation pane"
 msgid "Recycle Bin"
@@ -1897,19 +1897,19 @@ msgctxt "@info:accessible"
 msgid "Navigation pane"
 msgstr "Volet de navigation"
 
-#: src/raye/navpane/navigationpane.cpp:528
+#: src/raye/navpane/navigationpane.cpp:534
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Eject"
 msgstr "Éjecter"
 
-#: src/raye/navpane/navigationpane.cpp:693 src/raye/preview/detailsmodel.cpp:61
+#: src/raye/navpane/navigationpane.cpp:699 src/raye/preview/detailsmodel.cpp:61
 #, kde-format
 msgctxt "@item the system drive"
 msgid "Raye"
 msgstr "Raye"
 
-#: src/raye/navpane/navigationpane.cpp:703
+#: src/raye/navpane/navigationpane.cpp:709
 #, kde-format
 msgctxt "@item a removable drive with no name"
 msgid "USB Drive"
@@ -2092,47 +2092,59 @@ msgctxt "@title:window"
 msgid "Add a folder to Gallery"
 msgstr "Ajouter un dossier à la Galerie"
 
-#: src/raye/pages/thispcmodel.cpp:51
+#: src/raye/pages/thispcmodel.cpp:53
 #, kde-format
 msgctxt "@info drive space under its name"
 msgid "%1 free of %2"
 msgstr "%1 libres sur %2"
 
-#: src/raye/pages/thispcmodel.cpp:56
+#: src/raye/pages/thispcmodel.cpp:58
 #, kde-format
 msgctxt "@item a shared folder, then the computer it is on"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: src/raye/pages/thispcmodel.cpp:172
+#: src/raye/pages/thispcmodel.cpp:180
 #, kde-format
 msgctxt "@info a network drive that is not connected right now"
 msgid "Disconnected"
 msgstr "Déconnecté"
 
-#: src/raye/pages/thispcmodel.cpp:225
+#: src/raye/pages/thispcmodel.cpp:183
+#, kde-format
+msgctxt "@info a USB drive that is plugged in but not opened yet"
+msgid "Click to open"
+msgstr "Cliquez pour ouvrir"
+
+#: src/raye/pages/thispcmodel.cpp:236
 #, kde-format
 msgctxt "@title section of This PC"
 msgid "Phones and cameras"
 msgstr "Téléphones et appareils photo"
 
-#: src/raye/pages/thispcmodel.cpp:228
+#: src/raye/pages/thispcmodel.cpp:239
 #, kde-format
 msgctxt "@title section of This PC"
 msgid "Network locations"
 msgstr "Emplacements réseau"
 
-#: src/raye/pages/thispcmodel.cpp:231
+#: src/raye/pages/thispcmodel.cpp:242
 #, kde-format
 msgctxt "@title section of This PC"
 msgid "Computers on the network"
 msgstr "Ordinateurs du réseau"
 
-#: src/raye/pages/thispcmodel.cpp:233
+#: src/raye/pages/thispcmodel.cpp:244
 #, kde-format
 msgctxt "@title section of This PC"
 msgid "Devices and drives"
 msgstr "Périphériques et lecteurs"
+
+#: src/raye/pages/thispcmodel.cpp:428
+#, kde-format
+msgctxt "@info"
+msgid "This drive could not be opened."
+msgstr "Impossible d'ouvrir ce lecteur."
 
 #: src/raye/portal/filedialog.cpp:79
 #, kde-format

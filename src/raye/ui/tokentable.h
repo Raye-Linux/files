@@ -14,8 +14,8 @@
 // is installed, so a change in the theme shows up as a failing test here.
 
 // RAYE_TOKEN(name, night, day)
-RAYE_TOKEN(acrylicTaskbar, 0xdb131217, 0xdb131217)
-RAYE_TOKEN(acrylicTaskbarSolid, 0xff131217, 0xff333236)
+RAYE_TOKEN(acrylicTaskbar, 0xdb131217, 0xdbf5f4f7)
+RAYE_TOKEN(acrylicTaskbarSolid, 0xff131217, 0xfff5f4f7)
 RAYE_TOKEN(acrylicTint, 0xcc1b1a20, 0xd1fafafb)
 RAYE_TOKEN(acrylicTintSolid, 0xff1a191e, 0xfff9f9fa)
 RAYE_TOKEN(bgBase, 0xff141318, 0xfff5f4f7)
