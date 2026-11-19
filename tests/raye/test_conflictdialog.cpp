@@ -82,16 +82,21 @@ private Q_SLOTS:
         QTest::addColumn<QString>("language");
         QTest::addColumn<bool>("compare");
         QTest::addColumn<bool>("growsLate");
-        QTest::newRow("merge, en") << true << QStringLiteral("en") << false << false;
-        QTest::newRow("merge, fr") << true << QStringLiteral("fr") << false << false;
-        QTest::newRow("files, en") << false << QStringLiteral("en") << false << false;
-        QTest::newRow("files, fr") << false << QStringLiteral("fr") << false << false;
-        QTest::newRow("compare, en") << false << QStringLiteral("en") << true << false;
-        QTest::newRow("compare, fr") << false << QStringLiteral("fr") << true << false;
+        QTest::addColumn<bool>("longLabel");
+        QTest::newRow("merge, en") << true << QStringLiteral("en") << false << false << false;
+        QTest::newRow("merge, fr") << true << QStringLiteral("fr") << false << false << false;
+        QTest::newRow("files, en") << false << QStringLiteral("en") << false << false << false;
+        QTest::newRow("files, fr") << false << QStringLiteral("fr") << false << false << false;
+        QTest::newRow("compare, en") << false << QStringLiteral("en") << true << false << false;
+        QTest::newRow("compare, fr") << false << QStringLiteral("fr") << true << false << false;
         // the page gets taller once the window is up (text laid out again
         // at the real scale, a line that wraps): the window follows
-        QTest::newRow("merge grows, en") << true << QStringLiteral("en") << false << true;
-        QTest::newRow("merge grows, fr") << true << QStringLiteral("fr") << false << true;
+        QTest::newRow("merge grows, en") << true << QStringLiteral("en") << false << true << false;
+        QTest::newRow("merge grows, fr") << true << QStringLiteral("fr") << false << true << false;
+        // a label that wraps (large text, a long translation): the box is
+        // as tall as its lines, and they stay above the buttons
+        QTest::newRow("long label, en") << true << QStringLiteral("en") << false << false << true;
+        QTest::newRow("long label, fr") << true << QStringLiteral("fr") << false << false << true;
     }
 
     void fits()
@@ -100,6 +105,7 @@ private Q_SLOTS:
         QFETCH(QString, language);
         QFETCH(bool, compare);
         QFETCH(bool, growsLate);
+        QFETCH(bool, longLabel);
         if (language == QLatin1String("fr")) {
             if (!std::setlocale(LC_MESSAGES, "fr_FR.UTF-8") && !std::setlocale(LC_MESSAGES, "C.UTF-8")) {
                 QSKIP("no UTF-8 locale here");
@@ -141,6 +147,15 @@ private Q_SLOTS:
         QQuickItem *forAll = itemWithText(root, forAllText);
         QVERIFY(forAll);
         QVERIFY(forAll->isVisible());
+        if (longLabel) {
+            forAll->setProperty("text", QString(forAllText + QLatin1Char(' ') + forAllText + QLatin1Char(' ') + forAllText));
+            QTest::qWait(300);
+        }
+        // the label's lines are inside the box
+        QQuickItem *label = forAll->property("contentItem").value<QQuickItem *>();
+        QVERIFY(label);
+        QVERIFY2(label->mapToItem(forAll, QPointF(0, label->implicitHeight())).y() <= forAll->height() + 1,
+                 qPrintable(QStringLiteral("label %1 high, box %2").arg(label->implicitHeight()).arg(forAll->height())));
 
         // the whole page is in the view...
         QVERIFY2(view->height() + 1 >= qCeil(root->implicitHeight()),

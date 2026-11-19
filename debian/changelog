@@ -2,6 +2,8 @@ raye-files (25.12.3+raye14) resolute; urgency=medium
 
   * Home, This PC, Gallery and the dialogs share one engine, so more tabs
     cost less memory.
+  * The "Do this for all current items" box no longer runs over the
+    buttons when its text wraps.
 
  -- techoraye <190692880+techoraye@users.noreply.github.com>  Thu, 19 Nov 2026 16:00:00 +0000
 

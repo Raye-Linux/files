@@ -11,12 +11,13 @@ import org.raye.files.kit
 
 // The check box of Files' dialogs (progress, conflicts, Folder options):
 // a 20 px box, radius 4, filled with the accent and a check mark when
-// ticked; the label after it in Body.
+// ticked; the label after it in Body. A label that wraps makes the box
+// taller, with the box beside its first line.
 T.CheckBox {
     id: box
 
     implicitWidth: implicitIndicatorWidth + spacing + implicitContentWidth
-    implicitHeight: Kit.controlHeight
+    implicitHeight: Math.max(Kit.controlHeight, implicitContentHeight + topPadding + bottomPadding)
     spacing: 8
     font: Kit.body
     hoverEnabled: true
@@ -29,7 +30,7 @@ T.CheckBox {
         implicitWidth: 20
         implicitHeight: 20
         x: box.leftPadding
-        anchors.verticalCenter: parent.verticalCenter
+        y: box.topPadding + Math.round((Kit.controlHeight - box.topPadding - box.bottomPadding - height) / 2)
         radius: Kit.radiusControl
         color: box.checked ? (box.down ? Kit.colors.accentPressed : box.hovered ? Kit.colors.accentHover : Kit.colors.accent)
                            : (box.down ? Kit.colors.fillControlPressed : box.hovered ? Kit.colors.fillControlHover : Kit.colors.fillControl)
