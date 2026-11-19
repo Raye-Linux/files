@@ -1,3 +1,15 @@
+raye-files (25.12.3+raye13) resolute; urgency=medium
+
+  * Scrolling with the mouse wheel moves about three lines per notch
+    everywhere in the Explorer.
+  * Copies to a USB drive show what is really written and finish only once
+    the drive has everything ("Finishing writing").
+  * Folder options and Properties are laid out on cards; Folder options fits
+    small screens. Dialogs always grow to fit their content.
+  * French for "Click to open" and "This drive could not be opened.".
+
+ -- techoraye <190692880+techoraye@users.noreply.github.com>  Thu, 19 Nov 2026 06:00:00 +0000
+
 raye-files (25.12.3+raye12) resolute; urgency=medium
 
   * The light taskbar colour of the theme, in the Explorer's own windows too.
