@@ -15,7 +15,14 @@
 #include <QQmlEngine>
 #include <QQuickItem>
 #include <QQuickWidget>
+#include <QTimer>
 #include <QtMath>
+
+#include <utility>
+
+#ifdef __GLIBC__
+#include <malloc.h>
+#endif
 
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
@@ -25,16 +32,52 @@ QT_WARNING_POP
 namespace Raye::Jobs
 {
 
+namespace
+{
+// Every page of the app (Home in each tab, This PC, the dialogs) runs in one
+// engine: each QQuickWidget used to make its own, with its own copy of every
+// type and of the theme, about 4 MB a page. It goes with the last page.
+QQmlEngine *s_engine = nullptr;
+int s_pages = 0;
+
+QQmlEngine *pageEngine()
+{
+    if (!s_engine) {
+        s_engine = new QQmlEngine;
+        QT_WARNING_PUSH
+        QT_WARNING_DISABLE_DEPRECATED
+        auto *context = new KLocalizedContext(s_engine);
+        QT_WARNING_POP
+        context->setTranslationDomain(QStringLiteral("raye-files"));
+        s_engine->rootContext()->setContextObject(context);
+        s_engine->addImageProvider(QString::fromUtf16(Raye::Pages::ThumbnailProvider::id), new Raye::Pages::ThumbnailProvider);
+    }
+    return s_engine;
+}
+
+void holdEngine(QQuickWidget *view)
+{
+    ++s_pages;
+    QObject::connect(view, &QObject::destroyed, [] {
+        if (--s_pages == 0) {
+            // a page asked for before it is gone gets a new one
+            std::exchange(s_engine, nullptr)->deleteLater();
+        }
+#ifdef __GLIBC__
+        // the heap keeps what the page freed otherwise, and the window
+        // stays the size of every page it showed
+        QTimer::singleShot(1000, [] {
+            malloc_trim(0);
+        });
+#endif
+    });
+}
+}
+
 QQuickWidget *quickPage(const QString &type, const QVariantMap &properties, QWidget *parent, const char *clearToken)
 {
-    auto *view = new QQuickWidget(parent);
-    QT_WARNING_PUSH
-    QT_WARNING_DISABLE_DEPRECATED
-    auto *context = new KLocalizedContext(view->engine());
-    QT_WARNING_POP
-    context->setTranslationDomain(QStringLiteral("raye-files"));
-    view->engine()->rootContext()->setContextObject(context);
-    view->engine()->addImageProvider(QString::fromUtf16(Raye::Pages::ThumbnailProvider::id), new Raye::Pages::ThumbnailProvider);
+    auto *view = new QQuickWidget(pageEngine(), parent);
+    holdEngine(view);
     view->setClearColor(Raye::Ui::Tokens::current().color(QString::fromLatin1(clearToken)));
     view->loadFromModule("org.raye.files", type);
     QQuickItem *root = view->rootObject();

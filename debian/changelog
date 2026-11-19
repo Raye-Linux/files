@@ -1,3 +1,10 @@
+raye-files (25.12.3+raye14) resolute; urgency=medium
+
+  * Home, This PC, Gallery and the dialogs share one engine, so more tabs
+    cost less memory.
+
+ -- techoraye <190692880+techoraye@users.noreply.github.com>  Thu, 19 Nov 2026 16:00:00 +0000
+
 raye-files (25.12.3+raye13) resolute; urgency=medium
 
   * Scrolling with the mouse wheel moves about three lines per notch
